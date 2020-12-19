@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Daily Planner",
+    "screenshot": "/projectImages/plannerScreenshot.png",
+    "deployment": "https://kkaraman.github.io/dailyPlanner/",
+    "repository": "https://github.com/KKaraman/dailyPlanner"
+  },
+  {
+    "id": 2,
+    "name": "React Profile",
+    "screenshot": "/projectImages/reactPortfolio.png",
+    "deployment": "https://kkreactprofile.herokuapp.com/",
+    "repository": "https://github.com/KKaraman/KKreactProfile"
+  }
+]
