@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
 
 
 // import { Link, NavLink } from "react-router-dom";
@@ -18,22 +18,61 @@ const MainPage = () => {
       
       <Container>
         <Row>
-          <Col size="md-3">
-            <h3>About Me</h3>
+          <Col size="md-3" className="text-center" >
+            <h3>"Agents Name"</h3>
+            {/* also implement dynamic agents name here */}
           </Col>
         </Row>
-        <Row>
-          <Col size="md-2">
-            <Image src={ Placeholder } fluid />
+        <Row className="text-center">
+          <Col>
+          <input className="rounded" placeholder="Search address"></input>
           </Col>
-          <Col size="md-10">
-            <p>
-              This is our Project 3.  
-            </p>
+          <Col>
+          <Button type="button" class="btn btn-primary" >Add home</Button>
+          </Col>
+        </Row>
+        <Row className="d-flex justify-content-center">
+          <Col className="text-center col-sm-6">
+            <Card>
+            
+              <Image  className="card-img-top"  src={ Placeholder } fluid  />
+              {/* implement agent updated photos */}
+            
+              <Col>
+              <div >
+                <p className="text-center">
+                 Address: "dynamic address put here"
+                </p>
+              </div>
+              </Col>
+              
+              <Col size="md-2">
+              <Row>
+              <div>
+                <p className="">
+                  price
+                </p>
+              </div>
+              
+              <Col size="md-2">
+              <div>
+                <p className="text-center" >
+                  offers
+                </p>
+              </div>
+              <Col size="md-2">
+              <div>
+                <p className="text-right">
+                  Sellers name
+                </p>
+              </div>
+              </Col>
+              </Col>
+              </Row>
+              </Col>
 
-            <p>
-              Wicked Jackrabbits are the coolest
-            </p>
+              
+            </Card>
           </Col>
         </Row>
         <Row>
