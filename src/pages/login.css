@@ -8,11 +8,23 @@ textarea {
     display: block;
     margin-left: auto;
     margin-right: auto;
-
+    resize: none;
 }
 
 .sellerLogin{
 margin-right: auto;
 margin-left: auto;
-float: right;
+margin-top: 10px;
+}
+
+.agentLogin {
+margin-right: auto;
+margin-left: auto;
+margin-top: 10px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
