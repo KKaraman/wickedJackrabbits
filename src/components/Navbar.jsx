@@ -23,8 +23,9 @@ class BootstrapNavbar extends React.Component{
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mr-auto">
                                     <Nav.Link href="/">Home Page</Nav.Link>
-                                    <Nav.Link href="/one">Page One</Nav.Link>
-                                    <Nav.Link href="/two">Page Two</Nav.Link>
+                                    <Nav.Link href="/one">Add House</Nav.Link>
+                                    <Nav.Link href="/two">Agent Login</Nav.Link>
+                                    <Nav.Link href="/three">Seller Login</Nav.Link>
                                     <NavDropdown title="Split DropDown Item" id="basic-nav-dropdown">
                                         
                                         <NavDropdown.Item href= "https://www.google.com">Google Again</NavDropdown.Item>

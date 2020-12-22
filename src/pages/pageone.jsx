@@ -1,7 +1,5 @@
 import { Jumbotron, Container, Row, Col, Card, Button } from "react-bootstrap";
-
 import GmailLogo from "../images/Gmail.png";
-
 
 const PageOne = () => {
   return (
