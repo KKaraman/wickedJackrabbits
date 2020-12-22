@@ -19,7 +19,9 @@ class PageThree extends Component {
         <div class="Container">
         <textarea className="sellerEmail" placeholder="email"></textarea>
         <textarea className="sellerPassword" placeholder="password"></textarea>
+        <div class="center">
         <button className="sellerLogin" onclick="sellerLogin()">Log In</button>
+        </div>
         </div>
         <p></p>
       </Wrapper>
