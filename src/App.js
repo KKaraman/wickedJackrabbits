@@ -9,6 +9,7 @@ import './App.css';
 import MainPage from "./pages";
 import PageOne from "./pages/pageone";
 import PageTwo from "./pages/pagetwo";
+import PageThree from "./pages/pagethree";
 
 // different components
 import Wrapper from "./components/Wrapper"
@@ -30,6 +31,7 @@ function App() {
             {/* Render this only if the first route doesnt match */}
             <Route exact path="/one" component= { PageOne } />
             <Route exact path="/two" component={ PageTwo } />
+            <Route exact path="/three" component={ PageThree } />
             <Route path="/404" render={
               () => (
                 <h2>404: NOT A VALID URL PATH!</h2>
