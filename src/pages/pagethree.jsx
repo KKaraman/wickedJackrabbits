@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Project from "../components/Project";
 import Wrapper from "../components/Wrapper";
 import Title from "../components/Title";
 import projects from "../projects.json";
@@ -16,11 +15,11 @@ class PageThree extends Component {
   render() {
     return (
       <Wrapper> 
-        <Title>Agent Login</Title>
+        <Title>Seller Login</Title>
         <div class="Container">
-        <textarea className="AgentEmail" placeholder="email"></textarea>
-        <textarea className="AgentPassword" placeholder="password"></textarea>
-        <button class="agentLogin" onclick="AgentLogin()">Log In</button>
+        <textarea className="sellerEmail" placeholder="email"></textarea>
+        <textarea className="sellerPassword" placeholder="password"></textarea>
+        <button className="sellerLogin" onclick="sellerLogin()">Log In</button>
         </div>
         <p></p>
       </Wrapper>

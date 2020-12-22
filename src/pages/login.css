@@ -1,6 +1,6 @@
 .container {
     display: block;
-    width: max-content;
+    width: auto;
     height: auto;
 }
 
@@ -11,6 +11,8 @@ textarea {
 
 }
 
-.agentLogin{
-
+.sellerLogin{
+margin-right: auto;
+margin-left: auto;
+float: right;
 }
