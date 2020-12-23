@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
 
 
@@ -80,3 +78,5 @@ const addHome = () => {
 };
 
 export default addHome;
+
+
