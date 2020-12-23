@@ -5,11 +5,11 @@ import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
 
 // import { Link, NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../App.css";
+// import "../App.css";
 
-import Placeholder from "../images/placeholder.png";
+// import Placeholder from "../images/placeholder.png";
 
-import Wrapper from "../components/Wrapper";
+import Wrapper from "../Wrapper";
 
 const addHome = () => {
     return (

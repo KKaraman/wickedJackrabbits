@@ -28,7 +28,7 @@ const MainPage = () => {
           <input className="rounded" placeholder="Search address"></input>
           </Col>
           <Col>
-          <Button type="button" class="btn btn-primary" >Add home</Button>
+          <Button type="button" className="btn btn-primary" href="/addhome">Add home</Button>
           </Col>
         </Row>
         <Row className="d-flex justify-content-center">
