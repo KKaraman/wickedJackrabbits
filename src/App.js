@@ -10,7 +10,9 @@ import MainPage from "./pages";
 import PageOne from "./pages/pageone";
 import PageTwo from "./pages/pagetwo";
 import PageThree from "./pages/pagethree";
-import addHome from "./components/pages/addHome"
+import homeDetails from "./components/pages/clickedHome"
+import addHome from "./pages/addHome"
+
 
 // different components
 import Wrapper from "./components/Wrapper"
@@ -33,6 +35,7 @@ function App() {
             <Route exact path="/one" component= { PageOne } />
             <Route exact path="/two" component={ PageTwo } />
             <Route exact path="/three" component={ PageThree } />
+            <Route exact path="/homedetails" component={ homeDetails } />
             <Route exact path="/addhome" component={ addHome } />
             {/* <Route exact path="/createoffer" component={ createOffer } /> */}
             <Route path="/404" render={

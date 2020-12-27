@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Wrapper from "../Wrapper";
 
-const addHome = () => {
+const homeDetails = () => {
     return (
         <Wrapper>
             <Container>
@@ -77,6 +77,6 @@ const addHome = () => {
     )
 };
 
-export default addHome;
+export default homeDetails;
 
 
