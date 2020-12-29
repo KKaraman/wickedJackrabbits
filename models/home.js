@@ -16,6 +16,8 @@ module.exports = function (sequelize, DataTypes) {
 
     Home.associate = (db) => {
         db.Home.hasMany(db.Offer)
+        // db.Home.hasMany(db.Reviews)
+
     }
 
     return Home;
