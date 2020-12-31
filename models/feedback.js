@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
-    const  Feedback = sequelize.define("Feedback", {
-        DateOffered: {
+    const Feedback = sequelize.define("Feedback", {
+        dateOffered: {
             type: DataTypes.STRING,
             allowNull: false,
         },

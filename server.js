@@ -21,7 +21,7 @@ require("./routes/api-routes")(app);
 
 
 
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync({ /*force: true*/ }).then(() => {
     app.listen(PORT, () => {
         console.log(`Server is live on http://localhost:${PORT} !`)
     });
