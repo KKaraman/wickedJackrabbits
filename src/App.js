@@ -12,7 +12,7 @@ import PageTwo from "./pages/pagetwo";
 import PageThree from "./pages/pagethree";
 import homeDetails from "./components/pages/clickedHome"
 import addHome from "./pages/addHome"
-
+import createOffer from "./components/pages/createOffer/createOffer"
 
 // different components
 import Wrapper from "./components/Wrapper"
@@ -37,7 +37,7 @@ function App() {
             <Route exact path="/three" component={ PageThree } />
             <Route exact path="/homedetails" component={ homeDetails } />
             <Route exact path="/addhome" component={ addHome } />
-            {/* <Route exact path="/createoffer" component={ createOffer } /> */}
+            <Route exact path="/createoffer" component={ createOffer } />
             <Route path="/404" render={
               () => (
                 <h2>404: NOT A VALID URL PATH!</h2>

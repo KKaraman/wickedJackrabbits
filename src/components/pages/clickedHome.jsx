@@ -57,7 +57,7 @@ const homeDetails = () => {
                 <Row>
                     <Col>
                         <div>
-                            <Button>CREATE OFFER</Button>
+                            <Button type="button" className="btn btn-primary" href="/createOffer">CREATE OFFER</Button>
                         </div>
                         <div>
                             <Button>ADD FEEDBACK</Button>
