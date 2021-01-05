@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    const  Offer = sequelize.define("Offer", {
+    const Feedback = sequelize.define("Feedback", {
         dateOffered: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -22,9 +22,9 @@ module.exports = function (sequelize, DataTypes) {
         },
     });
 
-    Offer.associate = (db) => {
-        db.Offer.belongsTo(db.Home)
+    Feedback.associate = (db) => {
+        db.Feedback.belongsTo(db.Home)
     }
 
-    return Offer;
+    return Feedback;
 };
