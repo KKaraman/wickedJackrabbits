@@ -60,6 +60,31 @@ module.exports = function (app) {
 
   });
 
+  app.put("/api/updateOffer", (req, res)=>{
+    db.Offer.update(req.body,{
+      where:{
+        id: req.body.id
+      }
+    }).then(()=>{
+      console.log("Update Offer Complete");
+      res.sendStatus(200)
+    })
+  })
+
+  app.delete("/api/deleteOffer/:id", (req, res)=>{
+    db.Offer.destroy({
+      where:{
+        id: req.params.id
+      }
+    }).then(()=>{
+      console.log("Delete Feedback Complete");
+      res.sendStatus(200)
+    })
+  })
+
+
+
+
 
 };
 
