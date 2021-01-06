@@ -32,116 +32,36 @@ module.exports = function (app) {
         res.status(401).json(err);
       });
   });
+ 
+  app.get("/api/getHome/:id", (request, response) => {
 
-//   {
-//     "dateOffered": "today",
-//        "name": "Kerem",
-//        "amount": "200000",
-//        "closingDate": "tomorrow",
-//        "moneyType": "dollar",
-//        "home": true,
-//        "id": "1"
-//  }
+    db.Home.findOne({ where: { id: request.params.id }, include: [{ model: db.Feedback }, { model: db.Offer }] }).then(result => {
+      console.log("This is the Home result", result);
+      response.json({ result })
 
-  app.post("/api/createOffer", function (req, res) {
-    console.log(req.body);
-    const query = {
-      homeId:req.body.id
-    };
-    if (req.body.home) {
-        query.homeId = req.body.id;
-    }
-    console.log(query.homeId);
-    console.log(req.body.id);
-    db.Offer.create({
-      dateOffered: req.body.dateOffered,
-      name: req.body.name,
-      amount: req.body.amount,
-      closingDate: req.body.closingDate,
-      moneyType: req.body.moneyType,
-      HomeId: query.homeId
+    }).catch(err => {
+      console.log("Get home wasnt completed");
+      response.status(500).json(err);
     })
-      .then(function () {
-        // res.redirect(307, "/api/login");
-        console.log("create offer has been completed");
-        res.sendStatus(200)
-      })
-      .catch(function (err) {
-        console.log("create offer has NOT been completed");
-        res.status(500).json(err);
-      });
-      
   });
-
-  app.get("/api/home_offers/:homeId", function (req, res) {
-    
-    // get request for home id
-    // find all offers for that home id
-    console.log(req.params.homeId);
-
-      db.Offer.findAll({
-        where: {
-          HomeId : req.params.homeId
-        }
-      })
-    
-      .then(function (data) {
-        // res.redirect(307, "/api/login");
-        console.log("Your home ID: " + data );
-        res.json(data)
-      })
-      .catch(function (err) {
-        console.log("create offer has NOT been completed");
-        res.status(500).json(err);
-      });
-     
-  });
-
-  app.get("/api/home_feedback/:homeId", function (req, res) {
-    
-    // get request for home id
-    // find all offers for that home id
-    console.log(req.params.homeId);
-
-      db.Feedback.findAll({
-        where: {
-          HomeId : req.params.homeId
-        }
-      })
-    
-      .then(function (data) {
-        // res.redirect(307, "/api/login");
-        console.log("Your home ID: " + data );
-        res.json(data)
-      })
-      .catch(function (err) {
-        console.log("create offer has NOT been completed");
-        res.status(500).json(err);
-      });
-     
-  });
-
-//   {
-//     "address": "11211 tramonto",
-//     "sellerFirstName": "Kerem",
-//     "sellerLastName": "Karaman",
-//     "UserId": "1"
-// }
 
   app.post("/api/createHome", function (req, res) {
-    const query = {};
-    if (req.user) {
-        query.userId = req.user.id;
-    }
-    db.Home.create({
-      address: req.body.address,
-      sellerFirstName: req.body.sellerFirstName,
-      sellerLastName: req.body.sellerLastName,
-      UserId: query.userId
+    db.User.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      password: req.body.password,
+      AgentId: req.body.AgentId
     })
       .then(function () {
-        // res.redirect(307, "/api/login");
-        res.sendStatus(201)
+        db.Home.create({
+          address: req.body.address,
+          listingPrice: req.body.listingPrice,
+          dateListed: req.body.dateListed,
+          UserId: req.body.UserId
+        })
+      }).then(function(){
+        res.sendStatus(200)
       })
       .catch(function (err) {
         res.status(401).json(err);
@@ -149,6 +69,46 @@ module.exports = function (app) {
   });
 
 };
+
+  //   {
+  //     "dateOffered": "today",
+  //        "name": "Kerem",
+  //        "amount": "200000",
+  //        "closingDate": "tomorrow",
+  //        "moneyType": "dollar",
+  //        "home": true,
+  //        "id": "1"
+  //  }
+
+
+  //   {
+  //     "address": "11211 tramonto",
+  //     "sellerFirstName": "Kerem",
+  //     "sellerLastName": "Karaman",
+  //     "UserId": "1"
+  // }
+
+  // app.post("/api/createHome", function (req, res) {
+  //   const query = {};
+  //   if (req.user) {
+  //       query.userId = req.user.id;
+  //   }
+  //   db.Home.create({
+  //     address: req.body.address,
+  //     sellerFirstName: req.body.sellerFirstName,
+  //     sellerLastName: req.body.sellerLastName,
+  //     UserId: query.userId
+  //   })
+  //     .then(function () {
+  //       // res.redirect(307, "/api/login");
+  //       res.sendStatus(201)
+  //     })
+  //     .catch(function (err) {
+  //       res.status(401).json(err);
+  //     });
+  // });
+
+  //Post request for Reviews
 
 
 

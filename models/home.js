@@ -4,11 +4,11 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        sellerFirstName: {
-            type: DataTypes.STRING,
+        listingPrice: {
+            type: DataTypes.INTEGER,
             allowNull: false
         },
-        sellerLastName: {
+        dateListed: {
             type: DataTypes.STRING,
             allowNull: false
         }
