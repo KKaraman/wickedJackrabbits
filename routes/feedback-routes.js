@@ -61,7 +61,27 @@ module.exports = function (app) {
 
   });
 
+  app.put("/api/updateFeedback", (req, res)=>{
+    db.Feedback.update(req.body,{
+      where:{
+        id: req.body.id
+      }
+    }).then(()=>{
+      console.log("Update Feedback Complete");
+      res.sendStatus(200)
+    })
+  })
 
+  app.delete("/api/deleteFeedback/:id", (req, res)=>{
+    db.Feedback.destroy({
+      where:{
+        id: req.params.id
+      }
+    }).then(()=>{
+      console.log("Delete Feedback Complete");
+      res.sendStatus(200)
+    })
+  })
 
 };
 
