@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
-    const Feedback = sequelize.define("Feedback", {
-        dateOffered: {
+    const  Feedback = sequelize.define("Feedback", {
+        dateShown: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -8,18 +8,30 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        amount: {
+        local: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+        },
+        family: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+        },
+        timeline: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        closingDate: {
+        liked: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true
         },
-        moneyType: {
+        notLike: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true
         },
+        estimatedInterest: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        }
     });
 
     Feedback.associate = (db) => {
