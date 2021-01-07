@@ -10,9 +10,12 @@ import MainPage from "./pages";
 import PageOne from "./pages/pageone";
 import PageTwo from "./pages/pagetwo";
 import PageThree from "./pages/pagethree";
-import homeDetails from "./components/pages/clickedHome"
-import addHome from "./pages/addHome"
-import createOffer from "./components/pages/createOffer/createOffer"
+
+
+import addHome from "./components/pages/addHome"
+import SignUp from "./pages/signup";
+
+
 
 // different components
 import Wrapper from "./components/Wrapper"
@@ -29,6 +32,7 @@ function App() {
 
           {/* Router cannot have more than one single child element */}
           <Switch>
+          <Route exact path="/test" component= { SignUp } />
 
             <Route exact path="/" component={MainPage} />
             {/* Render this only if the first route doesnt match */}

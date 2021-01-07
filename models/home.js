@@ -4,11 +4,11 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        sellerFirstName: {
-            type: DataTypes.STRING,
+        listingPrice: {
+            type: DataTypes.INTEGER,
             allowNull: false
         },
-        sellerLastName: {
+        dateListed: {
             type: DataTypes.STRING,
             allowNull: false
         }
@@ -16,6 +16,8 @@ module.exports = function (sequelize, DataTypes) {
 
     Home.associate = (db) => {
         db.Home.hasMany(db.Offer)
+        db.Home.hasMany(db.Feedback)
+        db.Home.belongsTo(db.User)
     }
 
     return Home;
