@@ -20,9 +20,8 @@ require("./routes/api-routes")(app);
 require("./routes/offer-routes")(app);
 require("./routes/feedback-routes")(app);
 
-
-
 db.sequelize.sync({ force: false }).then(() => {
+
     app.listen(PORT, () => {
         console.log(`Server is live on http://localhost:${PORT} !`)
     });
