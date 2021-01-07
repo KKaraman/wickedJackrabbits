@@ -7,9 +7,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 // import Placeholder from "../images/placeholder.png";
 
-import Wrapper from "../Wrapper";
+import Wrapper from "../components/Wrapper";
 
-const addHome = () => {
+const homeDetails = () => {
     return (
         <Wrapper>
             <Container>
@@ -57,7 +57,7 @@ const addHome = () => {
                 <Row>
                     <Col>
                         <div>
-                            <Button>CREATE OFFER</Button>
+                            <Button type="button" className="btn btn-primary" href="/createOffer">CREATE OFFER</Button>
                         </div>
                         <div>
                             <Button>ADD FEEDBACK</Button>
@@ -77,6 +77,6 @@ const addHome = () => {
     )
 };
 
-export default addHome;
+export default homeDetails;
 
 

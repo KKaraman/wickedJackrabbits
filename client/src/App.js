@@ -7,12 +7,13 @@ import './App.css';
 
 // different pages
 import MainPage from "./pages";
-import PageOne from "./pages/pageone";
-import PageTwo from "./pages/pagetwo";
-import PageThree from "./pages/pagethree";
-import addHome from "./components/pages/addHome"
-import SignUp from "./pages/signup";
+import AgentLogin from "./pages/agentLogin";
+import SellerLogin from "./pages/sellerlogin"
 
+import addHome from "./pages/addHome"
+import SignUp from "./pages/signup";
+import homeDetails from "./pages/homeDetails"
+import createOffer from "./pages/createOffer"
 
 // different components
 import Wrapper from "./components/Wrapper"
@@ -33,11 +34,11 @@ function App() {
 
             <Route exact path="/" component={MainPage} />
             {/* Render this only if the first route doesnt match */}
-            <Route exact path="/one" component= { PageOne } />
-            <Route exact path="/two" component={ PageTwo } />
-            <Route exact path="/three" component={ PageThree } />
+            <Route exact path="/sellerlogin" component= { SellerLogin } />
+            <Route exact path="/agentlogin" component={ AgentLogin } />
+            <Route exact path="/homedetails" component={ homeDetails } />
             <Route exact path="/addhome" component={ addHome } />
-            {/* <Route exact path="/createoffer" component={ createOffer } /> */}
+            <Route exact path="/createoffer" component={ createOffer } />
             <Route path="/404" render={
               () => (
                 <h2>404: NOT A VALID URL PATH!</h2>

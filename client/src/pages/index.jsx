@@ -28,7 +28,7 @@ const MainPage = () => {
           <input className="rounded" placeholder="Search address"></input>
           </Col>
           <Col>
-          <Button type="button" className="btn btn-primary" href="/addhome">Add home</Button>
+          <Button type="button" className="btn btn-primary" href="/addHome">Add home</Button>
           </Col>
         </Row>
         <Row className="d-flex justify-content-center">
@@ -75,7 +75,7 @@ const MainPage = () => {
             </Card>
           </Col>
         </Row>
-        <Row>
+        {/* <Row>
           <Col size="md-12">
           <p>Here is a list</p>
                       <ul>
@@ -84,7 +84,7 @@ const MainPage = () => {
                         <li>List Item 3"</li>
                       </ul>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </Wrapper>
   );

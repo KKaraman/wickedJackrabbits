@@ -1,82 +1,56 @@
-import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
-
-
-// import { Link, NavLink } from "react-router-dom";
+import React from "react";
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import "../App.css";
-
-// import Placeholder from "../images/placeholder.png";
-
-import Wrapper from "../Wrapper";
+import Wrapper from "../components/Wrapper";
 
 const addHome = () => {
     return (
         <Wrapper>
             <Container>
+                <Col>
+                    <Image> 
+                        {/* Upload image area */}
+                    </Image>
+                </Col>
+
+                <Col>
+                    <h2>New Home Details</h2>
+                </Col>
+
                 <Row>
                     <Col>
-                        <Card>
-                            <Image>
-                                {/* INSERT DYNAMIC IMAGE OF HOME THAT WAS CLICKED ON HERE */}
-                            </Image>
-                            <Col>
-                                <div>
-                                    <p className="text-center">
-                                        Address: "dynamic address put here"
-                                    </p>
-                                </div>
-                            </Col>
-              
-                            <Col size="md-2">
-                                <Row>
-                                    <div>
-                                        <p className="">
-                                            price
-                                        </p>
-                                    </div>
-              
-                                    <Col size="md-2">
-                                        <div>
-                                            <p className="text-center" >
-                                                offers
-                                            </p>
-                                        </div>
-                                        <Col size="md-2">
-                                            <div>
-                                                <p className="text-right">
-                                                    Sellers name
-                                                </p>
-                                            </div>
-                                        </Col>
-                                    </Col>
-                                </Row>
-                            </Col>
-                        </Card>
+                        <input className="md-6" placeholder="Enter Address" type="address"></input>
                     </Col>
+                    <Row>
+                        <input className="md-6" placeholder="Enter Price" type="price"></input>
+                    </Row>
                 </Row>
+            
                 <Row>
                     <Col>
-                        <div>
-                            <Button>CREATE OFFER</Button>
-                        </div>
-                        <div>
-                            <Button>ADD FEEDBACK</Button>
-                        </div>
+                        <input placeholder="Sellers Name" type="sellersName"></input>
                     </Col>
-                    <Col>
-                        <div>
-                            <Button>VIEW OFFERS</Button>
-                        </div>
-                        <div>
-                            <Button>VIEW FEEDBACK</Button>
-                        </div>
-                    </Col>
+                    <Row>
+                        <input placeholder="Seller Phone #" type="phoneNumber"></input>
+                    </Row>
                 </Row>
-            </Container>
+
+                <br></br>
+
+                <Col>
+                    <Row>
+                        <input className="col-md-4 text-center" placeholder="Sellers Email" type="sellersEmail" ></input>
+                    </Row>
+                </Col>
+
+                <Col>
+                    <Row className="justify-content-center">
+                        <Button className="text-center justify-content-center" href="/">Add Home</Button>
+                    </Row>
+                </Col>
+            </Container>        
         </Wrapper>
     )
-};
+}
 
 export default addHome;
-
-
