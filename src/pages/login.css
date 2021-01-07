@@ -54,3 +54,19 @@ form {
     margin-left: auto;
     margin-right: auto;
 }
+
+.addHouse {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.addhousecontent {
+    margin-top: 1%;
+    justify-content: right;
+    text-align: right;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}

@@ -13,43 +13,43 @@ class PageThree extends Component {
   // Map over this.state.projects and render a project component for each one
   render() {
     return (
-      <div className="addHouse">
-      <Wrapper> 
+      
+      <Wrapper>
+        <div className="addHouse"> 
         <Title>Add House</Title>
         <div class="houseimage"></div>
         <div id="button">
         <button>Add Image</button>
         </div>
+        <div className="addhousecontent">
         <form>
   <label>
     Address
     <input type="text" name="name" />
   </label>
-  <input type="submit" value="Submit" />
 </form>
 <form>
   <label>
     Owners
     <input type="text" name="name" />
   </label>
-  <input type="submit" value="Submit" />
 </form>
 <form>
   <label>
     Asking Price
     <input type="text" name="name" />
   </label>
-  <input type="submit" value="Submit" />
 </form>
 <form>
   <label>
     Contact
     <input type="text" name="name" />
   </label>
-  <input type="submit" value="Submit" />
 </form>
+<input type="submit" id="addhousesubmit" value="Submit" />
+</div>
+</div>
       </Wrapper>
-      </div>
     );
   }
 }
