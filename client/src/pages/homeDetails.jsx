@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 // import Placeholder from "../images/placeholder.png";
 
-import Wrapper from "../Wrapper";
+import Wrapper from "../components/Wrapper";
 
 const homeDetails = () => {
     return (

@@ -3,7 +3,7 @@ import Wrapper from "../components/Wrapper";
 import Title from "../components/Title";
 import projects from "../projects.json";
 
-class PageTwo extends Component {
+class AgentLogin extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     projects
@@ -28,4 +28,4 @@ class PageTwo extends Component {
   }
 }
 
-export default PageTwo;
+export default AgentLogin

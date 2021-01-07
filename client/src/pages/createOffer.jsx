@@ -1,7 +1,7 @@
 import {Row, Col, Button, Container} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Wrapper from "../../Wrapper";
+import Wrapper from "../components/Wrapper";
 
 const createOffer = () => {
     return (
