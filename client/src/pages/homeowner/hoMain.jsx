@@ -64,16 +64,10 @@ const hoMain = () => {
                 <Row>
                     <Col>
                         <div>
-                            <Button type="button" className="btn btn-primary" href="/createOffer">CREATE OFFER</Button>
-                        </div>
-                        <div>
                             <Button>ADD FEEDBACK</Button>
                         </div>
                     </Col>
                     <Col>
-                        <div>
-                            <Button>VIEW OFFERS</Button>
-                        </div>
                         <div>
                             <Button>VIEW FEEDBACK</Button>
                         </div>
