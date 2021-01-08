@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
     const  Offer = sequelize.define("Offer", {
-        DateOffered: {
+        dateOffered: {
             type: DataTypes.STRING,
             allowNull: false,
         },
