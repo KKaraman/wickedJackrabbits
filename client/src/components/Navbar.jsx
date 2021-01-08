@@ -27,7 +27,7 @@ class BootstrapNavbar extends React.Component{
                                     <Nav.Link href="/agentlogin">Agent Login</Nav.Link>
                                     <Nav.Link href="/createoffer">Create Offer</Nav.Link>
                                     <Nav.Link href="/addfeedback">Add Feedback</Nav.Link>
-                                    <Nav.Link href="/homeownermain">Main (homeowner)</Nav.Link>
+                                    <Nav.Link href="/homeownermain">My House</Nav.Link>
                                     <Nav.Link href="/agentmain">Main (agent)</Nav.Link>
 
                                     <NavDropdown title="Split DropDown Item" id="basic-nav-dropdown">
