@@ -19,6 +19,7 @@ import createOffer from "./pages/createOffer"
 import Wrapper from "./components/Wrapper"
 import BootstrapNavbar from "./components/Navbar";
 import BootstrapFooter from "./components/Footer";
+import addFeedback from "./pages/addFeedback/addFeedback";
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
             <Route exact path="/homedetails" component={ homeDetails } />
             <Route exact path="/addhome" component={ addHome } />
             <Route exact path="/createoffer" component={ createOffer } />
+            <Route exact path="/addfeedback" component={ addFeedback } />
             <Route path="/404" render={
               () => (
                 <h2>404: NOT A VALID URL PATH!</h2>
