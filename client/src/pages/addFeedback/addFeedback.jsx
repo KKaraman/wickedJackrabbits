@@ -5,6 +5,7 @@ import Wrapper from "../../components/Wrapper";
 import "./feedback.css";
 
 const addFeedback = () => {
+
         return (
             <Wrapper>
                 <Container>
@@ -48,6 +49,7 @@ const addFeedback = () => {
         )
     
     
+
 };
 
 export default addFeedback;

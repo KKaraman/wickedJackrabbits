@@ -1,7 +1,9 @@
 {
     "development": {
     "username": "root",
-    "password": "1July2018",
+
+    "password": "",
+
     "database": "sellify_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
