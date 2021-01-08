@@ -20,7 +20,8 @@ import Wrapper from "./components/Wrapper"
 import BootstrapNavbar from "./components/Navbar";
 import BootstrapFooter from "./components/Footer";
 import addFeedback from "./pages/addFeedback/addFeedback";
-
+import viewOffer from "./pages/viewOffer/viewOffer";
+import viewFeedback from "./pages/viewFeedback/viewFeedback"
 function App() {
 
   return (
@@ -41,6 +42,8 @@ function App() {
             <Route exact path="/addhome" component={ addHome } />
             <Route exact path="/createoffer" component={ createOffer } />
             <Route exact path="/addfeedback" component={ addFeedback } />
+            <Route exact path="/viewoffer" component={ viewOffer } />
+            <Route exact path="/viewfeedback" component={ viewFeedback } />
             <Route path="/404" render={
               () => (
                 <h2>404: NOT A VALID URL PATH!</h2>
