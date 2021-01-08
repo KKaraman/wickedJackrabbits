@@ -8,7 +8,7 @@ import './App.css';
 // different pages
 import MainPage from "./pages";
 import AgentLogin from "./pages/agentLogin";
-import SellerLogin from "./pages/sellerlogin"
+import SellerLogin from "./pages/sellerlogin";
 
 import addHome from "./pages/addHome"
 import SignUp from "./pages/signup";
@@ -18,7 +18,6 @@ import createOffer from "./pages/createOffer"
 // different components
 import Wrapper from "./components/Wrapper"
 import BootstrapNavbar from "./components/Navbar";
-import BootstrapFooter from "./components/Footer";
 
 function App() {
 
@@ -51,7 +50,6 @@ function App() {
           </Switch>
         </div>
       </Router>
-      <BootstrapFooter/>
     </Wrapper>
   );
 }
