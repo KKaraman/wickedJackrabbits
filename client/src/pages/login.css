@@ -33,7 +33,9 @@ margin-top: 10px;
     border-style: solid;
     border-color: black;
     border-width: 5px;
-
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 #button {
@@ -55,12 +57,15 @@ form {
     margin-right: auto;
 }
 
+<<<<<<< HEAD
 .addHouse {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 
+=======
+>>>>>>> 8f80f5309d4a50586f92d1cb02ee9fd199a4c6b8
 .addhousecontent {
     margin-top: 1%;
     justify-content: right;
@@ -69,4 +74,8 @@ form {
     margin-left: auto;
     margin-right: auto;
     display: inline-block;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8f80f5309d4a50586f92d1cb02ee9fd199a4c6b8
