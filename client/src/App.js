@@ -7,7 +7,7 @@ import './App.css';
 
 // different pages
 import MainPage from "./pages";
-import AgentLogin from "./pages/agentLogin";
+import AgentLogin from "./pages/agentlogin";
 import SellerLogin from "./pages/sellerlogin"
 
 import addHome from "./pages/addHome"
