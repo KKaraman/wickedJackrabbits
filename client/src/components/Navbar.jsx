@@ -23,10 +23,13 @@ class BootstrapNavbar extends React.Component{
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mr-auto">
                                     <Nav.Link href="/">Home Page</Nav.Link>
-                                    <Nav.Link href="/one">Add House</Nav.Link>
-                                    <Nav.Link href="/two">Agent Login</Nav.Link>
-                                    <Nav.Link href="/three">Seller Login</Nav.Link>
-                                    <Nav.Link href="/addhouse">Seller Login</Nav.Link>
+                                    <Nav.Link href="/addhome">Add House</Nav.Link>
+                                    <Nav.Link href="/agentlogin">Agent Login</Nav.Link>
+                                    <Nav.Link href="/createoffer">Create Offer</Nav.Link>
+                                    <Nav.Link href="/addfeedback">Add Feedback</Nav.Link>
+                                    <Nav.Link href="/homeownermain">Main (homeowner)</Nav.Link>
+                                    <Nav.Link href="/agentmain">Main (agent)</Nav.Link>
+
                                     <NavDropdown title="Split DropDown Item" id="basic-nav-dropdown">
                                         
                                         <NavDropdown.Item href= "https://www.google.com">Google Again</NavDropdown.Item>
