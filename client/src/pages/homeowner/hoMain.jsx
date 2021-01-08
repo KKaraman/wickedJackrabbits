@@ -1,43 +1,76 @@
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
+
+
+// import { Link, NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+// import "../App.css";
+
+// import Placeholder from "../images/placeholder.png";
+
 import Wrapper from "../../components/Wrapper";
 import "./homeOwner.css";
 
-const addFeedback = () => {
+const hoMain = () => {
     return (
         <Wrapper>
             <Container>
-                <Row >
-                    <Col>
-                        <h3 className="text-center justify-content-center">Add Feeback</h3> 
-                    </Col>
-                </Row>
-                <br/>
-
-                <Row id="feedbackChoices">
-                    <Col className="sm-6">
-                        <select>
-                            <option value="family">Family?</option>
-                            <option value="single">Single?</option>
-                        </select>
-                    </Col>
-                    <Col className="sm-6">
-                        <select >
-                            <option value="local">Local?</option>
-                            <option value="outofstate">Out of state?</option>
-                        </select>
-                    </Col>
-                </Row> 
-                <br/>
                 <Row>
                     <Col>
-                    <textarea name="feedback" rows="4" cols="35"></textarea>
+                        <Card>
+                            <Image>
+                                {/* INSERT DYNAMIC IMAGE OF HOME THAT WAS CLICKED ON HERE */}
+                            </Image>
+                            <Col>
+                                <div>
+                                    <p className="text-center">
+                                        Address: "dynamic address put here"
+                                    </p>
+                                </div>
+                            </Col>
+              <div className="homeownermain">
+                            <Col>
+                                <Row>
+                                    <Col id="priceCol">
+                                    <div>
+                                        <p>
+                                            Price
+                                            <p id="price">$$$$.$$</p>
+                                        </p>
+                                        
+                                    </div>
+                                    </Col>
+                                    <Col id="offersCol">
+                                    <div>
+                                        <p>
+                                            Offers
+                                            <p id="offer">$$$$.$$</p>
+                                        </p>
+                                    </div>
+                                    </Col>
+                                    <Col id="nameCol">
+                                    <div>
+                                        <p>
+                                            Sellers
+                                            <p id="sellerName">Johnsons</p>
+                                        </p>
+                                    </div>
+                                    </Col>
+                                </Row>
+                            </Col>
+                            </div>
+                        </Card>
                     </Col>
-                </Row>  
-                <br/>
-                <Row id="submitfeedback">
+                </Row>
+                <Row>
                     <Col>
-                        <Button href="/" className="text-center justifiy-content-center">Submit Feedback</Button>
+                        <div>
+                            <Button>ADD FEEDBACK</Button>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div>
+                            <Button>VIEW FEEDBACK</Button>
+                        </div>
                     </Col>
                 </Row>
             </Container>
@@ -45,4 +78,6 @@ const addFeedback = () => {
     )
 };
 
-export default addFeedback;
+export default hoMain;
+
+
