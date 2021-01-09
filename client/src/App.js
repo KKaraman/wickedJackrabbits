@@ -7,9 +7,8 @@ import './App.css';
 
 // different pages
 import MainPage from "./pages";
-import AgentLogin from "./pages/agentLogin";
-import SellerLogin from "./pages/sellerlogin";
-
+import AgentLogin from "./pages/agentlogin";
+import SellerLogin from "./pages/sellerlogin"
 import addHome from "./pages/addHome"
 import SignUp from "./pages/signup";
 import homeDetails from "./pages/homeDetails"
@@ -18,6 +17,12 @@ import createOffer from "./pages/createOffer"
 // different components
 import Wrapper from "./components/Wrapper"
 import BootstrapNavbar from "./components/Navbar";
+import BootstrapFooter from "./components/Footer";
+import addFeedback from "./pages/addFeedback/addFeedback";
+import viewOffer from "./pages/viewOffer/viewOffer";
+import viewFeedback from "./pages/viewFeedback/viewFeedback"
+import hoMain from "./pages/homeowner/hoMain.jsx";
+
 
 function App() {
 
@@ -38,6 +43,13 @@ function App() {
             <Route exact path="/homedetails" component={ homeDetails } />
             <Route exact path="/addhome" component={ addHome } />
             <Route exact path="/createoffer" component={ createOffer } />
+            <Route exact path="/addfeedback" component={ addFeedback } />
+
+            <Route exact path="/viewoffer" component={ viewOffer } />
+            <Route exact path="/viewfeedback" component={ viewFeedback } />
+
+            <Route exact path="/homeownermain" component={ hoMain } />
+
             <Route path="/404" render={
               () => (
                 <h2>404: NOT A VALID URL PATH!</h2>

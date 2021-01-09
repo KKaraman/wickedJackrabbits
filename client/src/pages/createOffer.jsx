@@ -44,7 +44,7 @@ const createOffer = () => {
                 </Row>
                 <Row>
                     <Col>
-                        <Button className="text-center justifiy-content-center">Submit offer</Button>
+                        <Button href="/" className="text-center justifiy-content-center" type="submit">Submit offer</Button>
                     </Col>
                 </Row>
             </Container>

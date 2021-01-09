@@ -1,5 +1,5 @@
 import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
-import API from "../utils/API"
+
 
 // import { Link, NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,21 +7,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 // import Placeholder from "../images/placeholder.png";
 
-import Wrapper from "../components/Wrapper";
-// import { useParams } from "react-router-dom";
-// import { useEffect, useState } from "react";
+import Wrapper from "../../components/Wrapper";
+import "./homeOwner.css";
 
-const homeDetails = () => {
-    // Not sure if this is where this useeffect is needed.
-    // const [offer, setOffer] = useState("")
-    
-    // const { id } = useParams()
-    // useEffect(() => {
-    //     API.getBook(id)
-    //     .then(res => setBook(res.data))
-    //     .catch(err => console.log(err));
-    // }, [])
-    
+const hoViewOffers = () => {
     return (
         <Wrapper>
             <Container>
@@ -34,35 +23,41 @@ const homeDetails = () => {
                             <Col>
                                 <div>
                                     <p className="text-center">
-                                        Address: {}
+                                        Address: "dynamic address put here"
                                     </p>
                                 </div>
                             </Col>
-              
-                            <Col size="md-2">
+              <div className="homeownermain">
+                            <Col>
                                 <Row>
+                                    <Col id="priceCol">
                                     <div>
-                                        <p className="">
-                                            price
+                                        <p>
+                                            Price
+                                            <p id="price">$$$$.$$</p>
+                                        </p>
+                                        
+                                    </div>
+                                    </Col>
+                                    <Col id="offersCol">
+                                    <div>
+                                        <p>
+                                            Offers
+                                            <p id="offer">$$$$.$$</p>
                                         </p>
                                     </div>
-              
-                                    <Col size="md-2">
-                                        <div>
-                                            <p className="text-center" >
-                                                offers
-                                            </p>
-                                        </div>
-                                        <Col size="md-2">
-                                            <div>
-                                                <p className="text-right">
-                                                    Sellers name
-                                                </p>
-                                            </div>
-                                        </Col>
+                                    </Col>
+                                    <Col id="nameCol">
+                                    <div>
+                                        <p>
+                                            Sellers
+                                            <p id="sellerName">Johnsons</p>
+                                        </p>
+                                    </div>
                                     </Col>
                                 </Row>
                             </Col>
+                            </div>
                         </Card>
                     </Col>
                 </Row>
@@ -72,15 +67,15 @@ const homeDetails = () => {
                             <Button type="button" className="btn btn-primary" href="/createOffer">CREATE OFFER</Button>
                         </div>
                         <div>
-                            <Button href="/addfeedback">ADD FEEDBACK</Button>
+                            <Button>ADD FEEDBACK</Button>
                         </div>
                     </Col>
                     <Col>
                         <div>
-                            <Button href="/viewoffer">VIEW OFFERS</Button>
+                            <Button type="button" className="btn btn-primary" href="./hoViewOffers.jsx">VIEW OFFERS</Button>
                         </div>
                         <div>
-                            <Button href="/viewfeedback">VIEW FEEDBACK</Button>
+                            <Button>VIEW FEEDBACK</Button>
                         </div>
                     </Col>
                 </Row>
@@ -89,6 +84,4 @@ const homeDetails = () => {
     )
 };
 
-export default homeDetails;
-
-
+export default hoViewOffers;
