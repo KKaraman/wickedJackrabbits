@@ -1,13 +1,13 @@
 import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
-import API from "../utils/API"
+import API from "../../utils/API"
 
 // import { Link, NavLink } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./feedback/node_modules/bootstrap/dist/css/bootstrap.min.css";
 // import "../App.css";
 
 // import Placeholder from "../images/placeholder.png";
 
-import Wrapper from "../components/Wrapper";
+import Wrapper from "../../components/Wrapper";
 // import { useParams } from "react-router-dom";
 // import { useEffect, useState } from "react";
 
