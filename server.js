@@ -19,6 +19,7 @@ app.use(passport.session());
 require("./routes/api-routes")(app);
 require("./routes/offer-routes")(app);
 require("./routes/feedback-routes")(app);
+require("./routes/home-routes")(app);
 
 db.sequelize.sync({ force: false }).then(() => {
 

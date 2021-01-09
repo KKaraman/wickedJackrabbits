@@ -33,40 +33,8 @@ module.exports = function (app) {
       });
   });
  
-  app.get("/api/getHome/:id", (request, response) => {
+  
 
-    db.Home.findOne({ where: { id: request.params.id }, include: [{ model: db.Feedback }, { model: db.Offer }] }).then(result => {
-      console.log("This is the Home result", result);
-      response.json({ result })
-
-    }).catch(err => {
-      console.log("Get home wasnt completed");
-      response.status(500).json(err);
-    })
-  });
-
-  app.post("/api/createHome", function (req, res) {
-    db.User.create({
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      password: req.body.password,
-      AgentId: req.body.AgentId
-    })
-      .then(function () {
-        db.Home.create({
-          address: req.body.address,
-          listingPrice: req.body.listingPrice,
-          dateListed: req.body.dateListed,
-          UserId: req.body.UserId
-        })
-      }).then(function(){
-        res.sendStatus(200)
-      })
-      .catch(function (err) {
-        res.status(401).json(err);
-      });
-  });
 
 };
 
