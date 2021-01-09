@@ -2,27 +2,27 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './pages/feedback/node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 // different pages
 import MainPage from "./pages";
-import AgentLogin from "./pages/agentlogin";
+import AgentLogin from "./pages/agentLogin";
 import SellerLogin from "./pages/sellerlogin"
 
 import addHome from "./pages/addHome"
 import SignUp from "./pages/signup";
-import homeDetails from "./pages/homeDetails"
+import homeDetails from "./pages/home/homeDetails"
 import createOffer from "./pages/createOffer"
 
 // different components
 import Wrapper from "./components/Wrapper"
 import BootstrapNavbar from "./components/Navbar";
 import BootstrapFooter from "./components/Footer";
-import addFeedback from "./pages/addFeedback/addFeedback";
-import viewOffer from "./pages/viewOffer/viewOffer";
-import viewFeedback from "./pages/viewFeedback/viewFeedback"
-import hoMain from "./pages/homeowner/hoMain.jsx";
+import addFeedback from "./pages/feedback/addFeedback";
+import viewOffer from "./pages/offer/viewOffer";
+import viewFeedback from "./pages/feedback/viewFeedback"
+import hoMain from "./pages/home/hoMain.jsx";
 
 
 function App() {

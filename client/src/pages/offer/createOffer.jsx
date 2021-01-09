@@ -1,5 +1,5 @@
 import {Row, Col, Button, Container} from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./feedback/node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 import Wrapper from "../components/Wrapper";
 
