@@ -9,10 +9,10 @@ import './App.css';
 import MainPage from "./pages";
 import AgentLogin from "./pages/agentLogin";
 import SellerLogin from "./pages/sellerlogin"
-import addHome from "./pages/addHome"
+import addHome from "./pages/home/addHome"
 import SignUp from "./pages/signup";
 import homeDetails from "./pages/home/homeDetails"
-import createOffer from "./pages/createOffer"
+import createOffer from "./pages/offer/createOffer"
 
 // different components
 import Wrapper from "./components/Wrapper"
