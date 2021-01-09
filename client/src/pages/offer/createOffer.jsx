@@ -1,5 +1,5 @@
 import {Row, Col, Button, Container} from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./feedback/node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 import Wrapper from "../components/Wrapper";
 
@@ -44,7 +44,7 @@ const createOffer = () => {
                 </Row>
                 <Row>
                     <Col>
-                        <Button href="/" className="text-center justifiy-content-center">Submit offer</Button>
+                        <Button href="/" className="text-center justifiy-content-center" type="submit">Submit offer</Button>
                     </Col>
                 </Row>
             </Container>

@@ -1,15 +1,27 @@
 import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
-
+import API from "../../utils/API"
 
 // import { Link, NavLink } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./feedback/node_modules/bootstrap/dist/css/bootstrap.min.css";
 // import "../App.css";
 
 // import Placeholder from "../images/placeholder.png";
 
-import Wrapper from "../components/Wrapper";
+import Wrapper from "../../components/Wrapper";
+// import { useParams } from "react-router-dom";
+// import { useEffect, useState } from "react";
 
 const homeDetails = () => {
+    // Not sure if this is where this useeffect is needed.
+    // const [offer, setOffer] = useState("")
+    
+    // const { id } = useParams()
+    // useEffect(() => {
+    //     API.getBook(id)
+    //     .then(res => setBook(res.data))
+    //     .catch(err => console.log(err));
+    // }, [])
+    
     return (
         <Wrapper>
             <Container>
@@ -22,7 +34,7 @@ const homeDetails = () => {
                             <Col>
                                 <div>
                                     <p className="text-center">
-                                        Address: "dynamic address put here"
+                                        Address: {}
                                     </p>
                                 </div>
                             </Col>
@@ -60,15 +72,15 @@ const homeDetails = () => {
                             <Button type="button" className="btn btn-primary" href="/createOffer">CREATE OFFER</Button>
                         </div>
                         <div>
-                            <Button>ADD FEEDBACK</Button>
+                            <Button href="/addfeedback">ADD FEEDBACK</Button>
                         </div>
                     </Col>
                     <Col>
                         <div>
-                            <Button>VIEW OFFERS</Button>
+                            <Button href="/viewoffer">VIEW OFFERS</Button>
                         </div>
                         <div>
-                            <Button>VIEW FEEDBACK</Button>
+                            <Button href="/viewfeedback">VIEW FEEDBACK</Button>
                         </div>
                     </Col>
                 </Row>
