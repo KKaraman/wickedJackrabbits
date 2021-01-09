@@ -2,22 +2,21 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 
-import './pages/feedback/node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 // different pages
-import MainPage from "./pages";
-import AgentLogin from "./pages/agentLogin";
+import MainPage from "./pages/index";
+import AgentLogin from "./pages/agentlogin";
 import SellerLogin from "./pages/sellerlogin"
-import addHome from "./pages/addHome"
+import addHome from "./pages/home/addHome"
 import SignUp from "./pages/signup";
 import homeDetails from "./pages/home/homeDetails"
-import createOffer from "./pages/createOffer"
+import createOffer from "./pages/offer/createOffer"
 
 // different components
 import Wrapper from "./components/Wrapper"
 import BootstrapNavbar from "./components/Navbar";
-import BootstrapFooter from "./components/Footer";
 import addFeedback from "./pages/feedback/addFeedback";
 import viewOffer from "./pages/offer/viewOffer";
 import viewFeedback from "./pages/feedback/viewFeedback"
