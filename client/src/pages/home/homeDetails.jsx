@@ -2,7 +2,7 @@ import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
 import API from "../../utils/API"
 
 // import { Link, NavLink } from "react-router-dom";
-import "./feedback/node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 // import "../App.css";
 
 // import Placeholder from "../images/placeholder.png";

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
-import "./feedback/node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Wrapper from "../components/Wrapper";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Wrapper from "../../components/Wrapper";
 import axios from "axios";
 
 
