@@ -9,7 +9,6 @@ import './App.css';
 import MainPage from "./pages";
 import AgentLogin from "./pages/agentlogin";
 import SellerLogin from "./pages/sellerlogin"
-
 import addHome from "./pages/addHome"
 import SignUp from "./pages/signup";
 import homeDetails from "./pages/homeDetails"
@@ -63,7 +62,6 @@ function App() {
           </Switch>
         </div>
       </Router>
-      <BootstrapFooter/>
     </Wrapper>
   );
 }
