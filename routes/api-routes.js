@@ -2,7 +2,7 @@
 const { sequelize } = require("../models");
 const db = require("../models");
 //const offer = require("../models/offer");
-// var passport = require("../config/passport");
+var passport = require("../config/passport");
 
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -33,7 +33,17 @@ module.exports = function (app) {
       });
   });
  
-  
+  app.post("/api/login", passport.authenticate("local"), (req, res) => {
+    // Sending back a password, even a hashed password, isn't a good idea
+    res.json(
+      //   {
+      //     email: req.user.email,
+      //     password: req.user.password
+      // }
+      req.user
+
+    );
+  });
 
 
 };
