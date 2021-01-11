@@ -43,6 +43,8 @@ function App() {
             <Route exact path="/addhome" component={ addHome } />
             <Route exact path="/createoffer" component={ createOffer } />
             <Route exact path="/addfeedback" component={ addFeedback } />
+            <Route exact path="/hoMain" component={ addFeedback } />
+            
 
             <Route exact path="/viewoffer" component={ viewOffer } />
             <Route exact path="/viewfeedback" component={ viewFeedback } />
