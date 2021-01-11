@@ -48,7 +48,8 @@ function App() {
             <Route exact path="/viewfeedback" component={ viewFeedback } />
 
             <Route exact path="/homeownermain" component={ hoMain } />
-
+            <Route exact path="/signupagent" component={ SignUp } />
+            <Route exact path="/signupseller" component={ SignUp } />
             <Route path="/404" render={
               () => (
                 <h2>404: NOT A VALID URL PATH!</h2>
