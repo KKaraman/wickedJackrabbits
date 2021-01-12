@@ -4,9 +4,10 @@ const db = require("../models");
 //const offer = require("../models/offer");
 var passport = require("../config/passport");
 var isAuthenticated = require("../config/middleware/isAuthenticated");
+var isAgent = require("../config/middleware/isAgent");
 
 module.exports = function (app) {
-  app.get("/api/home_feedback/:homeId", function (req, res) {
+  app.get("/api/home_feedback/:homeId", isAuthenticated, function (req, res) {
 
     // get request for home id
     // find all offers for that home id
@@ -30,7 +31,7 @@ module.exports = function (app) {
 
   });
 
-  app.post("/api/createFeedback", function (req, res) {
+  app.post("/api/createFeedback", isAuthenticated, isAgent, function (req, res) {
     console.log(req.body);
     const query = {
       homeId: req.body.id
@@ -62,7 +63,7 @@ module.exports = function (app) {
 
   });
 
-  app.put("/api/updateFeedback", (req, res)=>{
+  app.put("/api/updateFeedback", isAuthenticated, isAgent, (req, res)=>{
     db.Feedback.update(req.body,{
       where:{
         id: req.body.id
@@ -73,7 +74,7 @@ module.exports = function (app) {
     })
   })
 
-  app.delete("/api/deleteFeedback/:id", (req, res)=>{
+  app.delete("/api/deleteFeedback/:id", isAuthenticated, isAgent, (req, res)=>{
     db.Feedback.destroy({
       where:{
         id: req.params.id
