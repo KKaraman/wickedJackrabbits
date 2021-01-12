@@ -27,7 +27,7 @@ class SignUp extends Component {
               <label for="exampleInputPassword1">Password</label>
               <input type="password" className="form-control" id="password-input" placeholder="Password"/>
             </div>
-            <div style="display:none" id="alert" className="alert alert-danger" role="alert">
+            <div id="alert" className="alert alert-danger" role="alert">
               <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
               <span className="sr-only">Error:</span> <span className="msg"></span>
             </div>

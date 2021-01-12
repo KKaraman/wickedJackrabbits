@@ -1,82 +1,65 @@
-import {Row, Col, Button, Container} from "react-bootstrap";
+import { Row, Col, Button, Container } from "react-bootstrap";
+import React, {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
 import "./offer.css";
 
-import Wrapper from "../../components/Wrapper";
 
 const createOffer = () => {
+    const [dateOffered, setDateOffered] = useState("")
+    const [name, setName] = useState("")
+    const [amount, setAmount] = useState("")
+    const [closingDate, setClosingDate] = useState("")
+    const [moneyType, setMoneyType] = useState("")
+    const submitOffer = () => {
+        axios.post("/api/createOffer", {
+            dateOffered: dateOffered,
+            name: name,
+            amount: amount,
+            closingDate: closingDate,
+            moneyType: moneyType,
+        }).then(() => {
+        res.sendStatus(200)
+        })
+    }
     return (
-        <Wrapper>
+       
             <Container>
             <div className="offerWrap">
                 <Row>
-                    <Col className="colName">
-                        Name
-                        <Col>
-                             <input className="txtarea" id="offerName" placeholder="" type="offer"></input>
-                        </Col>
-                    </Col>
+                   <Col>
+                   {/* <input onChange={(e) => {setDateOffered(e.target.value)}} className="txtarea" type="text" placeholder="Date Offered"/>
+                   <p></p> */}
+                    Buyer's Name
+                   <input onChange={(e) => {setName(e.target.value)}} className="txtarea" type="text" placeholder="name"/>
+                   <p></p>
 
-                    <Col className="colAmount">
-                        Amount
-                        <Col>
-                            <input className="txtarea" id="amount" placeholder="" type="offer"></input>
-                        </Col>
-                    </Col>
+                   Offer Amount
+                   <input onChange={(e) => {setAmount(e.target.value)}} className="txtarea" type="text" placeholder="amount"/>
+                   <p></p>
 
-                    <Col className="colCash">
-                        Cash?
-                        <Col>
-                            <select className="txtarea" placeholder="" type="offer">
-                                <option value="yes">Yes</option>
-                                <option value="no">No</option>
-                            </select>
-                        </Col>  
-                    </Col>  
-                </Row>
-                <Row><p></p></Row>
-                <Row>
-                    <div class="offerQuestion"> 
-                When is the earliest you could close?
-                </div>
-                    <Col>
-                        <Col>
-                             <input className="txtarea" class="submitOffer" type="date"></input>
-                        </Col>
-                    </Col>
+                   Earliest Closing Date
+                   <input onChange={(e) => {setClosingDate(e.target.value)}} className="txtarea" type="date" placeholder="Closing Date"/>
+                     <p></p>   
+                       
+                   <p className="payType">Payment Type 
+                   <select onChange={(e) => {setMoneyType(e.target.value)}} className="txtarea" type="offer" placeholder="Money Type">
+                        <option className="txtarea" value="cash">Cash</option>
+                        <option className="txtarea" value="loan">Bank Loan</option>
+                    </select>
+                    </p>
+                    <p>
+                        <Button onClick={submitOffer} href="/" type="submit">Submit offer</Button>
+                        </p>
 
-                </Row>
-{/* 
-                <Row>
-                    <Col>
-                        <input className="sm-4" placeholder="term" type="term"></input>
-                    </Col>
-                    <Col>
-                        <select className="sm-4">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                    </Col>
-                </Row>
 
-                <Row>
-                    <Col>
-                        Notes
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <textarea></textarea>
-                    </Col>
-                </Row> */}
-                <Row>
-                    <Col>
-                        <Button href="/" className="text-center justifiy-content-center" type="submit">Submit offer</Button>
-                    </Col>
+                   </Col>
+                
+                    
                 </Row>
                 </div>
             </Container>
-        </Wrapper>
+        
     )
 }
 
