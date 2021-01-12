@@ -5,44 +5,49 @@ import Wrapper from "../../components/Wrapper";
 import "./feedback.css";
 
 const addFeedback = () => {
+    const [dateShown, setDateShown] = useState("")
+    const [name, setName] = useState("")
+    const [local, setLocal] = useState("")
+    const [family, setFamily] = useState("")
+    const [timeline, setTimeline] = useState("")
+    const [liked, setLiked] = useState("")
+    const [notLike, setNotLike] = useState("")
+    const [estimatedInterest, setEstimatedInterest] = useState("")
+    const submitFeedback = () => {
+        axios.post("/api/createFeedback", {
+            dateShown: dateShown,
+            name: name,
+            local: local,
+            family: family,
+            timeline: timeline,
+            liked: liked,
+            notLike: notLike,
+            estimatedInterest: estimatedInterest,
+        }).then(() => {
+        res.sendStatus(200)
+        })
+    }
 
         return (
             <Wrapper>
                 <Container>
-                    <Row >
-                        <Col>
-                            <h3 className="text-center justify-content-center">Add Feeback</h3> 
-                        </Col>
-                    </Row>
-                    <br/>
-                    <Form>
-                        <Row id="feedbackChoices">
-                            <Col className="sm-6">
-                                <select>
-                                    <option value="family">Family?</option>
-                                    <option value="single">Single?</option>
-                                </select>
-                            </Col>
-                            <Col className="sm-6">
-                                <select >
-                                    <option value="local">Local?</option>
-                                    <option value="outofstate">Out of state?</option>
-                                </select>
-                            </Col>
-                        </Row> 
-                        <br/>
-                        <Row>
-                            <Col>
-                                <textarea className="form-control" name="feedback" rows="4" cols="35" ></textarea>
-                            </Col>
-                        </Row>  
-                        <br/>
-                        <Row>
-                            <Col>
-                                <Button href="/" className="text-center justifiy-content-center" type="submit">Submit Feedback</Button>
-                            </Col>
-                        </Row>
-                    </Form>    
+                <Row>
+                   <Col sm={6}>
+                   <input onChange={(e) => {setDateShown(e.target.value)}} type="text" placeholder="Date Shown"/>
+                   <input onChange={(e) => {setName(e.target.value)}} type="text" placeholder="name"/>
+                   <input onChange={(e) => {setLocal(e.target.value)}} type="text" placeholder="Local"/>
+                   <input onChange={(e) => {setFamily(e.target.value)}} type="text" placeholder="Family?"/>
+                   <input onChange={(e) => {setTimeline(e.target.value)}} type="text" placeholder="Timeline"/>
+                   <input onChange={(e) => {setLiked(e.target.value)}} type="text" placeholder="Liked?"/>
+                   <input onChange={(e) => {setNotLike(e.target.value)}} type="text" placeholder="Not Liked?"/>
+                   <input onChange={(e) => {setEstimatedInterest(e.target.value)}} type="text" placeholder="Estimated Interest"/>
+                   </Col>
+                
+                    <Col>
+                        <Button onClick={submitFeedback} href="/" type="submit">Submit offer</Button>
+                    </Col>
+                </Row>
+
                 </Container>
             </Wrapper>
             
@@ -53,3 +58,5 @@ const addFeedback = () => {
 };
 
 export default addFeedback;
+
+   

@@ -23,7 +23,7 @@ const addHome = () => {
             listingPrice: price,
             dateListed: "10/12/20",
         }).then(() => {
-            
+        res.sendStatus(200)
         })
     }
     return (

@@ -1,54 +1,44 @@
-import {Row, Col, Button, Container} from "react-bootstrap";
+import { Row, Col, Button, Container } from "react-bootstrap";
+import React, {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
 
-import Wrapper from "../../components/Wrapper";
 
 const createOffer = () => {
+    const [dateOffered, setDateOffered] = useState("")
+    const [name, setName] = useState("")
+    const [amount, setAmount] = useState("")
+    const [closingDate, setClosingDate] = useState("")
+    const [moneyType, setMoneyType] = useState("")
+    const submitOffer = () => {
+        axios.post("/api/createOffer", {
+            dateOffered: dateOffered,
+            name: name,
+            amount: amount,
+            closingDate: closingDate,
+            moneyType: moneyType,
+        }).then(() => {
+        res.sendStatus(200)
+        })
+    }
     return (
-        <Wrapper>
+       
             <Container>
                 <Row>
+                   <Col sm={6}>
+                   <input onChange={(e) => {setDateOffered(e.target.value)}} type="text" placeholder="Date Offered"/>
+                   <input onChange={(e) => {setName(e.target.value)}} type="text" placeholder="name"/>
+                   <input onChange={(e) => {setAmount(e.target.value)}} type="text" placeholder="amount"/>
+                   <input onChange={(e) => {setClosingDate(e.target.value)}} type="text" placeholder="Closing Date"/>
+                   <input onChange={(e) => {setMoneyType(e.target.value)}} type="text" placeholder="Money Type"/>
+                   </Col>
+                
                     <Col>
-                        price
-                    </Col>
-                    <Col>
-                        term
-                    </Col>
-                    <Col>
-                        cash?
-                    </Col>   
-                </Row>
-                <Row>
-                    <Col>
-                        <input className="sm-4" placeholder="price offer" type="offer"></input>
-                        
-                        <input className="sm-4" placeholder="term" type="term"></input>
-                    </Col>
-                    <Col>
-                        <select className="sm-4">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                    </Col>
-                </Row>
-
-                <Row>
-                    <Col>
-                        Notes
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <textarea></textarea>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <Button href="/" className="text-center justifiy-content-center" type="submit">Submit offer</Button>
+                        <Button onClick={submitOffer} href="/" type="submit">Submit offer</Button>
                     </Col>
                 </Row>
             </Container>
-        </Wrapper>
+        
     )
 }
 
