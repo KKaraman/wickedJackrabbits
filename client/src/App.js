@@ -38,7 +38,6 @@ function App() {
 
             <Route exact path="/sellerlogin" component= { SellerLogin } />
             <Route exact path="/agentlogin" component={ AgentLogin } />
-            <Route exact path="/homedetails" component={ homeDetails } />
             <Route exact path="/addhome" component={ addHome } />
             <Route exact path="/createoffer" component={ createOffer } />
             <Route exact path="/viewoffer" component={ viewOffer } />

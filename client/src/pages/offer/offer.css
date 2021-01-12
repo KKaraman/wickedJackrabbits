@@ -1,48 +1,33 @@
+.colName {
+
+}
+
+
 .offerWrap {
     font-size: larger;
-    width: min-content;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: grid ;
     grid-template-columns: min-content;
+    margin-left: 5px;
     text-align: center;
-    align-content: center;
 }
-
-.txtarea {
-    border: 1px black solid;
-    
-}
-
-/* 
-#ptype {
-    padding: 25px;
-    margin-left: 
-} */
-
-/* .offermidwrap {
-    margin-left: auto;
-    margin-right: auto;
-} */
-
 /* 
 .submitOffer {
     margin-top: 10px;
     margin-bottom: 15px;
     border: 1px solid black;
 }
-
 .offerQuestion {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
-
 #amount {
     width: 200%;
     margin-left: -50%;
 }
-
 #offerName {
     width: 150%;
     margin-left: -25%;
