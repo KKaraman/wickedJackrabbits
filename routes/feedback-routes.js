@@ -2,7 +2,8 @@
 const { sequelize } = require("../models");
 const db = require("../models");
 //const offer = require("../models/offer");
-// var passport = require("../config/passport");
+var passport = require("../config/passport");
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function (app) {
   app.get("/api/home_feedback/:homeId", function (req, res) {

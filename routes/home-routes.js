@@ -2,7 +2,9 @@
 const { sequelize } = require("../models");
 const db = require("../models");
 //const offer = require("../models/offer");
-// var passport = require("../config/passport");
+var passport = require("../config/passport");
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+var isAgent = require("../config/middleware/isAgent");
 
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -37,7 +39,7 @@ module.exports = function (app) {
     })
   });
 
-  app.post("/api/createHome", function (req, res) {
+  app.post("/api/createHome", isAuthenticated, isAgent, function (req, res) {
     db.User.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
