@@ -25,20 +25,14 @@ class BootstrapNavbar extends React.Component{
                                     <Nav.Link href="/">Home Page</Nav.Link>
                                     <Nav.Link href="/addhome">Add House</Nav.Link>
                                     <Nav.Link href="/agentlogin">Agent Login</Nav.Link>
+                                    <Nav.Link href="/sellerlogin">Seller Login</Nav.Link>
                                     <Nav.Link href="/createoffer">Create Offer</Nav.Link>
                                     <Nav.Link href="/addfeedback">Add Feedback</Nav.Link>
                                     <Nav.Link href="/homeownermain">My House</Nav.Link>
                                     <Nav.Link href="/agentmain">Main (agent)</Nav.Link>
-
-                                    <NavDropdown title="Split DropDown Item" id="basic-nav-dropdown">
-                                        
-                                        <NavDropdown.Item href= "https://www.google.com">Google Again</NavDropdown.Item>
-                                        <NavDropdown.Divider />
-                                        <NavDropdown.Item href="https://www.yahoo.com">Yahoo</NavDropdown.Item>
-                
-                                        
-                                        
-                                    </NavDropdown>
+                                    <Nav.Link href="/signupagent">SignUp (agent)</Nav.Link>
+                                    <Nav.Link href="/signupseller">Signup (seller)</Nav.Link>
+                                    <button id="logout">Log Out</button>
                                     </Nav>
                                     {/* <Form inline>
                                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
