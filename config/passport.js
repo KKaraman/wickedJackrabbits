@@ -18,9 +18,26 @@ passport.use(new LocalStrategy({
         //console.log(dbUser)
         // If there's no user with the given email
         if (!dbUser) {
-            return done(null, false, {
-                message: "Incorrect email."
-            });
+            return db.User.findOne({
+                where: {
+                    email: email
+                }
+            }).then(dbSeller => {
+                if(!dbSeller){
+                return done(null, false, {
+                    message: "Incorrect email."
+                });   
+                }
+                else if (!dbSeller.validatePassword(password)) {
+                    return done(null, false, {
+                        message: "Incorrect password."
+                    });
+                }
+                else{
+                    return done(null, dbSeller);
+                }  
+            })
+            
         }
         // If there is a user with the given email, but the password the user gives us is incorrect
         else if (!dbUser.validatePassword(password)) {
@@ -28,8 +45,11 @@ passport.use(new LocalStrategy({
                 message: "Incorrect password."
             });
         }
+       
         // If none of the above, return the user
-        return done(null, dbUser);
+        else{
+            return done(null, dbUser);
+        }
     });
 }));
 
