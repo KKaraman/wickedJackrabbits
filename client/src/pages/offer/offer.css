@@ -19,18 +19,15 @@
     margin-bottom: 15px;
     border: 1px solid black;
 }
-
 .offerQuestion {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
-
 #amount {
     width: 200%;
     margin-left: -50%;
 }
-
 #offerName {
     width: 150%;
     margin-left: -25%;
