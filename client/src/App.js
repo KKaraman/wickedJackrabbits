@@ -11,7 +11,6 @@ import AgentLogin from "./pages/agentlogin";
 import SellerLogin from "./pages/sellerlogin"
 import addHome from "./pages/home/addHome"
 import SignUp from "./pages/signup";
-import homeDetails from "./pages/home/homeDetails"
 import createOffer from "./pages/offer/createOffer"
 
 // different components
@@ -33,25 +32,23 @@ function App() {
 
           {/* Router cannot have more than one single child element */}
           <Switch>
-          <Route exact path="/test" component= { SignUp } />
-
+            <Route exact path="/test" component={SignUp} />
             <Route exact path="/" component={MainPage} />
             {/* Render this only if the first route doesnt match */}
+
             <Route exact path="/sellerlogin" component= { SellerLogin } />
             <Route exact path="/agentlogin" component={ AgentLogin } />
             <Route exact path="/homedetails" component={ homeDetails } />
             <Route exact path="/addhome" component={ addHome } />
             <Route exact path="/createoffer" component={ createOffer } />
-            <Route exact path="/addfeedback" component={ addFeedback } />
-            <Route exact path="/hoMain" component={ addFeedback } />
-            
-
             <Route exact path="/viewoffer" component={ viewOffer } />
             <Route exact path="/viewfeedback" component={ viewFeedback } />
-
+            <Route exact path="/addfeedback" component={ addFeedback } />
+            <Route exact path="/hoMain" component={ addFeedback } />
             <Route exact path="/homeownermain" component={ hoMain } />
             <Route exact path="/signupagent" component={ SignUp } />
             <Route exact path="/signupseller" component={ SignUp } />
+
             <Route path="/404" render={
               () => (
                 <h2>404: NOT A VALID URL PATH!</h2>
