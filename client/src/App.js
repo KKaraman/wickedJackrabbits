@@ -35,14 +35,19 @@ function App() {
             <Route exact path="/test" component={SignUp} />
             <Route exact path="/" component={MainPage} />
             {/* Render this only if the first route doesnt match */}
-            <Route exact path="/sellerlogin" component={SellerLogin} />
-            <Route exact path="/agentlogin" component={AgentLogin} />
-            <Route exact path="/addhome" component={addHome} />
-            <Route exact path="/createoffer" component={createOffer} />
-            <Route exact path="/addfeedback" component={addFeedback} />
-            <Route exact path="/viewoffer" component={viewOffer} />
-            <Route exact path="/viewfeedback" component={viewFeedback} />
-            <Route exact path="/homeownermain" component={hoMain} />
+
+            <Route exact path="/sellerlogin" component= { SellerLogin } />
+            <Route exact path="/agentlogin" component={ AgentLogin } />
+            <Route exact path="/homedetails" component={ homeDetails } />
+            <Route exact path="/addhome" component={ addHome } />
+            <Route exact path="/createoffer" component={ createOffer } />
+            <Route exact path="/viewoffer" component={ viewOffer } />
+            <Route exact path="/viewfeedback" component={ viewFeedback } />
+            <Route exact path="/addfeedback" component={ addFeedback } />
+            <Route exact path="/hoMain" component={ addFeedback } />
+            <Route exact path="/homeownermain" component={ hoMain } />
+            <Route exact path="/signupagent" component={ SignUp } />
+            <Route exact path="/signupseller" component={ SignUp } />
 
             <Route path="/404" render={
               () => (

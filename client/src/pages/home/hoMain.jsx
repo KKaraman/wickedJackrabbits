@@ -33,46 +33,79 @@ const hoMain = () => {
                                     <Col id="priceCol">
                                     <div>
                                         <p>
-                                            Price
-                                            <p id="price">$$$$.$$</p>
+                                        Listed Date
+                                            <p id="homeListed">1/1/2021</p>
                                         </p>
                                         
                                     </div>
+                                    <Col id="priceCol">
+                                    <div>
+                                        <p>
+                                            Total Showings
+                                            <p id="totalShowings">5</p>
+                                        </p>
+                                        
+                                    </div>
+                                    <Col id="nameCol">
+                                    <div>
+                                        <p>
+                                        Sellers
+                                            <p id="sellers">Johnsons</p>
+                                        </p>
+                                    </div>
+                                    
+                                    </Col>
+                                    </Col>
                                     </Col>
                                     <Col id="offersCol">
                                     <div>
                                         <p>
-                                            Offers
-                                            <p id="offer">$$$$.$$</p>
+                                            Price
+                                            <p id="price">$310,500.00</p>
                                         </p>
                                     </div>
-                                    </Col>
+                                    <Col id="offersCol">
+                                    <div>
+                                        <p>
+                                            Upcoming Showings
+                                            <p id="upcomingShowings">2</p>
+                                        </p>
+                                    </div>
                                     <Col id="nameCol">
                                     <div>
                                         <p>
-                                            Sellers
-                                            <p id="sellerName">Johnsons</p>
+                                            Total Offers  
+                                            <p id="offers">3</p>
                                         </p>
                                     </div>
                                     </Col>
+                                    </Col>
+                                    </Col>
+                                   
+                                </Row>
+                            </Col>
+                            <Col>
+                                <Row>
                                 </Row>
                             </Col>
                             </div>
                         </Card>
                     </Col>
                 </Row>
+                <div class="feedback">
                 <Row>
                     <Col>
-                        <div>
+                
                             <Button>ADD FEEDBACK</Button>
-                        </div>
+
                     </Col>
                     <Col>
-                        <div>
+
                             <Button>VIEW FEEDBACK</Button>
-                        </div>
+
                     </Col>
                 </Row>
+                </div>
             </Container>
         </Wrapper>
     )
