@@ -2,8 +2,8 @@ import React from 'react'
 // import {
 //     BrowserRouter as Router,
 //     } from "react-router-dom";
-import { Navbar,Nav,NavDropdown, Container, Row, Col} from 'react-bootstrap'
-
+import { Navbar,Nav,NavDropdown, Container, Row, Col} from 'react-bootstrap';
+import "./components.css";
 //import resume
 // import WorkResume from "../images/keremKaraman_workResume";
 
@@ -17,8 +17,9 @@ class BootstrapNavbar extends React.Component{
                 <Row>
                     <Col>
                         {/* <Router> */}
-                            <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
-                                <Navbar.Brand href="/">Wicked Jackrabbits</Navbar.Brand>
+                        <div id="navbarId">
+                            <Navbar expand="lg" sticky="top">
+                                <Navbar.Brand id="navTitle" href="/">Sellify</Navbar.Brand>
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mr-auto">
@@ -40,6 +41,7 @@ class BootstrapNavbar extends React.Component{
                                     </Form> */}
                                 </Navbar.Collapse>
                             </Navbar>
+                            </div>
                             <br />
                             {/* <Switch>
                                 <Route exact path="/" component= { MainPage }>
