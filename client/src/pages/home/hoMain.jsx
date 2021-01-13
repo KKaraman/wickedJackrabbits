@@ -11,6 +11,7 @@ import Wrapper from "../../components/Wrapper";
 import "./homeOwner.css";
 
 const hoMain = () => {
+    // Do a get call to the /getHomes:id with the agent id. 
     return (
         <Wrapper>
             <Container>
@@ -27,84 +28,84 @@ const hoMain = () => {
                                     </p>
                                 </div>
                             </Col>
-              <div className="homeownermain">
-                            <Col>
-                                <Row>
-                                    <Col id="priceCol">
-                                    <div>
-                                        <p>
-                                        Listed Date
+                            <div className="homeownermain">
+                                <Col>
+                                    <Row>
+                                        <Col id="priceCol">
+                                            <div>
+                                                <p>
+                                                    Listed Date
                                             <p id="homeListed">1/1/2021</p>
-                                        </p>
-                                        
-                                    </div>
-                                    <Col id="priceCol">
-                                    <div>
-                                        <p>
-                                            Total Showings
+                                                </p>
+
+                                            </div>
+                                            <Col id="priceCol">
+                                                <div>
+                                                    <p>
+                                                        Total Showings
                                             <p id="totalShowings">5</p>
-                                        </p>
-                                        
-                                    </div>
-                                    <Col id="nameCol">
-                                    <div>
-                                        <p>
-                                        Sellers
+                                                    </p>
+
+                                                </div>
+                                                <Col id="nameCol">
+                                                    <div>
+                                                        <p>
+                                                            Sellers
                                             <p id="sellers">Johnsons</p>
-                                        </p>
-                                    </div>
-                                    
-                                    </Col>
-                                    </Col>
-                                    </Col>
-                                    <Col id="offersCol">
-                                    <div>
-                                        <p>
-                                            Price
+                                                        </p>
+                                                    </div>
+
+                                                </Col>
+                                            </Col>
+                                        </Col>
+                                        <Col id="offersCol">
+                                            <div>
+                                                <p>
+                                                    Price
                                             <p id="price">$310,500.00</p>
-                                        </p>
-                                    </div>
-                                    <Col id="offersCol">
-                                    <div>
-                                        <p>
-                                            Upcoming Showings
+                                                </p>
+                                            </div>
+                                            <Col id="offersCol">
+                                                <div>
+                                                    <p>
+                                                        Upcoming Showings
                                             <p id="upcomingShowings">2</p>
-                                        </p>
-                                    </div>
-                                    <Col id="nameCol">
-                                    <div>
-                                        <p>
-                                            Total Offers  
+                                                    </p>
+                                                </div>
+                                                <Col id="nameCol">
+                                                    <div>
+                                                        <p>
+                                                            Total Offers
                                             <p id="offers">3</p>
-                                        </p>
-                                    </div>
-                                    </Col>
-                                    </Col>
-                                    </Col>
-                                   
-                                </Row>
-                            </Col>
-                            <Col>
-                                <Row>
-                                </Row>
-                            </Col>
+                                                        </p>
+                                                    </div>
+                                                </Col>
+                                            </Col>
+                                        </Col>
+
+                                    </Row>
+                                </Col>
+                                <Col>
+                                    <Row>
+                                    </Row>
+                                </Col>
                             </div>
                         </Card>
                     </Col>
                 </Row>
                 <div class="feedback">
-                <Row>
-                    <Col>
-                
+                    <Row>
+                        <Col>
+
                             <Button>ADD FEEDBACK</Button>
 
-                    </Col>
-                    <Col>
+                        </Col>
+                        <Col>
 
                             <Button>VIEW FEEDBACK</Button>
 
-                    </Col>
-                </Row>
+                        </Col>
+                    </Row>
                 </div>
             </Container>
         </Wrapper>

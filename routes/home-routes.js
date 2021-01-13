@@ -28,9 +28,9 @@ module.exports = function (app) {
     })
   });
 
-  app.get("/api/getHomes/:id", (request, response) => {
+  app.get("/api/getHomes", (request, response) => {
     // db.Agent.findOne({ where: { id: request.params.id }, include: [{ model: db.User }, { model: db.Home }, { model: db.Feedback }, { model: db.Offer }] }).then(result => {
-      db.Agent.findOne({ where: { id: request.params.id }, include: [{all: true, nested: true}] }).then(result => {
+      db.Agent.findOne({ where: { id: request.user.id }, include: [{all: true, nested: true}] }).then(result => {
       console.log("This is the Home result", result);
       response.json({ result })
     }).catch(err => {
@@ -40,13 +40,14 @@ module.exports = function (app) {
   });
 
   app.post("/api/createHome", isAuthenticated, isAgent, function (req, res) {
+    console.log(req.user)
     db.User.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
       password: req.body.password,
       //Once passport is complete we need to change this to req.user.id
-      AgentId: req.body.AgentId
+      AgentId: req.user.id
     })
       .then(function (newUser) {
         console.log(newUser)
