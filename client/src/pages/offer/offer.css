@@ -1,5 +1,7 @@
-.colName {
-
+.container {
+margin-left: auto;
+margin-right: auto;
+width: min-content;
 }
 
 
@@ -11,14 +13,14 @@
     display: grid ;
     grid-template-columns: min-content;
     margin-left: 5px;
-    text-align: center;
+    text-align: center;    
 }
-/* 
-.submitOffer {
-    margin-top: 10px;
-    margin-bottom: 15px;
+
+.txtarea {
     border: 1px solid black;
+
 }
+/*
 .offerQuestion {
     text-align: center;
     margin-left: auto;
