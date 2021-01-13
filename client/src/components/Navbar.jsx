@@ -13,9 +13,10 @@ class BootstrapNavbar extends React.Component{
 
     render(){
         return(
+            <div id="navContainer">
             <Container fluid>
                 <Row>
-                    <Col>
+                    
                         {/* <Router> */}
                         <div id="navbarId">
                             <Navbar expand="lg" sticky="top">
@@ -55,9 +56,10 @@ class BootstrapNavbar extends React.Component{
                                 </Route>
                             </Switch> */}
                         {/* </Router> */}
-                    </Col>
+                    
                 </Row>
             </Container>
+            </div>
         )  
     }
 }

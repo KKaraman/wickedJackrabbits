@@ -6,7 +6,7 @@ width: min-content;
 
 
 .offerWrap {
-    font-size: larger;
+    font-size: x-large;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -20,6 +20,9 @@ width: min-content;
     border: 1px solid black;
 
 }
+
+
+
 /*
 .offerQuestion {
     text-align: center;
