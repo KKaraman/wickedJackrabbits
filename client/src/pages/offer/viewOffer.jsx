@@ -13,6 +13,8 @@ const viewOffer = () => {
                 console.log(res.data.result)
             })
     }, [])
+
+    //Need to use map function in here to get all offers etc. 
     return (
         <Wrapper>
             <Container>
