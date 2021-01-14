@@ -32,51 +32,6 @@ const MainPage = () => {
           <Col>
           <Button type="button" className="btn btn-primary" href="/addHome">Add home</Button>
           </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Card>
-            
-              <Image  className="card-img-top"  src={ Placeholder } fluid  />
-              {/* implement agent updated photos */}
-            
-              <Col>
-              <div >
-                <p>
-                 Address: "dynamic address put here"
-                </p>
-              </div>
-              </Col>
-              
-              <Col>
-              <Row>
-              <div>
-                <p className="">
-                  price
-                </p>
-              </div>
-              
-              <Col>
-              <div>
-                <p>
-                  offers
-                </p>
-              </div>
-              <Col>
-              <div>
-                <p>
-                  Sellers name
-                </p>
-              </div>
-              </Col>
-              </Col>
-              </Row>
-              </Col>
-
-              
-            </Card>
-          </Col>
-        </Row>
         {/* <Row>
           <Col size="md-12">
           <p>Here is a list</p>
@@ -87,6 +42,7 @@ const MainPage = () => {
                       </ul>
           </Col>
         </Row> */}
+        </Row>
       </Container>
       </div>
     </Wrapper>
