@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Wrapper from "../../components/Wrapper";
 import axios from "axios";
 
 
@@ -27,7 +26,7 @@ const addHome = () => {
         })
     }
     return (
-        <Wrapper>
+       
             <Container>
                 <Col>
                     <Image>
@@ -54,7 +53,7 @@ const addHome = () => {
                 </Row>
 
             </Container>
-        </Wrapper>
+        
     )
 }
 

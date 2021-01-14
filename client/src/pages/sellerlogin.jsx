@@ -1,8 +1,4 @@
 import React, { Component } from "react";
-import { Container, Button, Row, Col } from "react-bootstrap";
-import Wrapper from "../components/Wrapper";
-import Title from "../components/Title";
-import projects from "../projects.json";
 import "./login.css";
 
 class PageThree extends Component {
@@ -15,8 +11,8 @@ class PageThree extends Component {
   // Map over this.state.projects and render a project component for each one
   render() {
     return (
-      <Wrapper> 
-        <Title>Seller Login</Title>
+      <div>
+       <h1> Seller Login</h1>
         <div class="Container">
         <textarea className="sellerEmail" placeholder="email"></textarea>
         <textarea className="sellerPassword" placeholder="password"></textarea>
@@ -24,8 +20,8 @@ class PageThree extends Component {
         <Button className="sellerLogin" href="/homeownermain"> Log In</Button>
         </div>
         </div>
-        <p></p>
-      </Wrapper>
+        </div>
+      
     );
   }
 }

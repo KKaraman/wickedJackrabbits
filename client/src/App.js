@@ -1,7 +1,6 @@
 // import logo from './logo.svg';
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -14,7 +13,6 @@ import SignUp from "./pages/signup";
 import createOffer from "./pages/offer/createOffer"
 
 // different components
-import Wrapper from "./components/Wrapper"
 import BootstrapNavbar from "./components/Navbar";
 import addFeedback from "./pages/feedback/addFeedback";
 import viewOffer from "./pages/offer/viewOffer";
@@ -23,9 +21,8 @@ import hoMain from "./pages/home/hoMain.jsx";
 
 
 function App() {
-
   return (
-    <Wrapper>
+    <div>
       <BootstrapNavbar />
       <Router>
         <div className="blah">
@@ -39,7 +36,7 @@ function App() {
             <Route exact path="/agentlogin" component={ AgentLogin } />
             <Route exact path="/addhome" component={ addHome } />
             <Route exact path="/createoffer" component={ createOffer } />
-            <Route exact path="/viewoffer" component={ viewOffer } />
+            <Route exact path="/viewoffer/:id" component={ viewOffer } />
             <Route exact path="/viewfeedback" component={ viewFeedback } />
             <Route exact path="/addfeedback" component={ addFeedback } />
             <Route exact path="/homeownermain" component={ hoMain } />
@@ -52,33 +49,12 @@ function App() {
             {/* Redirect tells react to go to a known path if nothing matches*/}
             {/* always have redirect as the last item */}
             <Redirect to="/404" />;
-
           </Switch>
         </div>
       </Router>
-    </Wrapper>
+      </div>
+   
   );
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;
