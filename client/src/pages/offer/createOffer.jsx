@@ -27,7 +27,6 @@ const createOffer = () => {
             <Container>
                 <div className="offerWrap">
                     <Row>
-
                    
                     <input onChange={(e) => {setDateOffered(e.target.value)}} className="txtarea" type="text" placeholder="Date Offered"/>
                     <p></p>
