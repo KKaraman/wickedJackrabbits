@@ -5,25 +5,33 @@
     font-size: 20px;
 }
 
-.singleWrap {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-
-.singleParentWrap{
-  align-items: center;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 33%;
-  margin-bottom: .5%;
-  margin-right: auto;
-  margin-left: .5%;
-}
-
 #wrapperId {
     text-align: center;
 }
 
-#firstCol {
+#details {
+  margin: auto;
+  width:max-content;
+  height:5%;
+  background-color:#fff;
+  display:grid;
+  grid-template-columns: 200px 200px;
+  grid-row: auto auto;
+  grid-column-gap: -10%;
+  grid-row-gap: -10%;
+
 }
+
+.box {
+  background-color: rgb(255, 255, 255);
+    border-radius:10px;
+    color:rgb(0, 0, 0);
+    display: flexbox;
+    align-items:center;
+    justify-content:center;
+    font-size: x-large;
+    margin-top: 0em ;
+    margin-bottom: 1em ;
+    line-height: 80%;
+}
+

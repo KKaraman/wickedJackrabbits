@@ -13,7 +13,7 @@ import "./homeOwner.css";
 const hoMain = () => {
     // Do a get call to the /getHomes:id with the agent id. 
     return (
-        <Wrapper> 
+
             <div  id="wrapperId">
             <Container>
                 {/* first row: Address */}
@@ -32,32 +32,28 @@ const hoMain = () => {
                     </Col>
                 </Row>
                 {/* second row: Details */}
-                <Row> 
-                    <Col>
-                    <p>
-                        Price
-                    </p>
-                    <p>
-                        Offers
-                    </p>
-                    <p>
-                        Viewings
-                   </p>
-                      </Col>
+                <div id="details">
 
-                    
-                    <Col>
-                    <p>
-                        Sellers
-                    </p>
-                    <p>
-                        Sellers
-                    </p>
-                    <p>
-                        Sellers
-                    </p>
-                    </Col>
-                </Row>
+                <div className="box">
+                <p>Price</p>
+                <p id="price">Test</p>
+                </div>
+
+                <div className="box">
+                <p>Offers</p>
+                <p id="offers">Test</p>
+                </div>
+
+                <div className="box">
+                <p>Viewings</p>
+                <p id="viewings">Test</p> 
+                </div>
+
+                <div className="box">
+                <p>Sellers</p>
+                <p id="sellers">Test</p>
+                </div>
+                </div>
 
                 <div className="feedback">
                 {/* Row for Feedback */}
@@ -72,7 +68,7 @@ const hoMain = () => {
                 </div>
             </Container>
             </div>
-        </Wrapper>
+
         
     )
 };
