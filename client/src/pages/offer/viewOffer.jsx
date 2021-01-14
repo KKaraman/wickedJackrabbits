@@ -1,18 +1,29 @@
-import {Row, Col, Container} from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import React, { useEffect, useState } from "react"
 import Wrapper from "../../components/Wrapper";
+import axios from "axios";
 
 const viewOffer = () => {
+    const [agentData, setAgentData] = useState({})
+    useEffect(() => {
+        axios.get("/api/getHome/3")
+            .then((res) => {
+                setAgentData(res.data.result)
+                console.log(res.data.result)
+            })
+    }, [])
+
+    //Need to use map function in here to get all offers etc. 
     return (
         <Wrapper>
             <Container>
                 <Row>
-                    <Col>Name</Col>
+                    <Col>name {agentData && agentData.Offers && agentData.Offers[0].name} </Col>
                     <Col>Showing Time</Col>
                     <Col>Showing Date</Col>
                 </Row>
-                    
+
                 <Row>
                     <Col>Family?</Col>
                     <Col>Interest Level</Col>
@@ -20,7 +31,7 @@ const viewOffer = () => {
                 </Row>
 
                 <Row className="text-center justify-content-center">Additional Notes</Row>
-                <br/>
+                <br />
                 <Row>
                     <ol>
                         {/* populated dynamically */}

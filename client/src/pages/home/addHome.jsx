@@ -18,7 +18,7 @@ const addHome = () => {
             lastName: sellerNumber,
             email: sellerEmail,
             password: sellerPassword,
-            AgentId: 1,
+            // AgentId: 1,
             address: address,
             listingPrice: price,
             dateListed: "10/12/20",

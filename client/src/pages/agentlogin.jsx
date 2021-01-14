@@ -1,31 +1,42 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Wrapper from "../components/Wrapper";
 import Title from "../components/Title";
+
 import projects from "../projects.json";
+import {Container, Row, Col, Button } from "react-bootstrap";
 
-class AgentLogin extends Component {
-  // Setting this.state.friends to the friends json array
-  state = {
-    projects
-  };
+import axios from "axios";
 
 
+
+const AgentLogin =()=> {
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  const submitAgent = () => {
+      axios.post("/api/login", {
+          email ,
+          password
+      }).then((res) => {
+      console.log(res)
+      })
+  }
   // Map over this.state.projects and render a project component for each one
-  render() {
     return (
+
       <Wrapper> 
         <Title>Agent Login</Title>
         <div class="Container">
-        <textarea className="agentEmail" placeholder="email"></textarea>
-        <textarea className="agentPassword" placeholder="password"></textarea>
+        <textarea onChange={(e) => {setEmail(e.target.value)}} className="agentEmail" placeholder="email"></textarea>
+        <textarea onChange={(e) => {setPassword(e.target.value)}} className="agentPassword" placeholder="password"></textarea>
         <div class="center">
-        <button className="agentLogin" onclick="agentLogin()">Log In</button>
+        <button onClick={submitAgent} className="agentLogin" >Log In</button>
         </div>
         </div>
         <p></p>
       </Wrapper>
     );
-  }
+  
 }
 
-export default AgentLogin
+export default AgentLogin;

@@ -11,6 +11,7 @@ import Wrapper from "../../components/Wrapper";
 import "./homeOwner.css";
 
 const hoMain = () => {
+    // Do a get call to the /getHomes:id with the agent id. 
     return (
         <Wrapper> 
             <div  id="wrapperId">
