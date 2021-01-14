@@ -13,7 +13,8 @@ import "./homeOwner.css";
 const hoMain = () => {
     // Do a get call to the /getHomes:id with the agent id. 
     return (
-        <Wrapper>
+        <Wrapper> 
+            <div  id="wrapperId">
             <Container>
                 <Row>
                     <Col>
@@ -28,74 +29,64 @@ const hoMain = () => {
                                     </p>
                                 </div>
                             </Col>
-                            <div className="homeownermain">
-                                <Col>
-                                    <Row>
-                                        <Col id="priceCol">
-                                            <div>
-                                                <p>
-                                                    Listed Date
+
+              <div className="homeownermain">
+                            <Col>
+                                <Row>
+                                    <Col id="firstCol">
+                                    <div>
+                                    <h3>Listed Date</h3>
                                             <p id="homeListed">1/1/2021</p>
-                                                </p>
-
-                                            </div>
-                                            <Col id="priceCol">
-                                                <div>
-                                                    <p>
-                                                        Total Showings
+                                    </div>
+                                    <Col>
+                                    <div>
+                                    <h3>Total Viewings</h3>
                                             <p id="totalShowings">5</p>
-                                                    </p>
-
-                                                </div>
-                                                <Col id="nameCol">
-                                                    <div>
-                                                        <p>
-                                                            Sellers
-                                            <p id="sellers">Johnsons</p>
-                                                        </p>
-                                                    </div>
-
-                                                </Col>
-                                            </Col>
-                                        </Col>
-                                        <Col id="offersCol">
-                                            <div>
-                                                <p>
-                                                    Price
-                                            <p id="price">$310,500.00</p>
-                                                </p>
-                                            </div>
-                                            <Col id="offersCol">
-                                                <div>
-                                                    <p>
-                                                        Upcoming Showings
+                                    </div>
+                                    <Col>
+                                    <div>
+                                    <h3>Pending Viewings</h3>
                                             <p id="upcomingShowings">2</p>
-                                                    </p>
-                                                </div>
-                                                <Col id="nameCol">
-                                                    <div>
-                                                        <p>
-                                                            Total Offers
-                                            <p id="offers">3</p>
-                                                        </p>
-                                                    </div>
-                                                </Col>
-                                            </Col>
-                                        </Col>
+                                    </div>
+                                    </Col>
+                                    </Col>
+                                    </Col>
 
-                                    </Row>
-                                </Col>
-                                <Col>
-                                    <Row>
-                                    </Row>
-                                </Col>
+                                    <Col id="secondCol">
+                                    <div>
+                                    <h3>Price</h3>
+                                            <p id="price">$310,500.00</p>
+                                    </div>
+                                    <Col>
+                                    <div>
+                                    <h3>Total Offers</h3> 
+                                            <p id="offers">3</p>
+                                    </div>
+                                    <Col>
+
+                                    <div>
+                                        <h3>Sellers</h3>
+                                            <p id="sellers">Johnsons</p>
+                                    </div>
+                                    </Col>
+                                    </Col>
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col>
+                                <Row>
+                                </Row>
+                            </Col>
+
                             </div>
                         </Card>
                     </Col>
                 </Row>
+
                 <div class="feedback">
                     <Row>
                         <Col>
+
 
                             <Button>ADD FEEDBACK</Button>
 
@@ -108,7 +99,9 @@ const hoMain = () => {
                     </Row>
                 </div>
             </Container>
+            </div>
         </Wrapper>
+        
     )
 };
 
