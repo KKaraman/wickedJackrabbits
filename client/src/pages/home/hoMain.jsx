@@ -1,18 +1,14 @@
 import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
-
-
 // import { Link, NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import "../App.css";
-
 // import Placeholder from "../images/placeholder.png";
-
-import Wrapper from "../../components/Wrapper";
 import "./homeOwner.css";
 
 const hoMain = () => {
     // Do a get call to the /getHomes:id with the agent id. 
     return (
+
 
             <div  id="wrapperId">
             <Container>
@@ -86,8 +82,6 @@ const hoMain = () => {
                 </div>
             </Container>
             </div>
-
-        
     )
 };
 

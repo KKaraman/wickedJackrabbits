@@ -7,12 +7,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 // import Placeholder from "../images/placeholder.png";
 
-import Wrapper from "../../components/Wrapper";
+
 import "./homeOwner.css";
 
 const hoViewOffers = () => {
     return (
-        <Wrapper>
+        
             <Container>
                 <div id="outerWrap">
                 <Row>
@@ -82,7 +82,7 @@ const hoViewOffers = () => {
                 </Row>
                 </div>
             </Container>
-        </Wrapper>
+        
     )
 };
 

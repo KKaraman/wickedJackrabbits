@@ -6,6 +6,7 @@ import axios from "axios";
 
 
 
+
 const SignUp = () => {
     const [firstName, setfirstName] = useState("")
     const [lastName, setlastName] = useState("")
