@@ -11,6 +11,7 @@ import Wrapper from "../../components/Wrapper";
 import "./homeOwner.css";
 
 const hoMain = () => {
+    // Do a get call to the /getHomes:id with the agent id. 
     return (
         <Wrapper> 
             <div  id="wrapperId">
@@ -28,6 +29,7 @@ const hoMain = () => {
                                     </p>
                                 </div>
                             </Col>
+
               <div className="homeownermain">
                             <Col>
                                 <Row>
@@ -75,23 +77,25 @@ const hoMain = () => {
                                 <Row>
                                 </Row>
                             </Col>
+
                             </div>
                         </Card>
                     </Col>
                 </Row>
-                <div className="feedback">
+               <div className="feedback">
                 <Row>
                     <Col>
                 
                             <Button>VIEW FEEDBACK</Button>
 
-                    </Col>
-                    <Col>
+
+                        </Col>
+                        <Col>
 
                             <Button>VIEW OFFERS</Button>
 
-                    </Col>
-                </Row>
+                        </Col>
+                    </Row>
                 </div>
             </Container>
             </div>
