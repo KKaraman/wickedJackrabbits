@@ -15,7 +15,7 @@ const hoMain = () => {
     return (
         <Wrapper> 
             <div  id="wrapperId">
-            <Container>
+            <Container >
                 <Row>
                     <Col>
                         <Card>
@@ -82,18 +82,17 @@ const hoMain = () => {
                         </Card>
                     </Col>
                 </Row>
+               <div className="feedback">
+                <Row>
+                    <Col>
+                
+                            <Button>VIEW FEEDBACK</Button>
 
-                <div class="feedback">
-                    <Row>
-                        <Col>
-
-
-                            <Button>ADD FEEDBACK</Button>
 
                         </Col>
                         <Col>
 
-                            <Button>VIEW FEEDBACK</Button>
+                            <Button>VIEW OFFERS</Button>
 
                         </Col>
                     </Row>

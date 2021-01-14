@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import Wrapper from "../components/Wrapper";
 import Title from "../components/Title";
+
+import projects from "../projects.json";
+import {Container, Row, Col, Button } from "react-bootstrap";
+
 import axios from "axios";
+
 
 
 const AgentLogin =()=> {
@@ -18,6 +23,7 @@ const AgentLogin =()=> {
   }
   // Map over this.state.projects and render a project component for each one
     return (
+
       <Wrapper> 
         <Title>Agent Login</Title>
         <div class="Container">
@@ -33,4 +39,4 @@ const AgentLogin =()=> {
   
 }
 
-export default AgentLogin
+export default AgentLogin;

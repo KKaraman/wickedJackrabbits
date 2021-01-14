@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import Wrapper from "../components/Wrapper";
 import Title from "../components/Title";
 import projects from "../projects.json";
@@ -31,10 +32,11 @@ class SignUp extends Component {
               <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
               <span className="sr-only">Error:</span> <span className="msg"></span>
             </div>
-            <button type="submit" className="btn btn-default">Sign Up</button>
+            <Button type="submit" className="btn btn-primary" href="/agentmain"> Sign Up</Button>
           </form>
           <br />
-          <p>Or log in <a href="/login">here</a></p>
+          <p>Or log in as the agent <a href="/agentlogin">here</a></p>
+          <p>Or as the owner <a href="/sellerlogin">here</a></p>
         </div>
       </div>
     </div>
