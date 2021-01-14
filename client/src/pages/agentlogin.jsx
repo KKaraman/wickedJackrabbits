@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-
-
 const AgentLogin = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -22,6 +20,7 @@ const AgentLogin = () => {
       <textarea onChange={(e) => { setEmail(e.target.value) }} className="agentEmail" placeholder="email"></textarea>
       <textarea onChange={(e) => { setPassword(e.target.value) }} className="agentPassword" placeholder="password"></textarea>
       <div class="center">
+
         <button onClick={submitAgent} className="agentLogin" >Log In</button>
       </div>
     </div>
@@ -31,4 +30,4 @@ const AgentLogin = () => {
 
 }
 
-export default AgentLogin
+export default AgentLogin;

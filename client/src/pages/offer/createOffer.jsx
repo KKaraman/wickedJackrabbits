@@ -25,41 +25,40 @@ const createOffer = () => {
     return (
        
             <Container>
-            <div className="offerWrap">
-                <Row>
-
-                   <Col>
-                   <input onChange={(e) => {setDateOffered(e.target.value)}} className="txtarea" type="text" placeholder="Date Offered"/>
-                   <p></p>
+                <div className="offerWrap">
+                    <Row>
+                   
+                    <input onChange={(e) => {setDateOffered(e.target.value)}} className="txtarea" type="text" placeholder="Date Offered"/>
+                    <p></p>
                     <Col className="offerInnerWrap">
-                    Buyer's Name
-                 
-                   <input onChange={(e) => {setName(e.target.value)}} className="txtarea" type="text" placeholder="name"/>
-                   <p></p>
+                        Buyer's Name
+                    
+                    <input onChange={(e) => {setName(e.target.value)}} className="txtarea" type="text" placeholder="name"/>
+                    <p></p>
 
-                   Offer
-                   <input onChange={(e) => {setAmount(e.target.value)}} className="txtarea" type="text" placeholder="$"/>
-                   <p></p>
+                    Offer
+                    <input onChange={(e) => {setAmount(e.target.value)}} className="txtarea" type="text" placeholder="$"/>
+                    <p></p>
 
-                   Earliest Closing Date
-                   <input onChange={(e) => {setClosingDate(e.target.value)}} className="txtarea" type="date" placeholder="Closing Date"/>
-                     <p></p>   
-                       
-                   <p className="payType">Payment Type 
-                   <select onChange={(e) => {setMoneyType(e.target.value)}} className="txtarea" type="offer" placeholder="Money Type">
-                        <option className="txtarea" value="cash">Cash</option>
-                        <option className="txtarea" value="loan">Bank Loan</option>
-                    </select>
-                    </p>
-                    <p>
-                        <Button onClick={submitOffer} href="/" type="submit">Submit offer</Button>
+                    Earliest Closing Date
+                    <input onChange={(e) => {setClosingDate(e.target.value)}} className="txtarea" type="date" placeholder="Closing Date"/>
+                        <p></p>   
+                        
+                    <p className="payType">Payment Type 
+                    <select onChange={(e) => {setMoneyType(e.target.value)}} className="txtarea" type="offer" placeholder="Money Type">
+                            <option className="txtarea" value="cash">Cash</option>
+                            <option className="txtarea" value="loan">Bank Loan</option>
+                        </select>
                         </p>
+                        <p>
+                            <Button onClick={submitOffer} href="/" type="submit">Submit offer</Button>
+                            </p>
 
 
                    </Col>
                 
                     
-                </Row>
+                    </Row>
                 </div>
             </Container>
         

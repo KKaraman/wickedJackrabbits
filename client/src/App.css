@@ -29,3 +29,35 @@
 .indexContainer {
   width: 100%;
 }
+
+
+h3 {
+  width: max-content;
+}
+
+.homeownermain {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+}
+
+.singleWrap {
+display: flex;
+flex-wrap: wrap;
+}
+
+
+.singleParentWrap{
+align-items: center;
+flex-grow: 0;
+flex-shrink: 0;
+flex-basis: 33%;
+margin-bottom: .5%;
+margin-right: auto;
+margin-left: .5%;
+}
+
+#wrapperId {
+  text-align: center;
+}

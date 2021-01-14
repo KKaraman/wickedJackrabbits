@@ -8,94 +8,70 @@ import "./homeOwner.css";
 const hoMain = () => {
     // Do a get call to the /getHomes:id with the agent id. 
     return (
-        <div>
+
+
+            <div  id="wrapperId">
             <Container>
+                {/* first row: Address */}
                 <Row>
                     <Col>
                         <Card>
                             <Image>
                                 {/* INSERT DYNAMIC IMAGE OF HOME THAT WAS CLICKED ON HERE */}
                             </Image>
-                            <Col>
-                                <div>
+                              <div>
                                     <p className="text-center">
                                         Address: "dynamic address put here"
                                     </p>
-                                </div>
-                            </Col>
-
-              <div className="homeownermain">
-                            <Col>
-                                <Row>
-                                    <Col id="firstCol">
-                                    <div>
-                                    <h3>Listed Date</h3>
-                                            <p id="homeListed">1/1/2021</p>
-                                    </div>
-                                    <Col>
-                                    <div>
-                                    <h3>Total Viewings</h3>
-                                            <p id="totalShowings">5</p>
-                                    </div>
-                                    <Col>
-                                    <div>
-                                    <h3>Pending Viewings</h3>
-                                            <p id="upcomingShowings">2</p>
-                                    </div>
-                                    </Col>
-                                    </Col>
-                                    </Col>
-
-                                    <Col id="secondCol">
-                                    <div>
-                                    <h3>Price</h3>
-                                            <p id="price">$310,500.00</p>
-                                    </div>
-                                    <Col>
-                                    <div>
-                                    <h3>Total Offers</h3> 
-                                            <p id="offers">3</p>
-                                    </div>
-                                    <Col>
-
-                                    <div>
-                                        <h3>Sellers</h3>
-                                            <p id="sellers">Johnsons</p>
-                                    </div>
-                                    </Col>
-                                    </Col>
-                                    </Col>
-                                </Row>
-                            </Col>
-                            <Col>
-                                <Row>
-                                </Row>
-                            </Col>
-
-                            </div>
-                        </Card>
+                             </div>
+                       </Card>
                     </Col>
                 </Row>
+                {/* second row: Details */}
+                <div id="details">
 
-                <div class="feedback">
-                    <Row>
-                        <Col>
+                <div className="box">
+                <p>Price</p>
+                <p id="price">Test</p>
+                </div>
 
+                <div className="box">
+                <p>Offers</p>
+                <p id="offers">Test</p>
+                </div>
 
-                            <Button>ADD FEEDBACK</Button>
+                <div className="box">
+                <p>Viewings</p>
+                <p id="viewings">Test</p> 
+                </div>
+
+                <div className="box">
+                <p>Sellers</p>
+                <p id="sellers">Test</p>
+                </div>
+                </div>
+
+                <div className="feedback">
+                {/* Row for Feedback */}
+                <Row>
+
+                    <Col>
+
+                
+                            <Button href="/viewfeedback">VIEW FEEDBACK</Button>
+
 
                         </Col>
                         <Col>
 
-                            <Button>VIEW FEEDBACK</Button>
+                            <Button href="/viewoffer">VIEW OFFERS</Button>
 
                         </Col>
                     </Row>
+
                 </div>
             </Container>
             </div>
-        
-        
     )
 };
 

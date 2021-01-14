@@ -67,7 +67,6 @@ const MainPage = () => {
             </Card>
           </Col>
         </Row>
-
       </Container>
     </div>
   );
