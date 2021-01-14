@@ -86,13 +86,13 @@ const hoMain = () => {
                 <Row>
                     <Col>
                 
-                            <Button>VIEW FEEDBACK</Button>
+                            <Button href="/viewfeedback">VIEW FEEDBACK</Button>
 
 
                         </Col>
                         <Col>
 
-                            <Button>VIEW OFFERS</Button>
+                            <Button href="/viewoffer">VIEW OFFERS</Button>
 
                         </Col>
                     </Row>
