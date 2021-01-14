@@ -27,15 +27,18 @@ const createOffer = () => {
             <Container>
             <div className="offerWrap">
                 <Row>
+
                    <Col>
                    <input onChange={(e) => {setDateOffered(e.target.value)}} className="txtarea" type="text" placeholder="Date Offered"/>
                    <p></p>
+                    <Col className="offerInnerWrap">
                     Buyer's Name
+                 
                    <input onChange={(e) => {setName(e.target.value)}} className="txtarea" type="text" placeholder="name"/>
                    <p></p>
 
-                   Offer Amount
-                   <input onChange={(e) => {setAmount(e.target.value)}} className="txtarea" type="text" placeholder="amount"/>
+                   Offer
+                   <input onChange={(e) => {setAmount(e.target.value)}} className="txtarea" type="text" placeholder="$"/>
                    <p></p>
 
                    Earliest Closing Date

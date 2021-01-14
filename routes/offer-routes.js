@@ -3,10 +3,12 @@ const { sequelize } = require("../models");
 const db = require("../models");
 //const offer = require("../models/offer");
 // var passport = require("../config/passport");
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+var isAgent = require("../config/middleware/isAgent");
 
 module.exports = function (app) {
  
-  app.post("/api/createOffer", function (req, res) {
+  app.post("/api/createOffer", isAuthenticated, isAgent, function (req, res) {
     console.log(req.body);
     const query = {
       homeId: req.body.id
@@ -36,7 +38,7 @@ module.exports = function (app) {
 
   });
 
-  app.get("/api/home_offers/:homeId", function (req, res) {
+  app.get("/api/home_offers/:homeId", isAuthenticated, function (req, res) {
 
     // get request for home id
     // find all offers for that home id
@@ -60,7 +62,7 @@ module.exports = function (app) {
 
   });
 
-  app.put("/api/updateOffer", (req, res)=>{
+  app.put("/api/updateOffer", isAuthenticated, isAgent, (req, res)=>{
     db.Offer.update(req.body,{
       where:{
         id: req.body.id
@@ -71,7 +73,7 @@ module.exports = function (app) {
     })
   })
 
-  app.delete("/api/deleteOffer/:id", (req, res)=>{
+  app.delete("/api/deleteOffer/:id", isAuthenticated, isAgent, (req, res)=>{
     db.Offer.destroy({
       where:{
         id: req.params.id

@@ -1,25 +1,29 @@
 .homeownermain {
-    width: 100%;
+    width: max-content;
     margin-left: auto;
     margin-right: auto;
-    display: grid;
+    font-size: 20px;
+}
+
+.singleWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.singleParentWrap{
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 33%;
+  margin-bottom: .5%;
+  margin-right: auto;
+  margin-left: .5%;
+}
+
+#wrapperId {
     text-align: center;
 }
 
-#priceCol {
-margin: 0 auto;
-margin-left:auto;
-margin-right: auto;
-justify-content: center;
-}
-
-#offersCol {
-margin: 0 auto;
-margin-left:auto;
-margin-right: auto;
-}
-
-.feedback {
-    margin-left: auto;
-    margin-right: auto;
+#firstCol {
 }

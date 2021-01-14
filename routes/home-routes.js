@@ -18,7 +18,7 @@ module.exports = function (app) {
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
  
-  app.get("/api/getHome/:id", (request, response) => {
+  app.get("/api/getHome/:id", isAuthenticated, isAgent, (request, response) => {
     db.Home.findOne({ where: { id: request.params.id }, include: [{ model: db.Feedback }, { model: db.Offer }] }).then(result => {
       console.log("This is the Home result", result);
       response.json({ result })
@@ -28,7 +28,9 @@ module.exports = function (app) {
     })
   });
 
+
   app.get("/api/getHomes", (request, response) => {
+
     // db.Agent.findOne({ where: { id: request.params.id }, include: [{ model: db.User }, { model: db.Home }, { model: db.Feedback }, { model: db.Offer }] }).then(result => {
       db.Agent.findOne({ where: { id: request.user.id }, include: [{all: true, nested: true}] }).then(result => {
       console.log("This is the Home result", result);
@@ -65,7 +67,7 @@ module.exports = function (app) {
       });
   });
 
-  app.put("/api/updateHome", (req, res)=>{
+  app.put("/api/updateHome", isAuthenticated, isAgent, (req, res)=>{
     db.Home.update(req.body,{
       where:{
         id: req.body.id
@@ -76,7 +78,7 @@ module.exports = function (app) {
     })
   })
 
-  app.delete("/api/deleteHome/:id", (req, res)=>{
+  app.delete("/api/deleteHome/:id", isAuthenticated, isAgent, (req, res)=>{
     db.Home.destroy({
       where:{
         id: req.params.id
