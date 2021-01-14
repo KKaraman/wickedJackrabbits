@@ -58,13 +58,21 @@ const hoMain = () => {
                 <div className="feedback">
                 {/* Row for Feedback */}
                 <Row>
-                    <Col>     
-                            <Button>ADD FEEDBACK</Button>
-                    </Col>
+
                     <Col>
-                            <Button>VIEW FEEDBACK</Button>
-                    </Col>
-                </Row>
+
+                
+                            <Button href="/viewfeedback">VIEW FEEDBACK</Button>
+
+
+                        </Col>
+                        <Col>
+
+                            <Button href="/viewoffer">VIEW OFFERS</Button>
+
+                        </Col>
+                    </Row>
+
                 </div>
             </Container>
             </div>
