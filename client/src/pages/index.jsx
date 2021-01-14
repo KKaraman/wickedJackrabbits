@@ -1,20 +1,14 @@
 import React from "react";
-
 import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
-
-
 // import { Link, NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
-
 import Placeholder from "../images/placeholder.png";
-
-import Wrapper from "../components/Wrapper";
 // import Navbar from "../components/Navbar";
 
 const MainPage = () => {
   return (
-    <Wrapper>
+    
       
       <Container>
         <Row>
@@ -86,7 +80,7 @@ const MainPage = () => {
           </Col>
         </Row> */}
       </Container>
-    </Wrapper>
+    
   );
 };
 

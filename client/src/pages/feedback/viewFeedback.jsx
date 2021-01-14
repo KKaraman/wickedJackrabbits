@@ -1,35 +1,39 @@
-import { Container, Row, Col, Button, } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Wrapper from "../../components/Wrapper";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 
 
 const viewFeedback = () => {
-        return (
-            <Wrapper>
-                <Container>
-                    <Row className="text-center justify-content-center">Johns Feedback</Row>
-                    <br/>
+    const [agentData, setAgentData] = useState({})
+    useEffect(() => {
+        axios.get("/api/getHome/3")
+            .then((res) => {
+                setAgentData(res.data.result)
+                console.log(res.data.result)
+                console.log("Feedback ==", res.data.result.Feedbacks)
+            })
+    }, [])
+
+    //Need to use map function in here to get all offers etc. 
+    return (
+
+        <Container>
+            <div>
+                <h3>Offers</h3>
+            </div>
+            {agentData.Feedbacks && agentData.Feedbacks.length !== 0 && agentData.Feedbacks.map(item => {
+                return (
                     <Row>
-                        <Col>Name</Col>
-                        <Col>Showing Time</Col>
-                        <Col>Showing Date</Col>
+                        <Col>{item.id}. {item.name}</Col>
+                        <Col>{item.id}. {item.dateShown}</Col>
+
                     </Row>
-                    
-                    <Row>
-                        <Col>Family?</Col>
-                        <Col>Interest Level</Col>
-                        <Col>Repeat?</Col>
-                    </Row>
-                    <br/>
-                    <Row className="text-center justify-content-center">Additional Notes</Row>
-                    
-                    <Row>
-                        <Button className="text-center justify-content-center">Update Feedback</Button>
-                    </Row>
-                </Container>
-            </Wrapper>
-            
-        )
+                )
+            })}
+        </Container>
+    )
     
     
 };

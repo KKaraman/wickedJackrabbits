@@ -1,8 +1,4 @@
 import React, { Component } from "react";
-import Wrapper from "../components/Wrapper";
-import Title from "../components/Title";
-import projects from "../projects.json";
-import utils from "../utils/API";
 import "./login.css";
 
 
