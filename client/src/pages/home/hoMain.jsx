@@ -35,23 +35,33 @@ const hoMain = () => {
                 <div id="details">
 
                 <div className="box">
+                <p>Home Listed</p>
+                <p id="homeListed">Test</p>
+                </div>
+
+                <div className="box">
                 <p>Price</p>
                 <p id="price">Test</p>
                 </div>
 
                 <div className="box">
-                <p>Offers</p>
-                <p id="offers">Test</p>
+                <p>Showings</p>
+                <p id="showings">Test</p>
                 </div>
 
                 <div className="box">
-                <p>Viewings</p>
-                <p id="viewings">Test</p> 
+                <p>Average Rating</p>
+                <p id="rating">Test</p>
                 </div>
 
                 <div className="box">
-                <p>Sellers</p>
-                <p id="sellers">Test</p>
+                <p>Number of Offers</p>
+                <p id="offers">Test</p> 
+                </div>
+
+                <div className="box">
+                <p>Average Offer Price</p>
+                <p id="offerAverage">Test</p>
                 </div>
                 </div>
 
