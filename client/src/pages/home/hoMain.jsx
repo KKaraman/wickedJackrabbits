@@ -12,7 +12,8 @@ import "./homeOwner.css";
 
 const hoMain = () => {
     return (
-        <Wrapper>
+        <Wrapper> 
+            <div  id="wrapperId">
             <Container>
                 <Row>
                     <Col>
@@ -30,58 +31,44 @@ const hoMain = () => {
               <div className="homeownermain">
                             <Col>
                                 <Row>
-                                    <Col id="priceCol">
+                                    <Col id="firstCol">
                                     <div>
-                                        <p>
-                                        Listed Date
+                                    <h3>Listed Date</h3>
                                             <p id="homeListed">1/1/2021</p>
-                                        </p>
-                                        
                                     </div>
-                                    <Col id="priceCol">
+                                    <Col>
                                     <div>
-                                        <p>
-                                            Total Showings
+                                    <h3>Total Viewings</h3>
                                             <p id="totalShowings">5</p>
-                                        </p>
-                                        
                                     </div>
-                                    <Col id="nameCol">
+                                    <Col>
                                     <div>
-                                        <p>
-                                        Sellers
-                                            <p id="sellers">Johnsons</p>
-                                        </p>
-                                    </div>
-                                    
-                                    </Col>
-                                    </Col>
-                                    </Col>
-                                    <Col id="offersCol">
-                                    <div>
-                                        <p>
-                                            Price
-                                            <p id="price">$310,500.00</p>
-                                        </p>
-                                    </div>
-                                    <Col id="offersCol">
-                                    <div>
-                                        <p>
-                                            Upcoming Showings
+                                    <h3>Pending Viewings</h3>
                                             <p id="upcomingShowings">2</p>
-                                        </p>
                                     </div>
-                                    <Col id="nameCol">
+                                    </Col>
+                                    </Col>
+                                    </Col>
+
+                                    <Col id="secondCol">
                                     <div>
-                                        <p>
-                                            Total Offers  
+                                    <h3>Price</h3>
+                                            <p id="price">$310,500.00</p>
+                                    </div>
+                                    <Col>
+                                    <div>
+                                    <h3>Total Offers</h3> 
                                             <p id="offers">3</p>
-                                        </p>
+                                    </div>
+                                    <Col>
+
+                                    <div>
+                                        <h3>Sellers</h3>
+                                            <p id="sellers">Johnsons</p>
                                     </div>
                                     </Col>
                                     </Col>
                                     </Col>
-                                   
                                 </Row>
                             </Col>
                             <Col>
@@ -92,7 +79,7 @@ const hoMain = () => {
                         </Card>
                     </Col>
                 </Row>
-                <div class="feedback">
+                <div className="feedback">
                 <Row>
                     <Col>
                 
@@ -107,7 +94,9 @@ const hoMain = () => {
                 </Row>
                 </div>
             </Container>
+            </div>
         </Wrapper>
+        
     )
 };
 

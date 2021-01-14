@@ -14,6 +14,7 @@ const hoViewOffers = () => {
     return (
         <Wrapper>
             <Container>
+                <div id="outerWrap">
                 <Row>
                     <Col>
                         <Card>
@@ -21,7 +22,7 @@ const hoViewOffers = () => {
                                 {/* INSERT DYNAMIC IMAGE OF HOME THAT WAS CLICKED ON HERE */}
                             </Image>
                             <Col>
-                                <div>
+                                <div className="singleWrap">
                                     <p className="text-center">
                                         Address: "dynamic address put here"
                                     </p>
@@ -31,7 +32,7 @@ const hoViewOffers = () => {
                             <Col>
                                 <Row>
                                     <Col id="priceCol">
-                                    <div>
+                                    <div className="singleWrap">
                                         <p>
                                             Price
                                             <p id="price">$$$$.$$</p>
@@ -40,7 +41,7 @@ const hoViewOffers = () => {
                                     </div>
                                     </Col>
                                     <Col id="offersCol">
-                                    <div>
+                                    <div className="singleWrap">
                                         <p>
                                             Offers
                                             <p id="offer">$$$$.$$</p>
@@ -48,7 +49,7 @@ const hoViewOffers = () => {
                                     </div>
                                     </Col>
                                     <Col id="nameCol">
-                                    <div>
+                                    <div className="singleWrap">
                                         <p>
                                             Sellers
                                             <p id="sellerName">Johnsons</p>
@@ -79,6 +80,7 @@ const hoViewOffers = () => {
                         </div>
                     </Col>
                 </Row>
+                </div>
             </Container>
         </Wrapper>
     )

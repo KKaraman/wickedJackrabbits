@@ -1,0 +1,18 @@
+#navbarId {
+    background-image: linear-gradient(to right, rgb(2, 60, 185) , rgb(45, 178, 255));
+    width: 100%;
+}
+
+#navTitle {
+    color: azure;
+    font-size: xx-large;
+    font-family: 'Righteous', cursive;
+margin-top: -4%;
+margin-bottom: -4%
+}
+
+#navContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
