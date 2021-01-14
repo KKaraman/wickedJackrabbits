@@ -5,6 +5,7 @@ import axios from "axios";
 
 
 
+
 const SignUp = () => {
     const [firstName, setfirstName] = useState("")
     const [lastName, setlastName] = useState("")
@@ -23,7 +24,7 @@ const SignUp = () => {
         })
     }
     return (
-       
+
             <Container>
             <div className="signupWrap">
                 <Row>
@@ -61,6 +62,7 @@ const SignUp = () => {
             </Container>
         
     )
+
 }
 
 // export default createOffer;

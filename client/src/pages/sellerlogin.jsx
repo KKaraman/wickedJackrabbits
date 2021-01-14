@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Container, Button, Row, Col } from "react-bootstrap";
 import Wrapper from "../components/Wrapper";
 import Title from "../components/Title";
 import projects from "../projects.json";
@@ -20,7 +21,7 @@ class PageThree extends Component {
         <textarea className="sellerEmail" placeholder="email"></textarea>
         <textarea className="sellerPassword" placeholder="password"></textarea>
         <div class="center">
-        <button className="sellerLogin" onclick="sellerLogin()">Log In</button>
+        <Button className="sellerLogin" href="/homeownermain"> Log In</Button>
         </div>
         </div>
         <p></p>
