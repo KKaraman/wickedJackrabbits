@@ -32,7 +32,6 @@ function App() {
 
           {/* Router cannot have more than one single child element */}
           <Switch>
-            <Route exact path="/test" component={SignUp} />
             <Route exact path="/" component={MainPage} />
             {/* Render this only if the first route doesnt match */}
 
@@ -46,7 +45,6 @@ function App() {
             <Route exact path="/hoMain" component={ addFeedback } />
             <Route exact path="/homeownermain" component={ hoMain } />
             <Route exact path="/signupagent" component={ SignUp } />
-            <Route exact path="/signupseller" component={ SignUp } />
 
             <Route path="/404" render={
               () => (

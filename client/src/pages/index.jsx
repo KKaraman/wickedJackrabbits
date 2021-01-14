@@ -16,14 +16,16 @@ const MainPage = () => {
   return (
     <Wrapper>
       
+      <div class="indexContainer">
       <Container>
         <Row>
-          <Col size="md-3" className="text-center" >
+          <Col>
             <h3>"Agents Name"</h3>
             {/* also implement dynamic agents name here */}
           </Col>
         </Row>
-        <Row className="text-center">
+
+        <Row>
           <Col>
           <input className="rounded" placeholder="Search address"></input>
           </Col>
@@ -31,8 +33,8 @@ const MainPage = () => {
           <Button type="button" className="btn btn-primary" href="/addHome">Add home</Button>
           </Col>
         </Row>
-        <Row className="d-flex justify-content-center">
-          <Col className="text-center col-sm-6">
+        <Row>
+          <Col>
             <Card>
             
               <Image  className="card-img-top"  src={ Placeholder } fluid  />
@@ -40,13 +42,13 @@ const MainPage = () => {
             
               <Col>
               <div >
-                <p className="text-center">
+                <p>
                  Address: "dynamic address put here"
                 </p>
               </div>
               </Col>
               
-              <Col size="md-2">
+              <Col>
               <Row>
               <div>
                 <p className="">
@@ -54,15 +56,15 @@ const MainPage = () => {
                 </p>
               </div>
               
-              <Col size="md-2">
+              <Col>
               <div>
-                <p className="text-center" >
+                <p>
                   offers
                 </p>
               </div>
-              <Col size="md-2">
+              <Col>
               <div>
-                <p className="text-right">
+                <p>
                   Sellers name
                 </p>
               </div>
@@ -86,6 +88,7 @@ const MainPage = () => {
           </Col>
         </Row> */}
       </Container>
+      </div>
     </Wrapper>
   );
 };
