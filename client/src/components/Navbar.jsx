@@ -2,7 +2,7 @@ import React from 'react'
 // import {
 //     BrowserRouter as Router,
 //     } from "react-router-dom";
-import { Navbar,Nav,NavDropdown, Container, Row, Col} from 'react-bootstrap';
+import { Navbar,Nav,NavDropdown, Container, Button, Row, Col} from 'react-bootstrap';
 import "./components.css";
 //import resume
 // import WorkResume from "../images/keremKaraman_workResume";
@@ -20,7 +20,8 @@ class BootstrapNavbar extends React.Component{
                         {/* <Router> */}
                         <div id="navbarId">
                             <Navbar fluid expand="lg" sticky="top">
-                                <Navbar.Brand id="navTitle" href="/">Sellify</Navbar.Brand>
+                                <Navbar.Brand id="navTitle" href="/">Sellify <div class="logout"><Button>Log Out</Button></div> </Navbar.Brand>
+                                
                                 {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
                                 {/* <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mr-auto">
