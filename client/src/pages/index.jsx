@@ -12,7 +12,7 @@ const MainPage = () => {
       <Container>
         <Row>
           <Col>
-            <h3>"Agents Name"</h3>
+            <h3><div id="agentName">'div id="agentName"'</div></h3>
             {/* also implement dynamic agents name here */}
           </Col>
         </Row>
@@ -23,48 +23,6 @@ const MainPage = () => {
           </Col>
           <Col>
             <Button type="button" className="btn btn-primary" href="/addHome">Add home</Button>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Card>
-
-              <Image className="card-img-top" src={Placeholder} fluid />
-              {/* implement agent updated photos */}
-
-              <Col>
-                <div >
-                  <p>
-                    Address: "dynamic address put here"
-                </p>
-                </div>
-              </Col>
-
-              <Col>
-                <Row>
-                  <div>
-                    <p className="">
-                      price
-                </p>
-                  </div>
-
-                  <Col>
-                    <div>
-                      <p>
-                        offers
-                </p>
-                    </div>
-                    <Col>
-                      <div>
-                        <p>
-                          Sellers name
-                </p>
-                      </div>
-                    </Col>
-                  </Col>
-                </Row>
-              </Col>
-            </Card>
           </Col>
         </Row>
       </Container>
