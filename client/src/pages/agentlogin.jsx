@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { Row, Col, Button, Container } from "react-bootstrap";
 import axios from "axios";
+import "./signup.css";
+
 const AgentLogin = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -14,18 +17,33 @@ const AgentLogin = () => {
   }
   // Map over this.state.projects and render a project component for each one
   return (
-    <div>
+    <Container>
+      <div className="signupWrap">
+      <Row>
+    <div className="signupInnerWrap">
+      <Col>
     <h1>Agent Login</h1>
-    <div class="Container">
-      <textarea onChange={(e) => { setEmail(e.target.value) }} className="agentEmail" placeholder="email"></textarea>
-      <textarea onChange={(e) => { setPassword(e.target.value) }} className="agentPassword" placeholder="password"></textarea>
-      <div class="center">
 
-        <button onClick={submitAgent} className="agentLogin" >Log In</button>
-      </div>
+      <input onChange={(e) => { setEmail(e.target.value) }} className="txtarea" type="text" placeholder="Email*"></input>
+      <p></p>
+      <input onChange={(e) => { setPassword(e.target.value) }} className="txtarea" type="text" placeholder="Password*"></input>
+
+      <p></p>
+
+        <Button onClick={submitAgent} className="agentLogin btn" >Log In</Button>
+        <p></p>
+        <h5>Not an Agent?</h5>                         
+        
+        <Button  href="/" id="login" type="submit">Sign up </Button> 
+        <Button  href="/sellerlogin" id="login" type="submit">Log In as a Homeowner</Button>
+        <p></p>
+ 
+
+    </Col>
     </div>
+    </Row>
     </div>
-      
+    </Container>
     );
 
 }
