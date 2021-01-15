@@ -21,3 +21,12 @@
 .navbar {
     width: 100%;
 }
+
+.logout {
+    position: relative;
+    float: right;
+    background-color: none;
+    background-image: none;
+    background: none;
+
+}
