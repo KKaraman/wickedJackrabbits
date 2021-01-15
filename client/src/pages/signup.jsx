@@ -58,9 +58,9 @@ const SignUp = () => {
                         </p>
                     <h5>Already signed up?</h5>                         
 
-                    <Button onClick={createLogin} href="/" id="login" type="submit">Log In as an Agent</Button>
+                    <Button  href="/agentlogin" id="login" type="submit">Log In as an Agent</Button>
 
-                    <Button onClick={createLogin} href="/" id="login" type="submit">Log In as a Homeowner</Button>
+                    <Button  href="/sellerlogin" id="login" type="submit">Log In as a Homeowner</Button>
 
                    </Col>
                 </div>

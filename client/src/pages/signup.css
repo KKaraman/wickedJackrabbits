@@ -1,5 +1,6 @@
 .txtarea {
     font-size: x-large;
+    width: 100%;
 }
 
 .signupWrap {
@@ -26,6 +27,7 @@
     font-weight: 600;
     border: 0;
     margin-left: -4%;
+    margin-right: 4%;
 }
 
 #login:hover {
