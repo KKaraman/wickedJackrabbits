@@ -61,3 +61,7 @@
     height: 100%;
     background-image: linear-gradient(to right, rgb(2, 60, 185) , rgb(45, 178, 255));
 }
+
+.InnerWrap {
+    padding: 5px;
+}

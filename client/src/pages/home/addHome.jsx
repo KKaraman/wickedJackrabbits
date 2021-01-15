@@ -33,6 +33,7 @@ const addHome = () => {
                     <Row>
                     <div className="signupInnerWrap">
                     <Col>
+                    <div className="InnerWrap">
 
                     <h1>House Details</h1>
 
@@ -69,7 +70,7 @@ const addHome = () => {
 
                          <p></p>
 
-
+                        </div>
                 </Col>
                 </div>
                 </Row>
