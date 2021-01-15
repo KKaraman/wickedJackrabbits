@@ -36,7 +36,7 @@ const AgentLogin = () => {
         
         <Button  href="/" id="login" type="submit">Sign up </Button> 
         <Button  href="/sellerlogin" id="login" type="submit">Log In as a Homeowner</Button>
-
+        <p></p>
  
 
     </Col>
