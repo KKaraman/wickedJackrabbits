@@ -2,7 +2,7 @@ import React from 'react'
 // import {
 //     BrowserRouter as Router,
 //     } from "react-router-dom";
-import { Navbar,Nav,NavDropdown, Container, Row, Col} from 'react-bootstrap';
+import { Navbar,Nav,NavDropdown, Container, Button, Row, Col} from 'react-bootstrap';
 import "./components.css";
 //import resume
 // import WorkResume from "../images/keremKaraman_workResume";
@@ -19,8 +19,9 @@ class BootstrapNavbar extends React.Component{
                     
                         {/* <Router> */}
                         <div id="navbarId">
-                            <Navbar fluid sticky="top">
-                                <Navbar.Brand id="navTitle" href="/">Sellify</Navbar.Brand>
+                            <Navbar fluid expand="lg" sticky="top">
+                                <Navbar.Brand id="navTitle" href="/">Sellify <div class="logout"><Button>Log Out</Button></div> </Navbar.Brand>
+                                
                                 {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
                                 {/* <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mr-auto">
@@ -35,11 +36,11 @@ class BootstrapNavbar extends React.Component{
                                     <Nav.Link href="/signupagent">SignUp (agent)</Nav.Link>
                                     <Nav.Link href="/signupseller">Signup (seller)</Nav.Link>
                                     <button id="logout">Log Out</button>
-                                    </Nav> */}
-                                    {/* <Form inline>
-                                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                                    </Nav>
+                                    {/* <Form inline> */}
+                                    {/* <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                                     <Button variant="outline-success">Search</Button>
-                                    </Form> */}
+                                    </Form> */} 
                                 {/* </Navbar.Collapse> */}
                             </Navbar>
                             </div>

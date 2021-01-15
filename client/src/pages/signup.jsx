@@ -2,6 +2,7 @@ import { Row, Col, Button, Container } from "react-bootstrap";
 import {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
+import "./signup.css"
 
 
 
@@ -29,36 +30,48 @@ const SignUp = () => {
             <Container>
             <div className="signupWrap">
                 <Row>
+                    <div className="signupInnerWrap">
                    <Col>
-                   First Name
-                   <input onChange={(e) => {setfirstName(e.target.value)}} className="txtarea" type="text" placeholder="Enter First Name"/>
+                   <h1>Sign Up</h1>
+                   <input onChange={(e) => {setfirstName(e.target.value)}} className="txtarea" type="text" placeholder="First Name*"/>
                    <p></p>
 
-                   Last Name
-                   <input onChange={(e) => {setlastName(e.target.value)}} className="txtarea" type="text" placeholder="Enter Last Name"/>
+                   
+                   <input onChange={(e) => {setlastName(e.target.value)}} className="txtarea" type="text" placeholder="Last Name*"/>
                    <p></p>
 
-                   Email
-                   <input onChange={(e) => {setEmail(e.target.value)}} className="txtarea" type="text" placeholder="Email"/>
+                   <input onChange={(e) => {setEmail(e.target.value)}} className="txtarea" type="text" placeholder="Email*"/>
                    <p></p>   
 
-                   Phone Number
-                   <input onChange={(e) => {setphoneNumber(e.target.value)}} className="txtarea" type="text" placeholder="XXX-XXXXXXX"/>
+                   <input onChange={(e) => {setphoneNumber(e.target.value)}} className="txtarea" type="text" placeholder="Phone*"/>
                    <p></p>   
                        
-                   Password
+                   <h2>Create a Password</h2>
+                    <p>Password requires 6 characters minimum</p>
                    <input onChange={(e) => {setPassword(e.target.value)}} className="txtarea" type="text" placeholder="Password"/>
                    <p></p>  
                   
                     <p>
+<!-- <<<<<<< nathans-branch -->
                         <Button onClick={createLogin} href="/agentmain" type="submit">Submit</Button>
                     </p>
                     
                     <p>Log in as agent <a href="/agentlogin">here</a></p>
                     <p>Or as home owner <a href="/sellerlogin">here</a></p>
+<!-- ======= -->
+                        <div class="buttoncss">
+                        <Button onClick={createLogin} href="/" type="submit">Submit</Button>
+                        </div>
+                        </p>
+                    <h5>Already signed up?</h5>                         
 
+                    <Button  href="/agentlogin" id="login" type="submit">Log In as an Agent</Button>
+<!-- >>>>>>> main -->
+
+                    <Button  href="/sellerlogin" id="login" type="submit">Log In as a Homeowner</Button>
+<p></p>
                    </Col>
-                
+                </div>
                     
                 </Row>
                 </div>

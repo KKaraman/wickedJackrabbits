@@ -26,13 +26,21 @@ const MainPage = () => {
     <div className="indexContainer">
       <Container>
         <Row>
+          <div className="searchbar">
           <Col>
-            <h3>{homeData.firstName}</h3>
+<!-- <<<<<<< nathans-branch
+            <h3>{homeData.firstName}</h3> -->
+
+            <h3><div id="agentName">'div id="agentName"'</div></h3>
+<!-- >>>>>>> main -->
             {/* also implement dynamic agents name here */}
           </Col>
+          </div>
         </Row>
         <Row>
+        <div className="searchbar">
           <Col>
+<!-- <<<<<<< nathans-branch -->
             <input placeholder="Search Address"></input>
           </Col>
           <Col>
@@ -98,6 +106,17 @@ const MainPage = () => {
                   </Row>
                 )
             })};
+<!-- ======= -->
+            <input className="rounded" placeholder="Search address"></input>
+            <p></p>
+          </Col>
+          <Button type="button" className="btn addHome btn-primary" href="/addHome">Add home</Button>
+          </div>
+          
+            
+          
+        </Row>
+<!-- >>>>>>> main -->
       </Container>
     </div>
   );
