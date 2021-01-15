@@ -20,6 +20,13 @@
     margin-right: auto;
 }
 
+#backtomain {
+    float: right;
+    position: relative;
+    padding-top: -4%;
+    margin-top: -1.5%;
+}
+
 .btn {
    height: auto;
    width: 100%;

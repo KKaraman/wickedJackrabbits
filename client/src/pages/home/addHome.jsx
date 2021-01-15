@@ -57,13 +57,16 @@ const addHome = () => {
 
                         <Button onClick={submitHome} className="text-center justify-content-center" href="/">Add Home</Button>
                          <p></p>
+                         <div id="backtomain">
+                         <Button  href="/agentlogin" id="login" type="submit">Back to Main</Button>
+                         </div>
                          <h5>Add Photo</h5>
-                         <Button>Add Image</Button>
+                         <p></p>
+                         <button>Add Image</button>
                          <Image>
                         {/* Upload image area */}
                          </Image>
-                         <p></p>
-                         <Button  href="/agentlogin" id="login" type="submit">Back to Main</Button>
+
                          <p></p>
 
 
