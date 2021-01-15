@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Button} from "react-bootstrap"
 import axios from "axios";
 const AgentLogin = () => {
   const [email, setEmail] = useState("")
@@ -21,7 +22,7 @@ const AgentLogin = () => {
       <textarea onChange={(e) => { setPassword(e.target.value) }} className="agentPassword" placeholder="password"></textarea>
       <div class="center">
 
-        <button onClick={submitAgent} className="agentLogin" >Log In</button>
+        <Button onClick={submitAgent} className="agentLogin" href="/agentmain" >Log In</Button>
       </div>
     </div>
     </div>

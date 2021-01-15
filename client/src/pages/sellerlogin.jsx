@@ -1,11 +1,10 @@
 import React, { Component } from "react";
+import { Button } from "react-bootstrap"
 import "./login.css";
 
 class PageThree extends Component {
   // Setting this.state.friends to the friends json array
-  state = {
-    projects
-  };
+  
 
 
   // Map over this.state.projects and render a project component for each one

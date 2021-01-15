@@ -46,7 +46,7 @@ const addHome = () => {
                         <input onChange={(e) => { setSellerPassword(e.target.value) }} className="col-md-4 text-center" placeholder="Sellers Password" type="sellersEmail" ></input>
                 <Col>
                     <Row className="justify-content-center">
-                        <Button onClick={submitHome} className="text-center justify-content-center" href="/">Add Home</Button>
+                        <Button onClick={submitHome} className="text-center justify-content-center" href="/agentmain">Add Home</Button>
                     </Row>
                 </Col>
                 </Col>
