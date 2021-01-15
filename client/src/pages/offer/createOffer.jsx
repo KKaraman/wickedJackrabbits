@@ -49,7 +49,7 @@ const createOffer = () => {
                         </select>
                         </p>
                         <p>
-                            <Button onClick={submitOffer} href="/" type="submit">Submit offer</Button>
+                            <Button onClick={submitOffer} href="/agentmain" type="submit">Submit offer</Button>
                             </p>
 
 

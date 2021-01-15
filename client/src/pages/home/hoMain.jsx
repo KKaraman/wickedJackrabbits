@@ -74,7 +74,7 @@ const hoMain = () => {
                         </Col>
                         <Col>
 
-                            <Button href="/viewoffer">VIEW OFFERS</Button>
+                            <Button href="/viewoffer/:id">VIEW OFFERS</Button>
 
                         </Col>
                     </Row>
