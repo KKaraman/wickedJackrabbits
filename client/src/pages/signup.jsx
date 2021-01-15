@@ -2,6 +2,7 @@ import { Row, Col, Button, Container } from "react-bootstrap";
 import {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
+import "./signup.css"
 
 
 
@@ -30,23 +31,23 @@ const SignUp = () => {
             <div className="signupWrap">
                 <Row>
                    <Col>
-                   First Name
+                   <h2>First Name</h2>
                    <input onChange={(e) => {setfirstName(e.target.value)}} className="txtarea" type="text" placeholder="Enter First Name"/>
                    <p></p>
 
-                   Last Name
+                   <h2>Last Name</h2>
                    <input onChange={(e) => {setlastName(e.target.value)}} className="txtarea" type="text" placeholder="Enter Last Name"/>
                    <p></p>
 
-                   Email
+                   <h2>Email</h2>
                    <input onChange={(e) => {setEmail(e.target.value)}} className="txtarea" type="text" placeholder="Email"/>
                    <p></p>   
 
-                   Phone Number
+                   <h2>Phone Number</h2>
                    <input onChange={(e) => {setphoneNumber(e.target.value)}} className="txtarea" type="text" placeholder="XXX-XXXXXXX"/>
                    <p></p>   
                        
-                   Password
+                   <h2>Password</h2>
                    <input onChange={(e) => {setPassword(e.target.value)}} className="txtarea" type="text" placeholder="Password"/>
                    <p></p>  
                   
