@@ -30,34 +30,40 @@ const SignUp = () => {
             <Container>
             <div className="signupWrap">
                 <Row>
+                    <div className="signupInnerWrap">
                    <Col>
-                   <h2>First Name</h2>
-                   <input onChange={(e) => {setfirstName(e.target.value)}} className="txtarea" type="text" placeholder="Enter First Name"/>
+                   <h1>Sign Up</h1>
+                   <input onChange={(e) => {setfirstName(e.target.value)}} className="txtarea" type="text" placeholder="First Name*"/>
                    <p></p>
 
-                   <h2>Last Name</h2>
-                   <input onChange={(e) => {setlastName(e.target.value)}} className="txtarea" type="text" placeholder="Enter Last Name"/>
+                   
+                   <input onChange={(e) => {setlastName(e.target.value)}} className="txtarea" type="text" placeholder="Last Name*"/>
                    <p></p>
 
-                   <h2>Email</h2>
-                   <input onChange={(e) => {setEmail(e.target.value)}} className="txtarea" type="text" placeholder="Email"/>
+                   <input onChange={(e) => {setEmail(e.target.value)}} className="txtarea" type="text" placeholder="Email*"/>
                    <p></p>   
 
-                   <h2>Phone Number</h2>
-                   <input onChange={(e) => {setphoneNumber(e.target.value)}} className="txtarea" type="text" placeholder="XXX-XXXXXXX"/>
+                   <input onChange={(e) => {setphoneNumber(e.target.value)}} className="txtarea" type="text" placeholder="Phone*"/>
                    <p></p>   
                        
-                   <h2>Password</h2>
+                   <h2>Create a Password</h2>
+                    <p>Password requires 6 characters minimum</p>
                    <input onChange={(e) => {setPassword(e.target.value)}} className="txtarea" type="text" placeholder="Password"/>
                    <p></p>  
                   
                     <p>
+                        <div class="buttoncss">
                         <Button onClick={createLogin} href="/" type="submit">Submit</Button>
+                        </div>
                         </p>
+                    <h5>Already signed up?</h5>                         
 
+                    <Button onClick={createLogin} href="/" id="login" type="submit">Log In as an Agent</Button>
+
+                    <Button onClick={createLogin} href="/" id="login" type="submit">Log In as a Homeowner</Button>
 
                    </Col>
-                
+                </div>
                     
                 </Row>
                 </div>

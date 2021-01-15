@@ -21,7 +21,7 @@ class BootstrapNavbar extends React.Component{
                         <div id="navbarId">
                             <Navbar fluid expand="lg" sticky="top">
                                 <Navbar.Brand id="navTitle" href="/">Sellify</Navbar.Brand>
-                                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                                {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
                                 {/* <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mr-auto">
                                     <Nav.Link href="/">Home Page</Nav.Link>

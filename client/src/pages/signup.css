@@ -1,3 +1,33 @@
 .txtarea {
     font-size: x-large;
 }
+
+.signupWrap {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.signupInnerWrap {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+   height: auto;
+   width: 100%;
+   font-size: x-large;
+}
+
+#login {
+    width: auto;
+    font-size: small;
+    color: black;
+    background-color: white;
+    font-weight: 600;
+    border: 0;
+    margin-left: -4%;
+}
+
+#login:hover {
+    color: rgb(47, 150, 235);
+}
