@@ -62,17 +62,6 @@ margin-left: .5%;
   text-align: center;
 }
 
-.rounded {
-  font-size: x-large;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.searchbar {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .agentName {
   margin-left: auto;
   margin-right: auto;
@@ -80,4 +69,81 @@ margin-left: .5%;
 
 .btn {
   width: 100%; 
+  background: none;
+  border: none;
+}
+
+.genImage {
+
+}
+
+.genPart {
+  background: none;
+  border-radius:10px;
+  color:rgb(255, 255, 255);
+  display: flexbox;
+  align-items:center;
+  justify-content:center;
+  font-size: x-large;
+  margin: 5px;
+  line-height: 80%;
+  border-radius: 15px;
+  background-color: #007bff;
+  padding: 5px; 
+  text-align: center;
+  width: 95%;
+}
+
+.genWrap {
+
+  margin: auto;
+  width:100%;
+  height:5%;
+background: none;
+  display:grid;
+  grid-template-columns: 50% 50%;
+  grid-row: auto auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  background: none;
+}
+
+.innerPart {
+  font-weight: 500;
+  width: 100%;
+}
+
+.innerGenPart {
+  line-height: 100%;
+  width: 100%;
+  font-size: large;
+}
+
+.addHome {
+width: 90%;
+font-weight: 500;
+margin-left: -3%;
+padding-left: 7%;
+margin-right: -5%;
+}
+
+.searchBar {
+width: 110%;
+padding-right: -15%;
+}
+
+.rounded {
+  font-size: x-large;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.searchAdd {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: flex-end;
 }
