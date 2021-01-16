@@ -79,7 +79,6 @@ margin-left: .5%;
 
 .genPart {
   background: none;
-  border-radius:10px;
   color:rgb(255, 255, 255);
   display: flexbox;
   align-items:center;
@@ -87,7 +86,6 @@ margin-left: .5%;
   font-size: x-large;
   margin: 5px;
   line-height: 80%;
-  border-radius: 15px;
   padding: 5px; 
   text-align: center;
   width: 95%;
@@ -104,18 +102,20 @@ background: none;
   grid-row: auto auto;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(16, 26, 54);
+  background-color: rgb(9, 21, 54);
 }
 
-.card {
+.cardWrap {
   background: none;
-  margin-top: 20px;
+  border: 10px solid rgb(9, 21, 54);
+  border-radius:15px;
+  background-color:rgb(9, 21, 54);
 }
 
 .innerPart {
   font-weight: 500;
   width: 100%;
-  font-size: 27px;
+  font-size: 22px;
   text-decoration: underline;
 }
 
@@ -150,4 +150,9 @@ height: 48px;
   margin-right: auto;
   display: flex;
   align-items: flex-end;
+}
+
+.card {
+  background-color:rgb(9, 21, 54);
+  border: solid 2px rgb(9, 21, 54);
 }

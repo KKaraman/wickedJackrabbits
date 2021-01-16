@@ -61,7 +61,7 @@ const MainPage = () => {
 
                   <NavLink to={`/homedetails/`}>
 
-                    <div className="card">
+                    <div className="cardWrap">
 
                     <Card>
                       <div className="genImage">
