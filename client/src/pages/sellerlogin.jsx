@@ -1,17 +1,7 @@
-// <<<<<<< nathans-branch
-import React, { Component } from "react";
-import { Button } from "react-bootstrap"
-import "./login.css";
-
-class PageThree extends Component {
-  // Setting this.state.friends to the friends json array
-  
-// =======
-import React, { useState } from "react";
+import React, { Component, useState } from "react";
 import { Row, Col, Button, Container } from "react-bootstrap";
 import axios from "axios";
 import "./signup.css";
-// >>>>>>> main
 
 const AgentLogin = () => {
   const [email, setEmail] = useState("")

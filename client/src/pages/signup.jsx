@@ -52,13 +52,7 @@ const SignUp = () => {
                    <p></p>  
                   
                     <p>
-<!-- <<<<<<< nathans-branch -->
-                        <Button onClick={createLogin} href="/agentmain" type="submit">Submit</Button>
-                    </p>
-                    
-                    <p>Log in as agent <a href="/agentlogin">here</a></p>
-                    <p>Or as home owner <a href="/sellerlogin">here</a></p>
-<!-- ======= -->
+
                         <div class="buttoncss">
                         <Button onClick={createLogin} href="/" type="submit">Submit</Button>
                         </div>
@@ -66,8 +60,6 @@ const SignUp = () => {
                     <h5>Already signed up?</h5>                         
 
                     <Button  href="/agentlogin" id="login" type="submit">Log In as an Agent</Button>
-<!-- >>>>>>> main -->
-
                     <Button  href="/sellerlogin" id="login" type="submit">Log In as a Homeowner</Button>
 <p></p>
                    </Col>
