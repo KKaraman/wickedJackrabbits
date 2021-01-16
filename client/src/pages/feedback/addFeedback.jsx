@@ -61,7 +61,7 @@ const addFeedback = () => {
                    <input onChange={(e) => {setEstimatedInterest(e.target.value)}} className="txtarea" type="text" placeholder="Estimated Interest"/>
                 
                     <Col>
-                        <Button onClick={submitFeedback} href="/" type="submit">Submit offer</Button>
+                        <Button onClick={submitFeedback} href="/agentmain" type="submit">Submit offer</Button>
                     </Col>
                     </Col>
                     </div>
