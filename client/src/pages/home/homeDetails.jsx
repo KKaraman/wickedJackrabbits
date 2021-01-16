@@ -2,8 +2,10 @@ import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Placeholder from "../../images/placeholder.png"
+
 import {useParams} from "react-router";
 import axios from "axios";
+
 
 const homeDetails = () => {
 
@@ -54,8 +56,10 @@ const homeDetails = () => {
                       <p>
                         Sellers name:
                                 </p>
+
                     </div>
                   </Col>
+
                 </Col>
               </Row>
             </Col>

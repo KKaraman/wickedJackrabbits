@@ -57,9 +57,11 @@ const MainPage = () => {
 
               <Col>
 
+
                 <NavLink to={`/homedetails/` + homeId}>
 
-                  <div className="card">
+
+                    <div className="cardWrap">
 
                     <Card>
                       <div className="genImage">
@@ -94,10 +96,11 @@ const MainPage = () => {
                         </div>
 
 
-                        <div className="genPart">
-                          <p>
-                            <div className="innerPart">
-                              Offers
+
+                            <div className="genPart">
+                            <p>
+                                  <div className="innerPart">
+                                Total Offers 
                                 </div>
                             <p></p>
                             <div className="innerGenPart">
