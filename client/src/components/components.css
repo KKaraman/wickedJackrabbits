@@ -28,5 +28,11 @@
     background-color: none;
     background-image: none;
     background: none;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    line-height: 0;
+}
 
+.btn:hover {
+    background: rgb(2, 60, 185);
 }
