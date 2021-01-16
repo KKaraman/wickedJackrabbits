@@ -26,18 +26,23 @@ const MainPage = () => {
     <div className="indexContainer">
       <Container>
         <Row>
+        <div className="searchbar">
           <Col>
+          <h3><div id="agentName">'div id="agentName"'</div></h3>
             <h3>{homeData.firstName}</h3>
             {/* also implement dynamic agents name here */}
           </Col>
+          </div>
+
         </Row>
         <Row>
+        <div className="searchbar">
           <Col>
-            <input placeholder="Search Address"></input>
+            <input className="rounded" placeholder="Search Address"></input>
+            <p></p>
           </Col>
-          <Col>
-          <Button href="/addhome">Add Home</Button>
-          </Col>
+          <Button type="button" className="btn addHome btn-primary" href="/addHome">Add home</Button>
+          </div>
         </Row>
 
         {homeData.Users && homeData.Users.length !== 0 && homeData.Users.map(item => {
