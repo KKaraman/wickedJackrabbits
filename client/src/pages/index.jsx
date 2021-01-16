@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ".././App.css";
 import Placeholder from "../images/placeholder.png";
@@ -9,136 +9,135 @@ import axios from "axios";
 const MainPage = () => {
   const [homeData, setHomeData] = useState({})
   useEffect(() => {
-    axios.get("/api/getHomes" )
+    axios.get("/api/getHomes")
       .then((res) => {
         setHomeData(res.data.result)
         console.log("Home details =", res.data.result.Users)
         console.log("data:", res.data.result)
       })
   }, [])
-  
-  
 
   console.log("this is homedata", homeData.firstName)
-
 
   return (
     <div className="indexContainer">
       <Container>
         <Row>
-        <div className="searchAdd">
-          <Col>
-            <h3 id="agentName">{homeData.firstName}</h3>
-            {/* also implement dynamic agents name here */}
-          </Col>
+          <div className="searchAdd">
+            <Col>
+              <h3 id="agentName">{homeData.firstName}</h3>
+              {/* also implement dynamic agents name here */}
+            </Col>
           </div>
 
         </Row>
         <Row>
           <Col>
-          <div className="searchAdd">
-          <div className="searchBar">
-            <input className="rounded searchBar" placeholder="Search Address"></input>
-          </div>
-          <div className="addHome">
-          <Button type="button" className="addHome btn btn-primary" href="/addHome">Add Home</Button>
-          </div>
-          </div>
+            <div className="searchAdd">
+              <div className="searchBar">
+                <input className="rounded searchBar" placeholder="Search Address"></input>
+              </div>
+              <div className="addHome">
+                <Button type="button" className="addHome btn btn-primary" href="/addHome">Add Home</Button>
+              </div>
+            </div>
           </Col>
 
-          
+
         </Row>
         <p></p>
 
         {homeData.Users && homeData.Users.length !== 0 && homeData.Users.map(item => {
 
-            const homes = item.Homes
-            const homesMap = homes.map(home=> {
-              console.log("home id", home) 
-              return(
-               
-                <Col>
+          const homes = item.Homes
+          const homesMap = homes.map(home => {
+            console.log("home id", home.id)
+            const homeId = home.id
+            return(
 
-                  <NavLink to={`/homedetails/`}>
+              <Col>
 
-                    <div className="card">
+                <NavLink to={`/homedetails/` + homeId}>
+
+                  <div className="card">
 
                     <Card>
                       <div className="genImage">
-                      <Image className="card-img-top" src={Placeholder} fluid />
-                      {/* implement agent updated photos */}
+                        <Image className="card-img-top" src={Placeholder} fluid />
+                        {/* implement agent updated photos */}
                       </div>
                       <div className="genWrap">
 
 
-                          <div className="genPart">
-                            <p>
-                              <div className="innerPart">
-                                 Address 
+                        <div className="genPart">
+                          <p>
+                            <div className="innerPart">
+                              Address
                               </div>
-                              <p></p>
-                              <div className="innerGenPart">
-                                  <p>{home.address}</p>
-                              </div>
+                            <p></p>
+                            <div className="innerGenPart">
+                              <p>{home.address}</p>
+                            </div>
+                          </p>
+                        </div>
+
+                        <div className="genPart">
+                          <p>
+                            <div className="innerPart">
+                              Listing Price
+                            </div>
+                            <p></p>
+                            <div className="innerGenPart">
+                              <p>${home.listingPrice}</p>
+                            </div>
+                          </p>
+                        </div>
+
+
+                        <div className="genPart">
+                          <p>
+                            <div className="innerPart">
+                              Offers
+                                </div>
+                            <p></p>
+                            <div className="innerGenPart">
+                              <p>Generated Text</p>
+                            </div>
+                          </p>
+                        </div>
+
+                        <div className="genPart">
+                          <p>
+                            <div className="innerPart">
+                              Homeowner
+                                  </div>
+                          </p>
+                          <p></p>
+                          <div className="innerGenPart">
+                            <p>{item.firstName} {item.LastName}
                             </p>
                           </div>
+                        </div>
 
-                          <div className="genPart">
-                          <p>
-                                  <div className="innerPart">
-                            Listing Price
-                            </div>
-                             <p></p> 
-                             <div className="innerGenPart">
-                              <p>${home.listingPrice}</p>
-                              </div>
-                          </p>
-                              </div>
-
-
-                            <div className="genPart">
-                            <p>
-                                  <div className="innerPart">
-                                Offers 
-                                </div>
-                                <p></p>
-                                <div className="innerGenPart">
-                                  <p>Generated Text</p>
-                                  </div>
-                              </p>
-                            </div>
-
-                              <div className="genPart">
-                                  <p>
-                                  <div className="innerPart">
-                                  Homeowner 
-                                  </div> 
-                                  </p>
-                                  <p></p>
-                                  <div className="innerGenPart">
-                                    <p>{item.firstName} {item.LastName}
-                                  </p>
-                                  </div>
-                              </div>
-
-                            </div>
+                      </div>
 
 
                     </Card>
-                    </div>
-                    </NavLink>
-                  </Col>
-                
-              
-                  
-            )})
-            
-                return (
-                  <Row>
-                    {homesMap}
-                  </Row>
-                )
-            })};
+                  </div>
+                </NavLink>
+              </Col>
+
+
+
+            )
+          })
+
+          return (
+            <Row>
+              {homesMap}
+            </Row>
+          )
+        })};
       </Container>
     </div>
   );

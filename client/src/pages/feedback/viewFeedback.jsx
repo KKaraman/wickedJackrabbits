@@ -1,14 +1,14 @@
 import { Row, Col, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
 import axios from "axios";
-
-
 
 const viewFeedback = () => {
     const [agentData, setAgentData] = useState({})
+    const { id } = useParams();
     useEffect(() => {
-        axios.get("/api/getHome/3")
+        axios.get("/api/getHome/" + id)
             .then((res) => {
                 setAgentData(res.data.result)
                 console.log(res.data.result)
@@ -34,8 +34,8 @@ const viewFeedback = () => {
             })}
         </Container>
     )
-    
-    
+
+
 };
 
 export default viewFeedback;

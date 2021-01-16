@@ -12,12 +12,13 @@ import addHome from "./pages/home/addHome"
 import SignUp from "./pages/signup";
 import createOffer from "./pages/offer/createOffer"
 import homeDetails from "./pages/home/homeDetails"
-// different components
-import BootstrapNavbar from "./components/Navbar";
-import addFeedback from "./pages/feedback/addFeedback";
 import viewOffer from "./pages/offer/viewOffer";
 import viewFeedback from "./pages/feedback/viewFeedback"
 import hoMain from "./pages/home/hoMain.jsx";
+// different components
+import BootstrapNavbar from "./components/Navbar";
+import addFeedback from "./pages/feedback/addFeedback";
+
 
 
 function App() {
@@ -37,10 +38,10 @@ function App() {
             <Route exact path="/addhome" component={ addHome } />
             <Route exact path="/createoffer" component={ createOffer } />
             <Route exact path="/viewoffer/:id" component={ viewOffer } />
-            <Route exact path="/viewfeedback" component={ viewFeedback } />
+            <Route exact path="/viewfeedback/:id" component={ viewFeedback } />
             <Route exact path="/addfeedback" component={ addFeedback } />
             <Route exact path="/homeownermain" component={ hoMain } />
-            <Route exact path="/homedetails" component={homeDetails} />
+            <Route exact path="/homedetails/:id" component={homeDetails} />
 
             <Route path="/404" render={
               () => (
