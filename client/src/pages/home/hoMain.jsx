@@ -31,7 +31,7 @@ const hoMain = () => {
                 <div id="details">
 
                 <div className="box">
-                <p>Home Listed</p>
+                <p className="HOM">Home Listed</p>
                 <p id="homeListed">Test</p>
                 </div>
 

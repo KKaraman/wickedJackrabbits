@@ -31,7 +31,7 @@ const createOffer = () => {
                         <Col>
                         <Col>
                         <h1>Create Offer</h1>
-                    <input onChange={(e) => {setDateOffered(e.target.value)}} className="txtarea" type="text" placeholder="Date of Offer"/>
+                    <input onChange={(e) => {setDateOffered(e.target.value)}} className="txtarea" type="date" placeholder="Date of Offer"/>
                         
                     <input onChange={(e) => {setName(e.target.value)}} className="txtarea" type="text" placeholder="Buyer's Name"/>
 
