@@ -13,7 +13,7 @@
   margin: auto;
   width:100% max-content;
   height:5%;
-  background-color:#fff;
+background: none;
   display:grid;
   grid-template-columns: 50% 50%;
   grid-row: auto auto;
@@ -31,9 +31,11 @@
     align-items:center;
     justify-content:center;
     font-size: x-large;
-    margin-top: 0em ;
-    margin-bottom: 1em ;
+    margin: 5px;
     line-height: 80%;
+    border-radius: 15px;
+    background: #ffffff;
+    padding: 5px; 
 }
 
 .container {
