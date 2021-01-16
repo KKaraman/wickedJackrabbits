@@ -18,7 +18,7 @@ const MainPage = () => {
   }, [])
   
   
-  const agent = homeData;
+
   console.log("this is homedata", homeData.firstName)
 
 
@@ -28,8 +28,7 @@ const MainPage = () => {
         <Row>
         <div className="searchAdd">
           <Col>
-          <h3><div id="agentName">'div id="agentName"'</div></h3>
-            <h3>{homeData.firstName}</h3>
+            <h3 id="agentName">{homeData.firstName}</h3>
             {/* also implement dynamic agents name here */}
           </Col>
           </div>
@@ -56,12 +55,14 @@ const MainPage = () => {
             const homes = item.Homes
             const homesMap = homes.map(home=> {
               console.log("home id", home) 
-              const id = home.id 
               return(
                
                 <Col>
-                  <NavLink to={`/createoffer/`}>
+
+                  <NavLink to={`/homedetails/`}>
+
                     <div className="card">
+
                     <Card>
                       <div className="genImage">
                       <Image className="card-img-top" src={Placeholder} fluid />

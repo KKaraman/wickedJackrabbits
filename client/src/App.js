@@ -11,7 +11,7 @@ import SellerLogin from "./pages/sellerlogin"
 import addHome from "./pages/home/addHome"
 import SignUp from "./pages/signup";
 import createOffer from "./pages/offer/createOffer"
-
+import homeDetails from "./pages/home/homeDetails"
 // different components
 import BootstrapNavbar from "./components/Navbar";
 import addFeedback from "./pages/feedback/addFeedback";
@@ -40,6 +40,7 @@ function App() {
             <Route exact path="/viewfeedback" component={ viewFeedback } />
             <Route exact path="/addfeedback" component={ addFeedback } />
             <Route exact path="/homeownermain" component={ hoMain } />
+            <Route exact path="/homedetails" component={homeDetails} />
 
             <Route path="/404" render={
               () => (

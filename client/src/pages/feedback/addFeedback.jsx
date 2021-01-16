@@ -44,7 +44,7 @@ const addFeedback = () => {
                    </Col>
                 
                     <Col>
-                        <Button onClick={submitFeedback} href="/" type="submit">Submit offer</Button>
+                        <Button onClick={submitFeedback} href="/agentmain" type="submit">Submit offer</Button>
                     </Col>
                 </Row>
 
