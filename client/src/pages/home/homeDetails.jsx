@@ -93,29 +93,8 @@ const homeDetails = () => {
                     </div>
                     </Col>
                </Row>
-               <br></br>
-            <Row>
-                <Col>
-                    <Button type="button" className="btn btn-dark" href="/createoffer">ADD OFFER</Button>
-                </Col>
-                <Col>
-                    <Button type="button" className="btn btn-dark" href="/addfeedback">ADD FEEDBACK</Button>
-                </Col>
-            </Row>
-                <br></br>
-            <Row>
-                <Col>
-                    <Button type="button" className="btn btn-dark" href="/viewoffer/:id">VIEW OFFERS</Button>
-                </Col>
-                <Col>
-                    <Button type="button" className="btn btn-dark" href="/viewfeedback/:id">VIEW FEEDBACK</Button>
+              
 
-                </Col>
-              </Row>
-            </Col>
-          </Card>
-        </Col>
-      </Row>
       <br></br>
       <Row>
         <Col>

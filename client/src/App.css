@@ -79,7 +79,7 @@ margin-left: .5%;
 
 .genPart {
   background: none;
-  color:rgb(255, 255, 255);
+  color:rgb(19, 18, 18);
   display: flexbox;
   align-items:center;
   justify-content:center;
@@ -102,14 +102,15 @@ background: none;
   grid-row: auto auto;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(9, 21, 54);
+  background-color: rgb(253, 253, 253);
 }
 
 .cardWrap {
   background: none;
-  border: 10px solid rgb(9, 21, 54);
+  border: 5px solid rgb(88, 85, 85);
   border-radius:15px;
-  background-color:rgb(9, 21, 54);
+  background-color:rgb(87, 84, 84);
+  margin-bottom: 5px;
 }
 
 .innerPart {
@@ -153,8 +154,9 @@ height: 48px;
 }
 
 .card {
-  background-color:rgb(9, 21, 54);
-  border: solid 2px rgb(9, 21, 54);
+  background-color:rgb(243, 242, 241);
+  border: solid 2px rgb(255, 254, 253);
+  margin: 5px;
 }
 
 .signupWrap {
