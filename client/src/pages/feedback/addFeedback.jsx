@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Button, Form, } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./feedback.css";
+import ".././signup.css";
 import axios from "axios";
 
 const addFeedback = () => {
@@ -31,22 +31,42 @@ const addFeedback = () => {
         return (
            
                 <Container>
+                                <div className="signupWrap">
                 <Row>
-                   <Col sm={6}>
-                   <input onChange={(e) => {setDateShown(e.target.value)}} type="text" placeholder="Date Shown"/>
-                   <input onChange={(e) => {setName(e.target.value)}} type="text" placeholder="name"/>
-                   <input onChange={(e) => {setLocal(e.target.value)}} type="text" placeholder="Local"/>
-                   <input onChange={(e) => {setFamily(e.target.value)}} type="text" placeholder="Family?"/>
-                   <input onChange={(e) => {setTimeline(e.target.value)}} type="text" placeholder="Timeline"/>
-                   <input onChange={(e) => {setLiked(e.target.value)}} type="text" placeholder="Liked?"/>
-                   <input onChange={(e) => {setNotLike(e.target.value)}} type="text" placeholder="Not Liked?"/>
-                   <input onChange={(e) => {setEstimatedInterest(e.target.value)}} type="text" placeholder="Estimated Interest"/>
-                   </Col>
+                <div className="signupInnerWrap">
+                   <Col>
+                   <h1>Create an Offer</h1>
+                                      
+                   <h5>What is your name?</h5>
+                   <input onChange={(e) => {setName(e.target.value)}} type="text" className="txtarea" placeholder="First and Last"/>
+                    
+                   <h5>When did you see the house?</h5>
+                   <input onChange={(e) => {setDateShown(e.target.value)}} type="date" className="txtarea" placeholder="Date"/>
+                   
+                   <h5>Are you local?</h5>
+                   <input onChange={(e) => {setLocal(e.target.value)}} className="txtarea" type="text" placeholder="Local"/>
+                   
+                   <h5>How many people would live in your household?</h5>
+                   <input onChange={(e) => {setFamily(e.target.value)}} className="txtarea" type="text" placeholder="Family?"/>
+                   
+                   <h5></h5>
+                   <input onChange={(e) => {setTimeline(e.target.value)}} className="txtarea" type="text" placeholder="Timeline"/>
+                   
+                   <h5></h5>
+                   <input onChange={(e) => {setLiked(e.target.value)}} className="txtarea" type="text" placeholder="Liked?"/>
+                   
+                   <h5></h5>
+                   <input onChange={(e) => {setNotLike(e.target.value)}} className="txtarea" type="text" placeholder="Not Liked?"/>
+
+                   <input onChange={(e) => {setEstimatedInterest(e.target.value)}} className="txtarea" type="text" placeholder="Estimated Interest"/>
                 
                     <Col>
-                        <Button onClick={submitFeedback} href="/" type="submit">Submit offer</Button>
+                        <Button onClick={submitFeedback} href="/agentmain" type="submit">Submit Feedback</Button>
                     </Col>
+                    </Col>
+                    </div>
                 </Row>
+                </div>
 
                 </Container>
             

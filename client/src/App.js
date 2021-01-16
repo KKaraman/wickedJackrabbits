@@ -12,7 +12,9 @@ import SellerLogin from "./pages/sellerlogin"
 import addHome from "./pages/home/addHome"
 import SignUp from "./pages/signup";
 import createOffer from "./pages/offer/createOffer"
-
+import homeDetails from "./pages/home/homeDetails"
+import selectedOffer from "./pages/offer/selectedOffer";
+import selectedFeedback from "./pages/feedback/selectedFeedback"
 // different components
 import BootstrapNavbar from "./components/Navbar";
 import addFeedback from "./pages/feedback/addFeedback";
@@ -36,12 +38,14 @@ function App() {
             <PrivateRoute exact path="/agentmain" component={ MainPage } />
             <Route exact path="/sellerlogin" component= { SellerLogin } />
             <Route exact path="/agentlogin" component={ AgentLogin } />
+
             <PrivateRoute exact path="/addhome" component={ addHome } />
             <PrivateRoute exact path="/createoffer" component={ createOffer } />
             <PrivateRoute exact path="/viewoffer/:id" component={ viewOffer } />
             <PrivateRoute exact path="/viewfeedback" component={ viewFeedback } />
             <PrivateRoute exact path="/addfeedback" component={ addFeedback } />
             <PrivateRoute exact path="/homeownermain" component={ hoMain } />
+
 
             <Route path="/404" render={
               () => (

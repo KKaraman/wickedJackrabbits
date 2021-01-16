@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Row, Col, Button, Container } from "react-bootstrap";
+
 import axios from "axios";
 import "./signup.css";
 
@@ -30,7 +31,8 @@ const AgentLogin = () => {
 
       <p></p>
 
-        <Button onClick={submitAgent} className="agentLogin btn" >Log In</Button>
+        <Button onClick={submitAgent} className="agentLogin btn" href="/agentmain">Log In</Button>
+       
         <p></p>
         <h5>Not an Agent?</h5>                         
         
@@ -40,6 +42,7 @@ const AgentLogin = () => {
  
 
     </Col>
+
     </div>
     </Row>
     </div>

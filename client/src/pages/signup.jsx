@@ -52,14 +52,14 @@ const SignUp = () => {
                    <p></p>  
                   
                     <p>
+
                         <div class="buttoncss">
-                        <Button onClick={createLogin} href="/" type="submit">Submit</Button>
+                        <Button onClick={createLogin} href="/agentmain" type="submit">Submit</Button>
                         </div>
                         </p>
                     <h5>Already signed up?</h5>                         
 
                     <Button  href="/agentlogin" id="login" type="submit">Log In as an Agent</Button>
-
                     <Button  href="/sellerlogin" id="login" type="submit">Log In as a Homeowner</Button>
 <p></p>
                    </Col>

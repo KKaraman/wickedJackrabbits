@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Component, useState } from "react";
 import { Row, Col, Button, Container } from "react-bootstrap";
 import axios from "axios";
 import "./signup.css";
@@ -29,7 +29,7 @@ const AgentLogin = () => {
       <input onChange={(e) => { setPassword(e.target.value) }} className="txtarea" type="text" placeholder="Password*"></input>
 
       <p></p>
-        <Button onClick={submitAgent} className="agentLogin btn" >Log In</Button>
+        <Button onClick={submitAgent} className="agentLogin btn" href="/homeownermain">Log In</Button>
         <p></p>
         <h5>Not the Homeowner?</h5>                         
         

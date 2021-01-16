@@ -33,6 +33,7 @@ const addHome = () => {
                     <Row>
                     <div className="signupInnerWrap">
                     <Col>
+
                     <div className="InnerWrap">
 
                     <h1>House Details</h1>
@@ -56,10 +57,10 @@ const addHome = () => {
                         
                         <p></p>
 
-                        <Button onClick={submitHome} className="text-center justify-content-center" href="/">Add Home</Button>
+                        <Button onClick={submitHome} className="text-center justify-content-center" href="/agentmain">Add Home</Button>
                          <p></p>
                          <div id="backtomain">
-                         <Button  href="/agentlogin" id="login" type="submit">Back to Main</Button>
+                         <Button  href="/agentmain" id="login" type="submit">Back to Main</Button>
                          </div>
                          <h5>Add Photo</h5>
                          <p></p>
@@ -69,8 +70,7 @@ const addHome = () => {
                          </Image>
 
                          <p></p>
-
-                        </div>
+                </div>
                 </Col>
                 </div>
                 </Row>

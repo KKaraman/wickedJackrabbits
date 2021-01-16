@@ -30,35 +30,81 @@ const hoMain = () => {
                 {/* second row: Details */}
                 <div id="details">
 
+
+
                 <div className="box">
-                <p>Home Listed</p>
-                <p id="homeListed">Test</p>
+                <p>
+                    <div className="innerPart">
+                    Home Listed
+                    </div>
+                    <p></p>
+                    <div className="innerGenPart">
+                        <p>Placeholder</p>
+                    </div>
+                </p>
                 </div>
 
                 <div className="box">
-                <p>Price</p>
-                <p id="price">Test</p>
+                <p>
+                    <div className="innerPart">
+                    Price
+                    </div>
+                    <p></p>
+                    <div className="innerGenPart">
+                        <p>Placeholder</p>
+                    </div>
+                </p>
                 </div>
 
                 <div className="box">
-                <p>Showings</p>
-                <p id="showings">Test</p>
+                <p>
+                    <div className="innerPart">
+                    Total Showings
+                    </div>
+                    <p></p>
+                    <div className="innerGenPart">
+                        <p>Placeholder</p>
+                    </div>
+                </p>
                 </div>
 
                 <div className="box">
-                <p>Average Rating</p>
-                <p id="rating">Test</p>
+                <p>
+                    <div className="innerPart">
+                    Average Rating 
+                    </div>
+                    <p></p>
+                    <div className="innerGenPart">
+                        <p>Placeholder</p>
+                    </div>
+                </p>
                 </div>
 
                 <div className="box">
-                <p>Number of Offers</p>
-                <p id="offers">Test</p> 
+                <p>
+                    <div className="innerPart">
+                    Number of Offers
+                    </div>
+                    <p></p>
+                    <div className="innerGenPart">
+                        <p>Placeholder</p>
+                    </div>
+                </p>
                 </div>
 
                 <div className="box">
-                <p>Average Offer Price</p>
-                <p id="offerAverage">Test</p>
+                <p>
+                    <div className="innerPart">
+                    Average Offer Price
+                    </div>
+                    <p></p>
+                    <div className="innerGenPart">
+                        <p>Placeholder</p>
+                    </div>
+                </p>
                 </div>
+
+
                 </div>
 
                 <div className="feedback">
@@ -74,7 +120,7 @@ const hoMain = () => {
                         </Col>
                         <Col>
 
-                            <Button href="/viewoffer">VIEW OFFERS</Button>
+                            <Button href="/viewoffer/:id">VIEW OFFERS</Button>
 
                         </Col>
                     </Row>

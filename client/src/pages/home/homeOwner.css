@@ -11,9 +11,9 @@
 
 #details {
   margin: auto;
-  width:100% max-content;
+  width:100%;
   height:5%;
-  background-color:#fff;
+background: none;
   display:grid;
   grid-template-columns: 50% 50%;
   grid-row: auto auto;
@@ -24,18 +24,27 @@
 }
 
 .box {
-  background-color: rgb(255, 255, 255);
-    border-radius:10px;
-    color:rgb(0, 0, 0);
-    display: flexbox;
-    align-items:center;
-    justify-content:center;
-    font-size: x-large;
-    margin-top: 0em ;
-    margin-bottom: 1em ;
-    line-height: 80%;
+  background: none;
+  border-radius:10px;
+  color:rgb(255, 255, 255);
+  display: flexbox;
+  align-items:center;
+  justify-content:center;
+  font-size: x-large;
+  margin: 5px;
+  line-height: 80%;
+  border-radius: 15px;
+  background-color: #007bff;
+  border: white 1px solid;
+  padding: 5px; 
+  text-align: center;
+  width: 95%;
 }
 
 .container {
   width: 100%;
+}
+
+.innerPart {
+  line-height: 100%;
 }
