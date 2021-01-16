@@ -23,8 +23,11 @@ const MainPage = () => {
 
 
   return (
-    <div className="indexContainer">
       <Container>
+      <div className="signupWrap">
+        <Row>
+        <div className="signupInnerWrap">
+          <Col>
         <Row>
         <div className="searchAdd">
           <Col>
@@ -139,8 +142,13 @@ const MainPage = () => {
                   </Row>
                 )
             })};
+            </Col>
+            </div>
+            </Row>
+            </div>
+            
       </Container>
-    </div>
+
   );
 };
 
