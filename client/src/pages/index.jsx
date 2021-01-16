@@ -26,7 +26,7 @@ const MainPage = () => {
     <div className="indexContainer">
       <Container>
         <Row>
-        <div className="searchbar">
+        <div className="searchAdd">
           <Col>
           <h3><div id="agentName">'div id="agentName"'</div></h3>
             <h3>{homeData.firstName}</h3>
@@ -36,13 +36,18 @@ const MainPage = () => {
 
         </Row>
         <Row>
-        <div className="searchbar">
           <Col>
-            <input className="rounded" placeholder="Search Address"></input>
-            <p></p>
-          </Col>
-          <Button type="button" className="btn addHome btn-primary" href="/addHome">Add home</Button>
+          <div className="searchAdd">
+          <div className="searchBar">
+            <input className="rounded searchBar" placeholder="Search Address"></input>
           </div>
+          <div className="addHome">
+          <Button type="button" className="addHome btn btn-primary" href="/addHome">Add Home</Button>
+          </div>
+          </div>
+          </Col>
+
+          
         </Row>
         <p></p>
 
