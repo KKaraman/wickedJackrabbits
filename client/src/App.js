@@ -42,11 +42,13 @@ function App() {
             <Route exact path="/addhome" component={ addHome } />
             <Route exact path="/createoffer" component={ createOffer } />
             <Route exact path="/viewoffer/:id" component={ viewOffer } />
+
+            <Route exact path="/selectedoffer" component={ selectedOffer } />
             <Route exact path="/viewfeedback/:id" component={ viewFeedback } />
             <Route exact path="/addfeedback" component={ addFeedback } />
-            <Route exact path="/homeownermain" component={ hoMain } />
-            <Route exact path="/homedetails/:id" component={homeDetails} />
-
+            <Route exact path="/selectedfeedback" component={ selectedFeedback } />
+            <Route exact path="/homeownermain/" component={ hoMain } />
+            <Route exact path="/homedetails" component={homeDetails} />
 
             <Route path="/404" render={
               () => (
