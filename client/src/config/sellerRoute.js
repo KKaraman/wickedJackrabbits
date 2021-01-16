@@ -5,27 +5,17 @@ import axios from "axios";
 
 // Router that checks if user is logged-in
 // If not, redirect to "/login"
-const PrivateRoute = ({ component: Component, ...rest }) => {
+const SellerRoute = ({ component: Component, ...rest }) => {
   
   const history = useHistory();
   const [isAuthenticate, setAuthenticated] = React.useState(false)
   const [isLoading, setLoading] = React.useState(true)
   React.useEffect(() => {
-    axios.get("/api/agent_data")
+    axios.get("/api/user_data")
     .then((res) => {
       if(res.data.email){
         setAuthenticated(true);
       }
-
-      // if(!res.data.email){
-      //   axios.get("/api/user_data")
-      //   .then((res) => {
-      //     if(res.data.email){
-      //       setAuthenticated(true);
-      //     }
-      //   })
-      // }
-    
       setLoading(false);
     })
   }, [])
@@ -44,11 +34,11 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
       isAuthenticate ? (
         <Component {...props} />
       ) : (
-             history.replace("/agentlogin")
+             history.replace("/sellerlogin")
       )
     }
   />
 )}
 
 
-export default PrivateRoute
+export default SellerRoute
