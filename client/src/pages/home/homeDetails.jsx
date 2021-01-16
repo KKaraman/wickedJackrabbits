@@ -1,6 +1,7 @@
 import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Placeholder from "../../images/placeholder.png"
+
 const homeDetails = () => {
     return(
         <Container>
@@ -46,7 +47,7 @@ const homeDetails = () => {
                <br></br>
             <Row>
                 <Col>
-                    <Button type="button" className="btn btn-dark" href="/createoffer">CREATE OFFER</Button>
+                    <Button type="button" className="btn btn-dark" href="/createoffer">ADD OFFER</Button>
                 </Col>
                 <Col>
                     <Button type="button" className="btn btn-dark" href="/addfeedback">ADD FEEDBACK</Button>
