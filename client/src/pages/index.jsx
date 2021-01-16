@@ -61,7 +61,7 @@ const MainPage = () => {
 
                   <NavLink to={`/homedetails/`}>
 
-                    <div className="card">
+                    <div className="cardWrap">
 
                     <Card>
                       <div className="genImage">
@@ -99,7 +99,7 @@ const MainPage = () => {
                             <div className="genPart">
                             <p>
                                   <div className="innerPart">
-                                Offers 
+                                Total Offers 
                                 </div>
                                 <p></p>
                                 <div className="innerGenPart">
