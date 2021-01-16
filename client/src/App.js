@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+
 // different pages
 import MainPage from "./pages/index";
 import AgentLogin from "./pages/agentlogin";
@@ -20,6 +21,8 @@ import addFeedback from "./pages/feedback/addFeedback";
 import viewOffer from "./pages/offer/viewOffer";
 import viewFeedback from "./pages/feedback/viewFeedback"
 import hoMain from "./pages/home/hoMain.jsx";
+import PrivateRoute from "./config/privateRoute";
+
 
 
 function App() {
@@ -33,12 +36,13 @@ function App() {
           <Switch>
             <Route exact path="/" component={SignUp} />
             {/* Render this only if the first route doesnt match */}
-            <Route exact path="/agentmain" component={ MainPage } />
+            <PrivateRoute exact path="/agentmain" component={ MainPage } />
             <Route exact path="/sellerlogin" component= { SellerLogin } />
             <Route exact path="/agentlogin" component={ AgentLogin } />
             <Route exact path="/addhome" component={ addHome } />
             <Route exact path="/createoffer" component={ createOffer } />
             <Route exact path="/viewoffer/:id" component={ viewOffer } />
+
             <Route exact path="/selectedoffer" component={ selectedOffer } />
             <Route exact path="/viewfeedback/:id" component={ viewFeedback } />
             <Route exact path="/addfeedback" component={ addFeedback } />

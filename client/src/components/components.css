@@ -36,3 +36,7 @@
 .btn:hover {
     background: rgb(2, 60, 185);
 }
+
+.btn {
+    background-color: rgb(2, 60, 185)
+}

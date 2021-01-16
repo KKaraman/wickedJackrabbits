@@ -1,9 +1,8 @@
 import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import axios from "axios";
-
-// import Placeholder from "../images/placeholder.png";
+// import "../App.css";
+import Placeholder from "../../images/placeholder.png";
 import "./homeOwner.css";
 
 const hoMain = () => {
@@ -31,18 +30,17 @@ const hoMain = () => {
             <div  id="wrapperId">
             <Container>
                 {/* first row: Address */}
+                <div className="cardWrap">
+                <Card>
                 <Row>
                     <Col>
-                        <Card>
-                            <Image>
+                            <Image className="card-img-top" src={Placeholder} fluid />
                                 {/* INSERT DYNAMIC IMAGE OF HOME THAT WAS CLICKED ON HERE */}
-                            </Image>
                               <div>
                                     <p className="text-center">
                                         Address: "dynamic address put here"
                                     </p>
                              </div>
-                       </Card>
                     </Col>
                 </Row>
                 {/* second row: Details */}
@@ -143,6 +141,8 @@ const hoMain = () => {
                         </Col>
                     </Row>
 
+                </div>
+                </Card>
                 </div>
             </Container>
             </div>

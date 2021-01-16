@@ -79,16 +79,13 @@ margin-left: .5%;
 
 .genPart {
   background: none;
-  border-radius:10px;
-  color:rgb(255, 255, 255);
+  color:rgb(19, 18, 18);
   display: flexbox;
   align-items:center;
   justify-content:center;
   font-size: x-large;
   margin: 5px;
   line-height: 80%;
-  border-radius: 15px;
-  background-color: #007bff;
   padding: 5px; 
   text-align: center;
   width: 95%;
@@ -105,15 +102,22 @@ background: none;
   grid-row: auto auto;
   margin-left: auto;
   margin-right: auto;
+  background-color: rgb(253, 253, 253);
 }
 
-.card {
+.cardWrap {
   background: none;
+  border: 5px solid rgb(88, 85, 85);
+  border-radius:15px;
+  background-color:rgb(87, 84, 84);
+  margin-bottom: 5px;
 }
 
 .innerPart {
   font-weight: 500;
   width: 100%;
+  font-size: 22px;
+  text-decoration: underline;
 }
 
 .innerGenPart {
@@ -131,8 +135,9 @@ margin-right: -5%;
 }
 
 .searchBar {
-width: 110%;
+width: 105%;
 padding-right: -15%;
+height: 48px;
 }
 
 .rounded {
@@ -146,4 +151,22 @@ padding-right: -15%;
   margin-right: auto;
   display: flex;
   align-items: flex-end;
+}
+
+.card {
+  background-color:rgb(243, 242, 241);
+  border: solid 2px rgb(255, 254, 253);
+  margin: 5px;
+}
+
+.signupWrap {
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: rgb(0, 0, 0); */
+  color: white;
+}
+
+.signupInnerWrap{
+  margin-left: auto;
+  margin-right: auto;
 }

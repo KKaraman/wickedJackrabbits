@@ -48,7 +48,7 @@ const SignUp = () => {
                        
                    <h2>Create a Password</h2>
                     <p>Password requires 6 characters minimum</p>
-                   <input onChange={(e) => {setPassword(e.target.value)}} className="txtarea" type="text" placeholder="Password"/>
+                   <input onChange={(e) => {setPassword(e.target.value)}} className="txtarea" type="password" placeholder="Password"/>
                    <p></p>  
                   
                     <p>
