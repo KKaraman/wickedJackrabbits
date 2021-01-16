@@ -22,7 +22,7 @@ import viewOffer from "./pages/offer/viewOffer";
 import viewFeedback from "./pages/feedback/viewFeedback"
 import hoMain from "./pages/home/hoMain.jsx";
 import PrivateRoute from "./config/privateRoute";
-
+import SellerRoute from "./config/sellerRoute";
 
 
 function App() {
@@ -36,19 +36,20 @@ function App() {
           <Switch>
             <Route exact path="/" component={SignUp} />
             {/* Render this only if the first route doesnt match */}
-            <PrivateRoute exact path="/agentmain" component={ MainPage } />
+            
             <Route exact path="/sellerlogin" component= { SellerLogin } />
             <Route exact path="/agentlogin" component={ AgentLogin } />
-            <Route exact path="/addhome" component={ addHome } />
-            <Route exact path="/createoffer" component={ createOffer } />
-            <Route exact path="/viewoffer/:id" component={ viewOffer } />
+            
+            <PrivateRoute exact path="/agentmain" component={ MainPage } />
+            <PrivateRoute exact path="/addhome" component={ addHome } />
+            <PrivateRoute exact path="/createoffer" component={ createOffer } />
+            <PrivateRoute exact path="/addfeedback" component={ addFeedback } />
+            <PrivateRoute exact path="/homeownermain" component={ hoMain } />
 
-            <Route exact path="/selectedoffer" component={ selectedOffer } />
-            <Route exact path="/viewfeedback/:id" component={ viewFeedback } />
-            <Route exact path="/addfeedback" component={ addFeedback } />
-            <Route exact path="/selectedfeedback" component={ selectedFeedback } />
-            <Route exact path="/homeownermain/" component={ hoMain } />
-            <Route exact path="/homedetails" component={homeDetails} />
+            <SellerRoute exact path="/viewoffer/:id" component={ viewOffer } />
+            <SellerRoute exact path="/viewfeedback/:id" component={ viewFeedback } />
+
+
 
             <Route path="/404" render={
               () => (
@@ -57,7 +58,7 @@ function App() {
             />
             {/* Redirect tells react to go to a known path if nothing matches*/}
             {/* always have redirect as the last item */}
-            <Redirect to="/404" />;
+            <Redirect to="/" />;
           </Switch>
         </div>
       </Router>
