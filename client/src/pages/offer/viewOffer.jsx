@@ -2,6 +2,7 @@ import { Row, Col, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
 import {useParams} from "react-router";
+import {Link} from "react-router-dom"
 import axios from "axios";
 
 const viewOffer = () => {
@@ -25,7 +26,9 @@ const viewOffer = () => {
             {agentData.Offers && agentData.Offers.length !== 0 && agentData.Offers.map(item => {
                 return (
                     <Row>
-                        <Col>{item.id}. {item.name}</Col>
+                        <Link href="/selectedoffer/:id">
+                            <Col>{item.id}. {item.name}</Col>
+                        </Link>
                         <Col>{item.id}. {item.dateOffered}</Col>
                         <Col>{item.id}. {item.amount}</Col>
                         <Col>{item.id}. {item.closingDate}</Col>

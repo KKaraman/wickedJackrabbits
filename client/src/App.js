@@ -12,6 +12,8 @@ import addHome from "./pages/home/addHome"
 import SignUp from "./pages/signup";
 import createOffer from "./pages/offer/createOffer"
 import homeDetails from "./pages/home/homeDetails"
+import selectedOffer from "./pages/offer/selectedOffer";
+import selectedFeedback from "./pages/feedback/selectedFeedback"
 // different components
 import BootstrapNavbar from "./components/Navbar";
 import addFeedback from "./pages/feedback/addFeedback";
@@ -36,9 +38,11 @@ function App() {
             <Route exact path="/agentlogin" component={ AgentLogin } />
             <Route exact path="/addhome" component={ addHome } />
             <Route exact path="/createoffer" component={ createOffer } />
-            <Route exact path="/viewoffer/:id" component={ viewOffer } />
-            <Route exact path="/viewfeedback" component={ viewFeedback } />
+            <Route exact path="/viewoffer/id" component={ viewOffer } />
+            <Route exact path="/selectedoffer" component={ selectedOffer } />
+            <Route exact path="/viewfeedback/id" component={ viewFeedback } />
             <Route exact path="/addfeedback" component={ addFeedback } />
+            <Route exact path="/selectedfeedback" component={ selectedFeedback } />
             <Route exact path="/homeownermain" component={ hoMain } />
             <Route exact path="/homedetails" component={homeDetails} />
 
