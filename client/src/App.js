@@ -50,6 +50,7 @@ function App() {
             <SellerRoute exact path="/viewfeedback/:id" component={ viewFeedback } />
 
 
+
             <Route path="/404" render={
               () => (
                 <h2>404: NOT A VALID URL PATH!</h2>

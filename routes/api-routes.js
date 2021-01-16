@@ -78,11 +78,13 @@ module.exports = function (app) {
     } else {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
-      res.json({
-        firstname: req.user.firstName,
-        lastname: req.user.lastName,
-        email: req.user.email
-      });
+      db.User.findOne({ where: { email: req.user.email } }).then(result => {
+        console.log("This is the user result", result);
+        res.json({ result })
+      }).catch(err => {
+        console.log("Get user wasn't completed");
+        res.status(500).json(err);
+      })
     }
   });
 
