@@ -24,6 +24,7 @@ import hoMain from "./pages/home/hoMain.jsx";
 import PrivateRoute from "./config/privateRoute";
 
 
+
 function App() {
   return (
     <div>
@@ -38,13 +39,13 @@ function App() {
             <PrivateRoute exact path="/agentmain" component={ MainPage } />
             <Route exact path="/sellerlogin" component= { SellerLogin } />
             <Route exact path="/agentlogin" component={ AgentLogin } />
-
-            <PrivateRoute exact path="/addhome" component={ addHome } />
-            <PrivateRoute exact path="/createoffer" component={ createOffer } />
-            <PrivateRoute exact path="/viewoffer/:id" component={ viewOffer } />
-            <PrivateRoute exact path="/viewfeedback" component={ viewFeedback } />
-            <PrivateRoute exact path="/addfeedback" component={ addFeedback } />
-            <PrivateRoute exact path="/homeownermain" component={ hoMain } />
+            <Route exact path="/addhome" component={ addHome } />
+            <Route exact path="/createoffer" component={ createOffer } />
+            <Route exact path="/viewoffer/:id" component={ viewOffer } />
+            <Route exact path="/viewfeedback/:id" component={ viewFeedback } />
+            <Route exact path="/addfeedback" component={ addFeedback } />
+            <Route exact path="/homeownermain" component={ hoMain } />
+            <Route exact path="/homedetails/:id" component={homeDetails} />
 
 
             <Route path="/404" render={

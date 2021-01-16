@@ -27,7 +27,7 @@ const AgentLogin = () => {
 
       <input onChange={(e) => { setEmail(e.target.value) }} className="txtarea" type="text" placeholder="Email*"></input>
       <p></p>
-      <input onChange={(e) => { setPassword(e.target.value) }} className="txtarea" type="text" placeholder="Password*"></input>
+      <input onChange={(e) => { setPassword(e.target.value) }} className="txtarea" type="password" placeholder="Password*"></input>
 
       <p></p>
 
