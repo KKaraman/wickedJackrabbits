@@ -20,8 +20,11 @@ const MainPage = () => {
   console.log("this is homedata", homeData.firstName)
 
   return (
-    <div className="indexContainer">
       <Container>
+      <div className="signupWrap">
+        <Row>
+        <div className="signupInnerWrap">
+          <Col>
         <Row>
           <div className="searchAdd">
             <Col>
@@ -126,23 +129,28 @@ const MainPage = () => {
 
 
                     </Card>
-                  </div>
-                </NavLink>
-              </Col>
-
-
-
-            )
-          })
-
-          return (
-            <Row>
-              {homesMap}
+                    </div>
+                    </NavLink>
+                  </Col>
+                
+              
+                  
+            )})
+            
+                return (
+                  <Row>
+                    {homesMap}
+                  </Row>
+                )
+            })};
+            </Col>
+            </div>
             </Row>
-          )
-        })};
+            </div>
+            
+
       </Container>
-    </div>
+
   );
 };
 
