@@ -34,17 +34,6 @@ const addHome = () => {
                     <div className="signupInnerWrap">
                     <Col>
 
-                        <input onChange={(e) => { setAddress(e.target.value) }} className="md-6" id="enterAddress" placeholder="Enter Address" type="address"></input>
-                        <input onChange={(e) => { setPrice(e.target.value) }} className="md-6" id="enterPrice" placeholder="Enter Price" type="price"></input>
-                        <input onChange={(e) => { setSellerName(e.target.value) }} placeholder="Sellers Name" id="sellerName" type="sellersName"></input>
-                        <input onChange={(e) => { setSellerNumber(e.target.value) }} placeholder="Seller Phone #" id="sellerNum" type="phoneNumber"></input>
-                        <input onChange={(e) => { setSellerEmail(e.target.value) }} className="col-md-4 text-center" placeholder="Sellers Email" type="sellersEmail" ></input>
-                        <input onChange={(e) => { setSellerPassword(e.target.value) }} className="col-md-4 text-center" placeholder="Sellers Password" type="sellersEmail" ></input>
-                            <Col>
-                                <Row className="justify-content-center">
-                                    <Button onClick={submitHome} className="text-center justify-content-center" href="/agentmain">Add Home</Button>
-                                </Row>
-                            </Col>
                     <div className="InnerWrap">
 
                     <h1>House Details</h1>
