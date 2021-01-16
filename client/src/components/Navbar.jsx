@@ -20,7 +20,7 @@ class BootstrapNavbar extends React.Component{
                         {/* <Router> */}
                         <div id="navbarId">
                             <Navbar fluid expand="lg" sticky="top">
-                                <Navbar.Brand id="navTitle" href="/">Sellify <div class="logout"><Button>Log Out</Button></div> </Navbar.Brand>
+                                <Navbar.Brand id="navTitle" href="/">Sellify <div className="logout"><Button>Log Out</Button></div> </Navbar.Brand>
                                 
                                 {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
                                 {/* <Navbar.Collapse id="basic-navbar-nav">
