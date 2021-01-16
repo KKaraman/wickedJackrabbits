@@ -99,7 +99,7 @@ const MainPage = () => {
                             <div className="genPart">
                             <p>
                                   <div className="innerPart">
-                                Offers 
+                                Total Offers 
                                 </div>
                                 <p></p>
                                 <div className="innerGenPart">
