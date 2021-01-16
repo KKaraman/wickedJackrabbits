@@ -1,12 +1,30 @@
 import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
-// import { Link, NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import "../App.css";
+import axios from "axios";
+
 // import Placeholder from "../images/placeholder.png";
 import "./homeOwner.css";
 
 const hoMain = () => {
-    // Do a get call to the /getHomes:id with the agent id. 
+    const [homeOwnerData, setHomeOwnerData] = useState({})
+    
+    useEffect(() => {
+        axios.get("/api/user_data/")
+        .then((res) => {
+            setHomeOwnerData(res.data.result)
+            console.log("searching for homeowner deets:", res.data.result)
+            axios.get("/api/getHome/" + res.data.result.id)
+            .then((res) => {
+                console.log(res.data.result)
+            })
+        })
+    }, []);
+    
+  
+
+ 
+    
     return (
 
 
