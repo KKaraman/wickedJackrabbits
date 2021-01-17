@@ -3,7 +3,7 @@ import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ".././App.css";
-import Placeholder from "../images/placeholder.png";
+import StockPhoto from "../images/stockhouse.jpg"
 import axios from "axios";
 
 const MainPage = () => {
@@ -14,8 +14,8 @@ const MainPage = () => {
         setHomeData(res.data.result)
         console.log("Home details =", res.data.result.Users)
         console.log("data:", res.data.result)
-      })
-  }, [])
+      });
+  }, []);
 
   console.log("this is homedata", homeData.firstName)
 
@@ -68,7 +68,7 @@ const MainPage = () => {
 
                     <Card>
                       <div className="genImage">
-                        <Image className="card-img-top" src={Placeholder} fluid />
+                        <Image className="card-img-top" src={StockPhoto} fluid />
                         {/* implement agent updated photos */}
                       </div>
                       <div className="genWrap">

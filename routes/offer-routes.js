@@ -8,23 +8,16 @@ var isAgent = require("../config/middleware/isAgent");
 
 module.exports = function (app) {
  
-  app.post("/api/createOffer", isAuthenticated, isAgent, function (req, res) {
-    console.log(req.body);
-    const query = {
-      homeId: req.body.id
-    };
-    if (req.body.home) {
-      query.homeId = req.body.id;
-    }
-    console.log(query.homeId);
-    console.log(req.body.id);
+  app.post("/api/createOffer/:id", isAuthenticated, isAgent, function (req, res) {
+    console.log("ROUTE RESPONSE", req.body, req.params);
+   
     db.Offer.create({
       dateOffered: req.body.dateOffered,
       name: req.body.name,
       amount: req.body.amount,
       closingDate: req.body.closingDate,
       moneyType: req.body.moneyType,
-      HomeId: query.homeId
+      HomeId: req.params.id
     })
       .then(function () {
         // res.redirect(307, "/api/login");

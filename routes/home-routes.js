@@ -28,6 +28,16 @@ module.exports = function (app) {
     })
   });
 
+  app.get("/api/getHomeDeet/:id", isAuthenticated, isAgent, (request, response) => {
+    db.Home.findOne({ where: { id: request.params.id }, include: [{all: true, nested: true}] }).then(result => {
+      console.log("This is the Home result", result);
+      response.json({ result })
+    }).catch(err => {
+      console.log("Get home wasn't completed");
+      response.status(500).json(err);
+    })
+  });
+
 
   app.get("/api/getHomes", (request, response) => {
 

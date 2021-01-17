@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "../signup.css";
 
+import {useParams} from "react-router";
+
 
 const createOffer = () => {
     const [dateOffered, setDateOffered] = useState("")
@@ -11,15 +13,15 @@ const createOffer = () => {
     const [amount, setAmount] = useState("")
     const [closingDate, setClosingDate] = useState("")
     const [moneyType, setMoneyType] = useState("")
+    const {id} = useParams();
     const submitOffer = () => {
-        axios.post("/api/createOffer", {
+     console.log("id HOUSE:", id)
+        axios.post("/api/createOffer/" + id, {
             dateOffered: dateOffered,
             name: name,
             amount: amount,
             closingDate: closingDate,
             moneyType: moneyType,
-        }).then(() => {
-        res.sendStatus(200)
         })
     }
     return (
