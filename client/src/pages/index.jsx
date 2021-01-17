@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ".././App.css";
 import Placeholder from "../images/placeholder.png";
+import TestHouse from "../images/housePH.jpg";
 import axios from "axios";
 
 const MainPage = () => {
@@ -68,7 +69,7 @@ const MainPage = () => {
 
                     <Card>
                       <div className="genImage">
-                        <Image className="card-img-top" src={Placeholder} fluid />
+                        <Image className="card-img-top" src={TestHouse} fluid />
                         {/* implement agent updated photos */}
                       </div>
                       <div className="genWrap">
