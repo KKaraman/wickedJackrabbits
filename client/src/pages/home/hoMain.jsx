@@ -53,7 +53,7 @@ const hoMain = () => {
                     </div>
                     <p></p>
                     <div className="innerGenPart">
-                        <p>Placeholder</p>
+                        <p></p>
                     </div>
                 </p>
                 </div>
@@ -65,7 +65,7 @@ const hoMain = () => {
                     </div>
                     <p></p>
                     <div className="innerGenPart">
-                        <p>Placeholder</p>
+                        <p></p>
                     </div>
                 </p>
                 </div>
@@ -77,7 +77,7 @@ const hoMain = () => {
                     </div>
                     <p></p>
                     <div className="innerGenPart">
-                        <p>Placeholder</p>
+                        <p></p>
                     </div>
                 </p>
                 </div>
@@ -89,7 +89,7 @@ const hoMain = () => {
                     </div>
                     <p></p>
                     <div className="innerGenPart">
-                        <p>Placeholder</p>
+                        <p></p>
                     </div>
                 </p>
                 </div>
@@ -101,7 +101,7 @@ const hoMain = () => {
                     </div>
                     <p></p>
                     <div className="innerGenPart">
-                        <p>Placeholder</p>
+                        <p></p>
                     </div>
                 </p>
                 </div>
@@ -113,7 +113,7 @@ const hoMain = () => {
                     </div>
                     <p></p>
                     <div className="innerGenPart">
-                        <p>Placeholder</p>
+                        <p></p>
                     </div>
                 </p>
                 </div>

@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.addView {
+  width: 100%;
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -47,7 +52,6 @@ display: flex;
 flex-wrap: wrap;
 }
 
-
 .singleParentWrap{
 align-items: center;
 flex-grow: 0;
@@ -68,13 +72,9 @@ margin-left: .5%;
 }
 
 .btn {
-  width: 100%; 
+  width: 25%; 
   background: none;
   border: none;
-}
-
-.genImage {
-
 }
 
 .genPart {
@@ -84,15 +84,30 @@ margin-left: .5%;
   align-items:center;
   justify-content:center;
   font-size: x-large;
-  margin: 5px;
-  line-height: 80%;
+  line-height: normal;
   padding: 5px; 
   text-align: center;
-  width: 95%;
+  width: 100%;
+  padding: -5px;
+}
+
+.genPartb {
+  background: none;
+  color:rgb(19, 18, 18);
+  display: flexbox;
+  align-items:center;
+  justify-content:center;
+  font-size: x-large;
+  line-height: 80%;
+  padding: 5px; 
+  padding-bottom: -20%;
+  margin-bottom: -4%;
+  text-align: center;
+  width: 100%;
+  height: -50%;
 }
 
 .genWrap {
-
   margin: auto;
   width:100%;
   height:5%;
@@ -106,6 +121,19 @@ background: none;
   border-top: 1px solid rgb(29, 48, 88);
 }
 
+.genWrapb {
+  width:100%;
+  height:100%;
+background: none;
+  display:grid;
+  grid-template-columns: 40% 40%;
+  grid-row: auto auto;
+  margin-left: 10%;
+  margin-right: -10%;
+  align-self: center;
+  align-items: center;
+}
+
 .cardWrap {
   background: none;
   margin-bottom: 5px;
@@ -114,15 +142,32 @@ background: none;
 .innerPart {
   font-weight: 500;
   width: 100%;
-  font-size: 22px;
+  font-size: 26px;
   text-decoration: underline;
 }
+
 
 .innerGenPart {
   line-height: 100%;
   width: 100%;
-  font-size: large;
+  font-size: x-large;
+  font-weight: 400;
 }
+
+innerAddViewa {
+  background: none;
+  color:rgb(19, 18, 18);
+  display: flexbox;
+  align-items:center;
+  justify-content:center;
+  font-size: x-large;
+  line-height: 80%;
+  padding: 5px; 
+  text-align: center;
+  width: 100%;
+  padding: -5px;
+}
+
 
 .addHome {
 width: 70%;
