@@ -84,7 +84,7 @@ margin-left: .5%;
   align-items:center;
   justify-content:center;
   font-size: x-large;
-  line-height: 80%;
+  line-height: normal;
   padding: 5px; 
   text-align: center;
   width: 100%;
@@ -148,7 +148,7 @@ background: none;
 
 
 .innerGenPart {
-  line-height: 80%;
+  line-height: 100%;
   width: 100%;
   font-size: x-large;
   font-weight: 400;
