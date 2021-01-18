@@ -13,7 +13,6 @@ const homeDetails = () => {
   const [offerLength, setOfferLength] = useState(0)
   const [homeOffersURLId, setHomeOffersURLId] = useState("")
   const [homeFeedbackURLId, setHomeFeedbackURLId] = useState("")
-  const [viewOfferURLId, setViewOfferURLId] = useState("")
   const { id } = useParams();
   useEffect(() => {
     axios.get("/api/getHomeDeet/" + id)
@@ -22,7 +21,6 @@ const homeDetails = () => {
         setOfferLength(res.data.result.Offers.length)
         setHomeOffersURLId("/createoffer/" + res.data.result.id)
         setHomeFeedbackURLId("/addfeedback/" + res.data.result.id)
-        setViewOfferURLId("/viewoffer/" + res.data.result.id)
         setUserDetails(res.data.result.User)
         console.log(res.data.result)
       })
@@ -129,7 +127,9 @@ const homeDetails = () => {
 
 <div className="genPartb">
   <p>
+    <div className="innerPartb">
     <Button type="button" className="btn btn-dark" href="/viewfeedback/:id">VIEW <div></div>FEEDBACK</Button>
+   </div>
     </p>
 </div>
 
