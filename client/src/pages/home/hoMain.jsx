@@ -7,8 +7,11 @@ import axios from "axios";
 import "./homeOwner.css";
 
 const hoMain = () => {
-    const [homeOwnerData, setHomeOwnerData] = useState({})
+    const [homeOwnerData, setHomeOwnerData] = useState({});
     const [homeData, setHomeData] = useState({});
+    const [offerData, setOfferData] = useState(0);
+    const [feedbackData, setFeedbackData] = useState(0);
+    const [maxOfferData, setMaxOfferData] = useState(0);
     useEffect(() => {
         axios.get("/api/user_data/")
         .then((res) => {
@@ -18,17 +21,13 @@ const hoMain = () => {
             .then((res) => {
                 console.log("information", res.data.result)
                 setHomeData(res.data.result)
+                setOfferData(res.data.result.Offers.length)
+                setFeedbackData(res.data.result.Feedbacks.length)
+                setMaxOfferData(res.data.result.Offers)
             })
         })
     }, []);
-    
-  const offers = homeData.Offers
-
- 
-    
     return (
-
-
             <div  id="wrapperId">
             <Container>
                 {/* first row: Address */}
@@ -83,7 +82,7 @@ const hoMain = () => {
                     </div>
                     <p></p>
                     <div className="innerGenPart">
-                        <p>Placeholder</p>
+                        <p>{feedbackData}</p>
                     </div>
                 </p>
                 </div>
@@ -107,7 +106,7 @@ const hoMain = () => {
                     </div>
                     <p></p>
                     <div className="innerGenPart">
-                        <p>{offers}</p>
+                        <p>{offerData}</p>
                     </div>
                 </p>
                 </div>
@@ -115,7 +114,7 @@ const hoMain = () => {
                 <div className="box">
                 <p>
                     <div className="innerPart">
-                    Average Offer Price
+                        Max Offer Price
                     </div>
                     <p></p>
                     <div className="innerGenPart">
@@ -146,7 +145,7 @@ const hoMain = () => {
                     </Row>
 
                 </div>
-c            </Container>
+            </Container>
             </div>
     )
 };
