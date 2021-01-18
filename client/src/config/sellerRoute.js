@@ -11,14 +11,27 @@ const SellerRoute = ({ component: Component, ...rest }) => {
   const [isAuthenticate, setAuthenticated] = React.useState(false)
   const [isLoading, setLoading] = React.useState(true)
   React.useEffect(() => {
-    axios.get("/api/user_data")
+  
+     axios.get("/api/user_data")
     .then((res) => {
-      if(res.data.email){
-        setAuthenticated(true);
-      }
+      res.data.email?
+      (setAuthenticated(true))
+      :
+      (getAgent())
+      //(axios.get("/api/agent_data").then(data)=>{if(data.data.email){setAuthenticated(true)}}
+     
       setLoading(false);
     })
   }, [])
+
+  function getAgent(){
+    axios.get("/api/agent_data")
+    .then(function(data){
+      if(data.data.email){setAuthenticated(true)}
+    })
+  
+  }
+
 
   if(isLoading){
     return(
