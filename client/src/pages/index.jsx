@@ -151,7 +151,7 @@ const MainPage = () => {
                     {homesMap}
                   </Row>
                 )
-            })};
+            })}
             </Col>
             </div>
             </Row>
