@@ -32,7 +32,7 @@ module.exports = function (app) {
   });
 
   app.post("/api/createFeedback/:id", isAuthenticated, isAgent, function (req, res) {
-    console.log(req.body);
+    console.log("ROUTE RESPONSE", req.body, req.params);
     db.Feedback.create({
       dateShown: req.body.dateShown,
       name: req.body.name,
@@ -40,7 +40,7 @@ module.exports = function (app) {
       family: req.body.family,
       timeline: req.body.timeline,
       liked: req.body.liked,
-      notLike: req.body.notLiked,
+      notLike: req.body.notLike,
       estimatedInterest: req.body.estimatedInterest,
       HomeId: req.params.id
     })

@@ -47,13 +47,13 @@ const addHome = () => {
  
                         <input onChange={(e) => { setSellerName(e.target.value) }} placeholder="Name" class="txtarea" id="sellerName" type="sellersName"></input>
                         <input onChange={(e) => { setSellerNumber(e.target.value) }} placeholder="Phone" class="txtarea" id="sellerNum" type="phoneNumber"></input>
-                        <input onChange={(e) => { setSellerEmail(e.target.value) }}  placeholder="Email" class="txtarea" type="sellersEmail" ></input>
+                        <input onChange={(e) => { setSellerEmail(e.target.value) }}  placeholder="Email" class="txtarea" type="email" ></input>
 
                         <p></p>
 
                     <h5>Create Homeowner's Password</h5>
 
-                        <input onChange={(e) => { setSellerPassword(e.target.value) }} placeholder="Password" class="txtarea" type="sellersEmail" ></input>
+                        <input onChange={(e) => { setSellerPassword(e.target.value) }} placeholder="Password" class="txtarea" type="password" ></input>
                         
                         <p></p>
 

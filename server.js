@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === "production") {
     });
   }
 
-db.sequelize.sync({ force: false }).then(() => {
+db.sequelize.sync({ force: false}).then(() => {
 
     app.listen(PORT, () => {
         console.log(`Server is live on http://localhost:${PORT} !`)

@@ -9,11 +9,11 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false,
         },
         local: {
-            type: DataTypes.BOOLEAN,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         family: {
-            type: DataTypes.BOOLEAN,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         timeline: {
@@ -29,7 +29,7 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: true
         },
         estimatedInterest: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false
         }
     });
