@@ -13,6 +13,8 @@ const homeDetails = () => {
   const [offerLength, setOfferLength] = useState(0)
   const [homeOffersURLId, setHomeOffersURLId] = useState("")
   const [homeFeedbackURLId, setHomeFeedbackURLId] = useState("")
+  const [viewOffersURLId, setViewOffersURLId] = useState("")
+  const [viewFeedbackURLId, setViewFeedbackURLId] = useState("")
   const { id } = useParams();
   useEffect(() => {
     axios.get("/api/getHomeDeet/" + id)
@@ -21,6 +23,9 @@ const homeDetails = () => {
         setOfferLength(res.data.result.Offers.length)
         setHomeOffersURLId("/createoffer/" + res.data.result.id)
         setHomeFeedbackURLId("/addfeedback/" + res.data.result.id)
+        setViewOffersURLId("/viewoffer/" + res.data.result.id)
+        setViewFeedbackURLId("/viewfeedback/" + res.data.result.id)
+
         setUserDetails(res.data.result.User)
         console.log(res.data.result)
       })
@@ -81,8 +86,8 @@ const homeDetails = () => {
                     <div className="innerPart">
                       Homeowner
                                   </div>
-                  <p></p></p>
-                  <p>{UserDetails.firstName} <p></p> {UserDetails.lastName}</p>
+                    <p></p></p>
+                  <p>{UserDetails.firstName} {UserDetails.lastName} <p></p> </p>
                   <div className="innerGenPart">
                     <p>
                     </p>
@@ -100,40 +105,40 @@ const homeDetails = () => {
       <div className="genWrapb">
 
 
-<div className="genPartb">
-  <p>
+        <div className="genPartb">
+          <p>
 
-    <Button type="button" className="btn btn-dark" href={homeOffersURLId}>ADD<div></div> OFFER</Button>
+            <Button type="button" className="btn btn-dark" href={homeOffersURLId}>ADD<div></div> OFFER</Button>
 
-  </p>
-</div>
+          </p>
+        </div>
 
-<div className="genPartb">
-  <p>
+        <div className="genPartb">
+          <p>
 
-    <Button type="button" className="btn btn-dark" href={homeFeedbackURLId}>ADD<div></div> FEEDBACK</Button>
+            <Button type="button" className="btn btn-dark" href={homeFeedbackURLId}>ADD<div></div> FEEDBACK</Button>
 
-  </p>
-</div>
+          </p>
+        </div>
 
 
-<div className="genPartb">
-  <p>
+        <div className="genPartb">
+          <p>
 
-    <Button type="button" className="btn btn-dark" href="/viewoffer/:id">VIEW<div></div> OFFERS</Button>
- 
-  </p>
-</div>
+            <Button type="button" className="btn btn-dark" href={viewOffersURLId}>VIEW<div></div> OFFERS</Button>
 
-<div className="genPartb">
-  <p>
-    <div className="innerPartb">
-    <Button type="button" className="btn btn-dark" href="/viewfeedback/:id">VIEW <div></div>FEEDBACK</Button>
-   </div>
-    </p>
-</div>
+          </p>
+        </div>
 
-</div>
+        <div className="genPartb">
+          <p>
+            <div className="innerPartb">
+              <Button type="button" className="btn btn-dark" href={viewFeedbackURLId}>VIEW <div></div>FEEDBACK</Button>
+            </div>
+          </p>
+        </div>
+
+      </div>
     </Container>
   )
 }
