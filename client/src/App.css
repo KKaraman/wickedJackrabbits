@@ -125,16 +125,13 @@ background: none;
 }
 
 .addHome {
-width: 90%;
+width: 70%;
 font-weight: 500;
-margin-left: -3%;
-padding-left: 7%;
-margin-right: -5%;
+margin-right: 2%;
 }
 
 .searchBar {
-width: 95%;
-padding-right: -15%;
+width: 90%;
 height: 48px;
 }
 

@@ -3,9 +3,7 @@ import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ".././App.css";
-
 import StockPhoto from "../images/stockhouse.jpg"
-
 import axios from "axios";
 
 const MainPage = () => {
@@ -78,9 +76,7 @@ const MainPage = () => {
 
                     <Card>
                       <div className="genImage">
-
                         <Image className="card-img-top" src={StockPhoto} fluid />
-
                         {/* implement agent updated photos */}
                       </div>
                       <div className="genWrap">
