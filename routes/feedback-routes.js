@@ -31,15 +31,8 @@ module.exports = function (app) {
 
   });
 
-  app.post("/api/createFeedback", isAuthenticated, isAgent, function (req, res) {
+  app.post("/api/createFeedback/:id", isAuthenticated, isAgent, function (req, res) {
     console.log(req.body);
-    const query = {
-      homeId: req.body.id
-    };
-    if (req.body.home) {
-      query.homeId = req.body.id;
-    }
-    console.log("Home ID", query.homeId);
     db.Feedback.create({
       dateShown: req.body.dateShown,
       name: req.body.name,
@@ -49,7 +42,7 @@ module.exports = function (app) {
       liked: req.body.liked,
       notLike: req.body.notLiked,
       estimatedInterest: req.body.estimatedInterest,
-      HomeId: query.homeId
+      HomeId: req.params.id
     })
       .then(function () {
         // res.redirect(307, "/api/login");

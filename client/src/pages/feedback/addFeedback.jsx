@@ -3,6 +3,7 @@ import { Container, Row, Col, Button, Form, } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ".././signup.css";
 import axios from "axios";
+import {useParams} from "react-router";
 
 const addFeedback = () => {
     const [dateShown, setDateShown] = useState("")
@@ -13,8 +14,10 @@ const addFeedback = () => {
     const [liked, setLiked] = useState("")
     const [notLike, setNotLike] = useState("")
     const [estimatedInterest, setEstimatedInterest] = useState("")
+    const {id} = useParams();
     const submitFeedback = () => {
-        axios.post("/api/createFeedback", {
+        console.log("home ID", id)
+        axios.post("/api/createFeedback/" + id, {
             dateShown: dateShown,
             name: name,
             local: local,
@@ -23,8 +26,6 @@ const addFeedback = () => {
             liked: liked,
             notLike: notLike,
             estimatedInterest: estimatedInterest,
-        }).then(() => {
-        res.sendStatus(200)
         })
     }
 
@@ -68,7 +69,7 @@ const addFeedback = () => {
 
                 <p></p>
                     <Col>
-                        <Button onClick={submitFeedback} href="/agentmain" type="submit">Submit Feedback</Button>
+                        <Button onClick={submitFeedback}  type="submit">Submit Feedback</Button>
                     </Col>
                     </Col>
                     </div>

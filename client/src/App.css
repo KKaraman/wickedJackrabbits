@@ -131,7 +131,12 @@ margin-right: 2%;
 }
 
 .searchBar {
+<<<<<<< HEAD
 width: 90%;
+=======
+width: 95%;
+padding-right: -15%;
+>>>>>>> cf6d7862b63e47dd3dbee26b434f442c92339daf
 height: 48px;
 }
 
