@@ -71,7 +71,7 @@ const addFeedback = () => {
 
                 <p></p>
                     <Col>
-                        <Button onClick={submitFeedback}  type="submit">Submit Feedback</Button>
+                        <Button onClick={submitFeedback} href="/agentmain" type="submit">Submit Feedback</Button>
                     </Col>
                     </Col>
                     </div>

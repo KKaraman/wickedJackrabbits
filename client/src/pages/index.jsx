@@ -57,11 +57,7 @@ const MainPage = () => {
           const homesMap = homes.map(home => {
             console.log("home id", home.id)
             console.log("Item", item.Homes[0].Offers.length)
-            // const offers = item.Homes.map(offer => {
-            //   console.log("offer", offer.Offers.length)
-              
-            //   const totalOffer = offer.Offers.length
-            // })
+           const offers = home.Offers.length
             
             const homeId = home.id
             return(
@@ -116,7 +112,7 @@ const MainPage = () => {
                                 </div>
                             <p></p>
                             <div className="innerGenPart">
-                              <p>Placeholder</p>
+                              <p>{offers}</p>
                             </div>
                           </p>
                         </div>
