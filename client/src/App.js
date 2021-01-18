@@ -42,10 +42,10 @@ function App() {
             
             <PrivateRoute exact path="/agentmain" component={ MainPage } />
             <PrivateRoute exact path="/addhome" component={ addHome } />
-            <PrivateRoute exact path="/createoffer" component={ createOffer } />
-            <PrivateRoute exact path="/addfeedback" component={ addFeedback } />
+            <PrivateRoute exact path="/createoffer/:id" component={ createOffer } />
+            <PrivateRoute exact path="/addfeedback/:id" component={ addFeedback } />
             <PrivateRoute exact path="/homeownermain" component={ hoMain } />
-
+            <PrivateRoute exact path="/homedetails/:id" component={homeDetails}/>
             <SellerRoute exact path="/viewoffer/:id" component={ viewOffer } />
             <SellerRoute exact path="/viewfeedback/:id" component={ viewFeedback } />
 
