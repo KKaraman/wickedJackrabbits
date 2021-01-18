@@ -21,7 +21,7 @@ const viewFeedback = () => {
 
         <Container>
             <div>
-                <h3>Offers</h3>
+                <h3>Feedback</h3>
             </div>
             {agentData.Feedbacks && agentData.Feedbacks.length !== 0 && agentData.Feedbacks.map(item => {
                 return (
