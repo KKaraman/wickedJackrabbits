@@ -2,7 +2,7 @@ import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-
+import stockImage from "../../images/stockhouse.jpg"
 // import Placeholder from "../images/placeholder.png";
 import "./homeOwner.css";
 
@@ -12,11 +12,15 @@ const hoMain = () => {
     const [offerData, setOfferData] = useState(0);
     const [feedbackData, setFeedbackData] = useState(0);
     const [maxOfferData, setMaxOfferData] = useState(0);
+    const [homeOffersURLId, setHomeOffersURLId] = useState("")
+    const [homeFeedbackURLId, setHomeFeedbackURLId] = useState("")
     useEffect(() => {
         axios.get("/api/user_data/")
         .then((res) => {
             setHomeOwnerData(res.data.result)
             console.log("searching for homeowner deets:", res.data.result)
+            setHomeOffersURLId("/viewoffer/" + res.data.result.id)
+            setHomeFeedbackURLId("/viewfeedback/" + res.data.result.id)
             axios.get("/api/getHome/" + res.data.result.id)
             .then((res) => {
                 console.log("information", res.data.result)
@@ -35,9 +39,9 @@ const hoMain = () => {
                 <Row>
                     <Col>
                         <Card>
-                            <Image>
-                                {/* INSERT DYNAMIC IMAGE OF HOME THAT WAS CLICKED ON HERE */}
-                            </Image>
+                        <Image className="card-img-top" src={stockImage} fluid />
+                               
+                            
                               <div>
                                     <p className="text-center">
                                         {homeData.address}
@@ -133,13 +137,13 @@ const hoMain = () => {
                     <Col>
 
                 
-                            <Button href="/viewfeedback">VIEW FEEDBACK</Button>
+                            <Button href={homeFeedbackURLId}>VIEW FEEDBACK</Button>
 
 
                         </Col>
                         <Col>
 
-                            <Button href="/viewoffer/:id">VIEW OFFERS</Button>
+                            <Button href={homeOffersURLId}>VIEW OFFERS</Button>
 
                         </Col>
                     </Row>
