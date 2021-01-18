@@ -8,14 +8,14 @@ import ".././signup.css";
 const addHome = () => {
     const [address, setAddress] = useState("")
     const [price, setPrice] = useState("")
-    const [sellerName, setSellerName] = useState("")
-    const [sellerNumber, setSellerNumber] = useState("")
+    const [sellerFirstName, setSellerFirstName] = useState("")
+    const [sellerLastName, setSellerLastName] = useState("")
     const [sellerEmail, setSellerEmail] = useState("")
     const [sellerPassword, setSellerPassword] = useState("")
     const submitHome = () => {
         axios.post("/api/createHome", {
-            firstName: sellerName,
-            lastName: sellerNumber,
+            firstName: sellerFirstName,
+            lastName: sellerLastName,
             email: sellerEmail,
             password: sellerPassword,
             // AgentId: 1,
@@ -45,9 +45,9 @@ const addHome = () => {
 
                     <h5>Create Homeowner's Login Info</h5>
  
-                        <input onChange={(e) => { setSellerName(e.target.value) }} placeholder="Name" class="txtarea" id="sellerName" type="sellersName"></input>
-                        <input onChange={(e) => { setSellerNumber(e.target.value) }} placeholder="Phone" class="txtarea" id="sellerNum" type="phoneNumber"></input>
-                        <input onChange={(e) => { setSellerEmail(e.target.value) }}  placeholder="Email" class="txtarea" type="email" ></input>
+                        <input onChange={(e) => { setSellerFirstName(e.target.value) }} placeholder="First Name" class="txtarea" id="sellerName" type="First Name"></input>
+                        <input onChange={(e) => { setSellerLastName(e.target.value) }} placeholder="Last Name" class="txtarea" id="sellerNum" type="Last Name"></input>
+                        <input onChange={(e) => { setSellerEmail(e.target.value) }}  placeholder="Email" class="txtarea" type="sellersEmail" ></input>
 
                         <p></p>
 

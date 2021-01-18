@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import "../App.css";
 import Placeholder from "../../images/placeholder.png";
 import "./homeOwner.css";
+import axios from "axios";
 
 const hoMain = () => {
     const [homeOwnerData, setHomeOwnerData] = useState({})
