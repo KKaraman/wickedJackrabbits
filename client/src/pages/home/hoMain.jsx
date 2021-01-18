@@ -1,14 +1,14 @@
 import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import "../App.css";
-import Placeholder from "../../images/placeholder.png";
-import "./homeOwner.css";
 import axios from "axios";
+
+// import Placeholder from "../images/placeholder.png";
+import "./homeOwner.css";
 
 const hoMain = () => {
     const [homeOwnerData, setHomeOwnerData] = useState({})
-    
+    const [homeData, setHomeData] = useState({});
     useEffect(() => {
         axios.get("/api/user_data/")
         .then((res) => {
@@ -16,29 +16,35 @@ const hoMain = () => {
             console.log("searching for homeowner deets:", res.data.result)
             axios.get("/api/getHome/" + res.data.result.id)
             .then((res) => {
-                console.log(res.data.result)
+                console.log("information", res.data.result)
+                setHomeData(res.data.result)
             })
         })
     }, []);
     
-  
+  const offers = homeData.Offers
+
+ 
+    
     return (
 
 
             <div  id="wrapperId">
             <Container>
                 {/* first row: Address */}
-                <div className="cardWrap">
-                <Card>
+                <h3>{homeOwnerData.firstName}</h3>
                 <Row>
                     <Col>
-                            <Image className="card-img-top" src={Placeholder} fluid />
+                        <Card>
+                            <Image>
                                 {/* INSERT DYNAMIC IMAGE OF HOME THAT WAS CLICKED ON HERE */}
+                            </Image>
                               <div>
                                     <p className="text-center">
-                                        Address: "dynamic address put here"
+                                        {homeData.address}
                                     </p>
                              </div>
+                       </Card>
                     </Col>
                 </Row>
                 {/* second row: Details */}
@@ -53,7 +59,7 @@ const hoMain = () => {
                     </div>
                     <p></p>
                     <div className="innerGenPart">
-                        <p></p>
+                        <p>{homeData.dateListed}</p>
                     </div>
                 </p>
                 </div>
@@ -65,7 +71,7 @@ const hoMain = () => {
                     </div>
                     <p></p>
                     <div className="innerGenPart">
-                        <p></p>
+                        <p>${homeData.listingPrice}</p>
                     </div>
                 </p>
                 </div>
@@ -77,7 +83,7 @@ const hoMain = () => {
                     </div>
                     <p></p>
                     <div className="innerGenPart">
-                        <p></p>
+                        <p>Placeholder</p>
                     </div>
                 </p>
                 </div>
@@ -89,7 +95,7 @@ const hoMain = () => {
                     </div>
                     <p></p>
                     <div className="innerGenPart">
-                        <p></p>
+                        <p>Placeholder</p>
                     </div>
                 </p>
                 </div>
@@ -101,7 +107,7 @@ const hoMain = () => {
                     </div>
                     <p></p>
                     <div className="innerGenPart">
-                        <p></p>
+                        <p>{offers}</p>
                     </div>
                 </p>
                 </div>
@@ -113,7 +119,7 @@ const hoMain = () => {
                     </div>
                     <p></p>
                     <div className="innerGenPart">
-                        <p></p>
+                        <p>Placeholder</p>
                     </div>
                 </p>
                 </div>
@@ -140,9 +146,7 @@ const hoMain = () => {
                     </Row>
 
                 </div>
-                </Card>
-                </div>
-            </Container>
+c            </Container>
             </div>
     )
 };
