@@ -54,15 +54,15 @@ const addFeedback = () => {
                    <h5>Earliest closing date</h5>
                    <input onChange={(e) => {setTimeline(e.target.value)}} className="txtarea" type="date" placeholder="Timeline"/>
                    
-                   <h5>What was something you liked about the house?</h5>
+                   <h5>What was something they liked about the house?</h5>
                    <h6>Limit: 25 Characters</h6>
                    <input onChange={(e) => {setLiked(e.target.value)}} className="txtarea" type="text" maxlength="25" placeholder="Liked"/>
                    
-                   <h5>What was something you didn't like about the house?</h5>
+                   <h5>What was something they didn't like about the house?</h5>
                    <h6>Limit: 25 Characters</h6>
                    <input onChange={(e) => {setNotLike(e.target.value)}} className="txtarea" type="text" maxlength="25" placeholder=""/>
 
-                    <h5>How would you rate this house on a scale of 1 to 10?</h5>
+                    <h5>How would they rate this house on a scale of 1 to 10?</h5>
                    <input onChange={(e) => {setEstimatedInterest(e.target.value)}} className="txtarea" type="text" placeholder="Estimated Interest">
                    </input>
 
