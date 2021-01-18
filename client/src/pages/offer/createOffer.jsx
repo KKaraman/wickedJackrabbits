@@ -3,7 +3,6 @@ import React, {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "../signup.css";
-
 import {useParams} from "react-router";
 
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Button, Form, } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ".././signup.css";
 import axios from "axios";
@@ -17,23 +17,25 @@ const addFeedback = () => {
     const {id} = useParams();
     const submitFeedback = () => {
         console.log("home ID", id)
-        axios.post("/api/createFeedback/" + id, {
-            dateShown: dateShown,
+        
+        const mydata = { dateShown: dateShown,
             name: name,
             local: local,
             family: family,
             timeline: timeline,
             liked: liked,
             notLike: notLike,
-            estimatedInterest: estimatedInterest,
-        })
+            estimatedInterest: estimatedInterest}
+            console.log(mydata)
+        axios.post("/api/createFeedback/" + id, mydata )
     }
 
-        return (
-           
-                <Container>
-                                <div className="signupWrap">
+    return (
+
+        <Container>
+            <div className="signupWrap">
                 <Row>
+
                 <div className="signupInnerWrap">
                    <Col>
                    <h1>Feedback</h1>
@@ -69,22 +71,21 @@ const addFeedback = () => {
 
                 <p></p>
                     <Col>
-                        <Button onClick={submitFeedback}  type="submit">Submit Feedback</Button>
+                        <Button onClick={submitFeedback} href="/agentmain" type="submit">Submit Feedback</Button>
                     </Col>
                     </Col>
                     </div>
                 </Row>
-                </div>
+            </div>
 
-                </Container>
-            
-            
-        )
-    
-    
+        </Container>
+
+
+    )
+
+
 
 };
 
 export default addFeedback;
 
-   
