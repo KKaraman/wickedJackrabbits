@@ -81,8 +81,8 @@ const homeDetails = () => {
                     <div className="innerPart">
                       Homeowner
                                   </div>
-                  </p>
-                  <p>{UserDetails.firstName} {UserDetails.lastName}</p>
+                  <p></p></p>
+                  <p>{UserDetails.firstName} <p></p> {UserDetails.lastName}</p>
                   <div className="innerGenPart">
                     <p>
                     </p>
@@ -97,25 +97,41 @@ const homeDetails = () => {
         </Col>
       </Row>
 
+      <div className="genWrapb">
 
-      <br></br>
-      <Row>
-        <Col>
-          <Button type="button" className="btn btn-dark" href={homeOffersURLId}>ADD OFFER</Button>
-        </Col>
-        <Col>
-          <Button type="button" className="btn btn-dark" href={homeFeedbackURLId}>ADD FEEDBACK</Button>
-        </Col>
-      </Row>
-      <br></br>
-      <Row>
-        <Col>
-          <Button type="button" className="btn btn-dark" href="/viewoffer/:id">VIEW OFFERS</Button>
-        </Col>
-        <Col>
-          <Button type="button" className="btn btn-dark" href="/viewfeedback/:id">VIEW FEEDBACK</Button>
-        </Col>
-      </Row>
+
+<div className="genPartb">
+  <p>
+
+    <Button type="button" className="btn btn-dark" href={homeOffersURLId}>ADD<div></div> OFFER</Button>
+
+  </p>
+</div>
+
+<div className="genPartb">
+  <p>
+
+    <Button type="button" className="btn btn-dark" href={homeFeedbackURLId}>ADD<div></div> FEEDBACK</Button>
+
+  </p>
+</div>
+
+
+<div className="genPartb">
+  <p>
+
+    <Button type="button" className="btn btn-dark" href="/viewoffer/:id">VIEW<div></div> OFFERS</Button>
+ 
+  </p>
+</div>
+
+<div className="genPartb">
+  <p>
+    <Button type="button" className="btn btn-dark" href="/viewfeedback/:id">VIEW <div></div>FEEDBACK</Button>
+    </p>
+</div>
+
+</div>
     </Container>
   )
 }
