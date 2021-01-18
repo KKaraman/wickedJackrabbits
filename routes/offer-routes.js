@@ -7,10 +7,9 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 var isAgent = require("../config/middleware/isAgent");
 
 module.exports = function (app) {
- 
+
   app.post("/api/createOffer/:id", isAuthenticated, isAgent, function (req, res) {
     console.log("ROUTE RESPONSE", req.body, req.params);
-   
     db.Offer.create({
       dateOffered: req.body.dateOffered,
       name: req.body.name,
@@ -55,23 +54,23 @@ module.exports = function (app) {
 
   });
 
-  app.put("/api/updateOffer", isAuthenticated, isAgent, (req, res)=>{
-    db.Offer.update(req.body,{
-      where:{
+  app.put("/api/updateOffer", isAuthenticated, isAgent, (req, res) => {
+    db.Offer.update(req.body, {
+      where: {
         id: req.body.id
       }
-    }).then(()=>{
+    }).then(() => {
       console.log("Update Offer Complete");
       res.sendStatus(200)
     })
   })
 
-  app.delete("/api/deleteOffer/:id", isAuthenticated, isAgent, (req, res)=>{
+  app.delete("/api/deleteOffer/:id", isAuthenticated, isAgent, (req, res) => {
     db.Offer.destroy({
-      where:{
+      where: {
         id: req.params.id
       }
-    }).then(()=>{
+    }).then(() => {
       console.log("Delete Feedback Complete");
       res.sendStatus(200)
     })

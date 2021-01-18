@@ -53,7 +53,7 @@ const addHome = () => {
 
                     <h5>Create Homeowner's Password</h5>
 
-                        <input onChange={(e) => { setSellerPassword(e.target.value) }} placeholder="Password" class="txtarea" type="sellersEmail" ></input>
+                        <input onChange={(e) => { setSellerPassword(e.target.value) }} placeholder="Password" class="txtarea" type="password" ></input>
                         
                         <p></p>
 

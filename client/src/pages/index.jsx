@@ -14,6 +14,7 @@ const MainPage = () => {
         setHomeData(res.data.result)
         console.log("Home details =", res.data.result.Users)
         console.log("data:", res.data.result)
+        
       });
   }, []);
 
@@ -55,9 +56,12 @@ const MainPage = () => {
           const homes = item.Homes
           const homesMap = homes.map(home => {
             console.log("home id", home.id)
+            console.log("Item", item.Homes[0].Offers.length)
+           const offers = home.Offers.length
+            
             const homeId = home.id
             return(
-
+              
               <Col>
 
 
@@ -102,12 +106,13 @@ const MainPage = () => {
 
                             <div className="genPart">
                             <p>
+                              
                                   <div className="innerPart">
                                 Total Offers 
                                 </div>
                             <p></p>
                             <div className="innerGenPart">
-                              <p>Generated Text</p>
+                              <p>{offers}</p>
                             </div>
                           </p>
                         </div>
@@ -120,7 +125,7 @@ const MainPage = () => {
                           </p>
                           <p></p>
                           <div className="innerGenPart">
-                            <p>{item.firstName} {item.LastName}
+                            <p>{item.firstName} {item.lastName}
                             </p>
                           </div>
                         </div>
@@ -133,9 +138,9 @@ const MainPage = () => {
                     </NavLink>
                   </Col>
                 
-              
+               
                   
-            )})
+            )}) 
             
                 return (
                   <Row>
