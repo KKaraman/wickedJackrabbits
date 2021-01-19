@@ -137,13 +137,13 @@ const hoMain = () => {
                     <Col>
 
                 
-                            <Button href={homeFeedbackURLId}>VIEW FEEDBACK</Button>
+                            <Button href={homeFeedbackURLId}>VIEW <div></div>FEEDBACK</Button>
 
 
                         </Col>
                         <Col>
 
-                            <Button href={homeOffersURLId}>VIEW OFFERS</Button>
+                            <Button href={homeOffersURLId}>VIEW <div></div>OFFERS</Button>
 
                         </Col>
                     </Row>
