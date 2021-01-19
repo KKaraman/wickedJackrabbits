@@ -28,7 +28,10 @@ const viewFeedback = () => {
                     <Row>
                         <Col>{item.id}. {item.name}</Col>
                         <Col>{item.id}. {item.dateShown}</Col>
-
+                        <Col>{item.id}. {item.family}</Col>
+                        <Col>{item.id}. {item.liked}</Col>
+                        <Col>{item.id}. {item.notLike}</Col>
+                        <Col>{item.id}. {item.estimatedInterest}</Col>
                     </Row>
                 )
             })}
