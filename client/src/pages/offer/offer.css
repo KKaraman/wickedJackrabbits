@@ -26,6 +26,11 @@ width: min-content;
 
 }
 
+.pageTitle{
+    color: white;
+    margin: auto;
+}
+
 /* 
 .genWrapb {
     width:100%;

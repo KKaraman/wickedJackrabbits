@@ -22,7 +22,7 @@ const viewOffer = () => {
     return (
         <Container>
             <div>
-                <h3>Offers</h3>
+                <h3 className="pageTitle">Offers</h3>
             </div>
             <div className="viewOffers">
 
@@ -55,19 +55,19 @@ const viewOffer = () => {
                         <div className="offerBitsWrap">
                         <Link href="/selectedoffer/:id">
                             <div className="offerBits">
-                            <Col>{item.id}. {item.name}</Col></div>
+                            <Col> {item.name}</Col></div>
                         </Link>
                         <div className="offerBits">
                         <Col>
-                        {item.id}. {item.dateOffered}</Col>
+                         {item.dateOffered}</Col>
                         </div>
                         <div className="offerBits">
                         <Col>
-                        {item.id}. {item.amount}</Col>
+                         {item.amount}</Col>
                         </div>
                         <div className="offerBits">
                         <Col>
-                        {item.id}. {item.closingDate}</Col>
+                         {item.closingDate}</Col>
                         </div>
                         </div>
                     </Row>
