@@ -29,7 +29,7 @@ const MainPage = () => {
         <Row>
           <div className="searchAdd">
             <Col>
-              <h3 id="agentName">{homeData.firstName}</h3>
+              <h3 id="agentName">{homeData.firstName}'s Listings</h3>
               {/* also implement dynamic agents name here */}
             </Col>
           </div>
