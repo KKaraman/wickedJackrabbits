@@ -63,7 +63,7 @@ const homeDetails = () => {
                             </div>
                     <p></p>
                     <div className="innerGenPart">
-                      <p>{homeDetails.listingPrice}</p>
+                      <p>${homeDetails.listingPrice}</p>
                     </div>
                   </p>
                 </div>
