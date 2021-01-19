@@ -1,6 +1,6 @@
 # Wicked Jackrabbits Sellify
 
-![sellify](https://user-images.githubusercontent.com/68077734/104972395-45cecc80-59b7-11eb-8902-d9344fc9873c.png)
+![sellify](https://user-images.githubusercontent.com/68077734/104973467-69dfdd00-59ba-11eb-845f-25930b889c4f.png)
 
 This project is intended to solve a current issue in the real estate agent world where passing information from the agent to 
 the seller is cumbersome and time consuming.  In the current world, this communication happens via phone call or text message
