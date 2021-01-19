@@ -5,23 +5,40 @@ width: min-content;
 }
 
 
-.offerWrap {
-    font-size: x-large;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid ;
-    grid-template-columns: min-content;
-    margin-left: 5px;
-    text-align: center;    
-}
-
 .txtarea {
     border: 1px solid black;
 
 }
 
+.viewOffers{
+    grid-template-columns: auto;
+}
 
+.offerBitsWrap {
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-row: auto auto auto auto;
+    padding-left: -15px;
+    padding-right: 15px;
+    background-color: white;
+    color: black;
+    width: 102%;
+
+}
+
+/* 
+.genWrapb {
+    width:100%;
+    height:100%;
+  background: none;
+    display:grid;
+    grid-template-columns: 40% 40%;
+    grid-row: auto auto;
+    margin-left: 10%;
+    margin-right: -10%;
+    align-self: center;
+    align-items: center;
+  } */
 
 /*
 .offerQuestion {
