@@ -19,9 +19,14 @@ module.exports = function (app) {
       lastName: req.body.lastName,
       phoneNumber: req.body.phoneNumber
     })
-      .then(function () {
+      .then(function (agent) {
         // res.redirect(307, "/api/login");
-        res.sendStatus(201)
+        console.log(agent)
+        req.login(agent, ()=>{
+          res.sendStatus(201)
+        })
+        
+        
       })
       .catch(function (err) {
         res.status(401).json(err);
