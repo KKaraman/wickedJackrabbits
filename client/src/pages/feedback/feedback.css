@@ -17,3 +17,8 @@
     text-align: right;
     width: max-content;
 }
+
+.pageTitle{
+    color: white;
+    margin: auto;
+}

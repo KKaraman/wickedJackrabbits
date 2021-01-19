@@ -35,7 +35,7 @@ const hoMain = () => {
             <div  id="wrapperId">
             <Container>
                 {/* first row: Address */}
-                <h3>{homeOwnerData.firstName}</h3>
+                <h3 className="agentName">{homeOwnerData.firstName}'s Home</h3>
                 <Row>
                     <Col>
                         <Card>
@@ -43,7 +43,7 @@ const hoMain = () => {
                                
                             
                               <div>
-                                    <p className="text-center">
+                                    <p className="text-center homainaddress">
                                         {homeData.address}
                                     </p>
                              </div>
@@ -52,8 +52,6 @@ const hoMain = () => {
                 </Row>
                 {/* second row: Details */}
                 <div id="details">
-
-
 
                 <div className="box">
                 <p>

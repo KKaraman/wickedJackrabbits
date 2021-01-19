@@ -21,17 +21,17 @@ const viewFeedback = () => {
 
         <Container>
             <div>
-                <h3>Feedback</h3>
+                <h3 className="pageTitle">Feedback</h3>
             </div>
             {agentData.Feedbacks && agentData.Feedbacks.length !== 0 && agentData.Feedbacks.map(item => {
                 return (
                     <Row>
-                        <Col>{item.id}. {item.name}</Col>
-                        <Col>{item.id}. {item.dateShown}</Col>
-                        <Col>{item.id}. {item.family}</Col>
-                        <Col>{item.id}. {item.liked}</Col>
-                        <Col>{item.id}. {item.notLike}</Col>
-                        <Col>{item.id}. {item.estimatedInterest}</Col>
+                        <Col> {item.name}</Col>
+                        <Col> {item.dateShown}</Col>
+                        <Col> {item.family}</Col>
+                        <Col> {item.liked}</Col>
+                        <Col> {item.notLike}</Col>
+                        <Col> {item.estimatedInterest}</Col>
                     </Row>
                 )
             })}
