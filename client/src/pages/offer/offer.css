@@ -12,6 +12,9 @@ width: min-content;
 
 .viewOffers{
     grid-template-columns: auto;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .offerBitsWrap {
@@ -19,16 +22,35 @@ width: min-content;
     grid-template-columns: 25% 25% 25% 25%;
     grid-row: auto auto auto auto;
     padding-left: -15px;
-    padding-right: 15px;
     background-color: white;
     color: black;
-    width: 102%;
+    width: 100%;
+    text-align: center;
+}
 
+.offerBits {
+    border: solid black 1px;
+    text-align: center;
+}
+
+#blah {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .pageTitle{
     color: white;
     margin: auto;
+}
+
+.col {
+    width: 100%;
+text-align: center;
+padding-right: 0%;
+padding-left: 0%;
+color: black;
+font-size: ;
 }
 
 /* 
