@@ -17,6 +17,17 @@ width: min-content;
     margin-left: auto;
 }
 
+.offerBitsWrapa {
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-row: auto auto auto auto;
+    padding-left: -15px;
+    background-color: white;
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+
 .offerBitsWrap {
     display:grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -29,6 +40,12 @@ width: min-content;
 }
 
 .offerBits {
+    border: solid black 1px;
+    text-align: center;
+    font-size: larger;
+    font-weight: 500;
+}
+.offerBitsb {
     border: solid black 1px;
     text-align: center;
 }
@@ -50,7 +67,6 @@ text-align: center;
 padding-right: 0%;
 padding-left: 0%;
 color: black;
-font-size: ;
 }
 
 /* 

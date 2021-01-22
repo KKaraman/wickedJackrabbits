@@ -29,10 +29,10 @@ const viewOffer = () => {
 
 
             <Row>
-                    <div className="offerBitsWrap">
+                    <div className="offerBitsWrapa">
                     <div className="offerBits">
                         <Link href="/selectedoffer/:id">
-                            <Col>Name of the Buyer</Col>
+                            <Col>Name of Buyer</Col>
                         </Link>
                         </div> 
 
@@ -56,20 +56,20 @@ const viewOffer = () => {
 
                     <Row>
                         <div className="offerBitsWrap">
-                        <div className="offerBits">
+                        <div className="offerBitsb">
                         <Link href="/selectedoffer/:id">
                             <Col> {item.name}</Col>
                         </Link>
                         </div>
-                        <div className="offerBits">
+                        <div className="offerBitsb">
                         <Col>
                          {item.dateOffered}</Col>
                         </div>
-                        <div className="offerBits">
+                        <div className="offerBitsb">
                         <Col>
                          {item.amount}</Col>
                         </div>
-                        <div className="offerBits">
+                        <div className="offerBitsb">
                         <Col>
                          {item.closingDate}</Col>
                         </div>
