@@ -26,12 +26,14 @@ const viewFeedback = () => {
             {agentData.Feedbacks && agentData.Feedbacks.length !== 0 && agentData.Feedbacks.map(item => {
                 return (
                     <Row>
+                        <div id="vfbRowWrap">
                         <Col> {item.name}</Col>
                         <Col> {item.dateShown}</Col>
                         <Col> {item.family}</Col>
                         <Col> {item.liked}</Col>
                         <Col> {item.notLike}</Col>
                         <Col> {item.estimatedInterest}</Col>
+                        </div>
                     </Row>
                 )
             })}
