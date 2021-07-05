@@ -1,9 +1,10 @@
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Button, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
 import {useParams} from "react-router";
 import {Link} from "react-router-dom"
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 import "./offer.css";
 
 const viewOffer = () => {
@@ -28,24 +29,26 @@ const viewOffer = () => {
 
 
             <Row>
-                        <div className="offerBitsWrap">
+                    <div className="offerBitsWrapa">
+                    <div className="offerBits">
                         <Link href="/selectedoffer/:id">
-                            <div className="offerBits">
-                            <Col>Buyer</Col></div>
+                            <Col>Name of Buyer</Col>
                         </Link>
+                        </div> 
+
+                        <div className="offerBits">
+                        <Col>Date of Offer</Col>
+                        </div>
+
+                        <div className="offerBits">
+                        <Col>Offer Amount</Col>
+                        </div>
+
                         <div className="offerBits">
                         <Col>
-                        Date of Offer</Col>
+                        Earliest Closing</Col>
                         </div>
-                        <div className="offerBits">
-                        <Col>
-                        Offer Amount</Col>
-                        </div>
-                        <div className="offerBits">
-                        <Col>
-                        Earliest Closing Date</Col>
-                        </div>
-                        </div>
+                    </div>
                     </Row>
 
             {agentData.Offers && agentData.Offers.length !== 0 && agentData.Offers.map(item => {
@@ -53,28 +56,34 @@ const viewOffer = () => {
 
                     <Row>
                         <div className="offerBitsWrap">
+                        <div className="offerBitsb">
                         <Link href="/selectedoffer/:id">
-                            <div className="offerBits">
-                            <Col> {item.name}</Col></div>
+                            <Col> {item.name}</Col>
                         </Link>
-                        <div className="offerBits">
+                        </div>
+                        <div className="offerBitsb">
                         <Col>
                          {item.dateOffered}</Col>
                         </div>
-                        <div className="offerBits">
+                        <div className="offerBitsb">
                         <Col>
                          {item.amount}</Col>
                         </div>
-                        <div className="offerBits">
+                        <div className="offerBitsb">
                         <Col>
                          {item.closingDate}</Col>
                         </div>
                         </div>
                     </Row>
-                    
+
                 )
+                
             })}
+
+<Button  href="/homedetails/1" id="login" type="submit">BACK </Button> 
+
             </div>
+
         </Container>
     )
 }
